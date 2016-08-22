@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection gml:id="SHP1" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wescml="http://xmlns.wescml.org" xmlns:wfs="http://www.opengis.net/wfs/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2"  
+xsi:schemaLocation="http://xmlns.wescml.org http://wescml.org/schemas/wescml.xsd
+                http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
+                  
+                      ">
+	<gml:featureMember>
+	<wescml:ElectricityMeterReading gml:id="e_meter_5005_26012012_peak">
+		<wescml:GNAF_ID>454574568</wescml:GNAF_ID>
+		<wescml:lotSize>25</wescml:lotSize>
+		<wescml:meterID>http://wescml.org/feature/e_meter_5005</wescml:meterID>
+		<wescml:propertyID>http://wescml.org/property/454574568</wescml:propertyID>
+		<wescml:propertyType>http://wescml.org/def/StrataProperty</wescml:propertyType>
+		<wescml:readingDate>2012-01-26</wescml:readingDate>
+		<wescml:resultID>http://wescml.org/feature/e_meter_5005/26012012/peak</wescml:resultID>
+		<wescml:resultMethod>http://wescml.org/def/CalculatedMeterValue</wescml:resultMethod>
+		<wescml:resultUnitsOfMeasure>http://qudt.org/vocab/unit#Kilowatthour</wescml:resultUnitsOfMeasure>
+		<wescml:spatialGeometry>
+		<gml:Point gml:id="e_meter_5005_location">
+			<gml:pos>-25.0 119.0</gml:pos>
+		</gml:Point>
+		</wescml:spatialGeometry>
+		<wescml:utilityID>http://wescml.org/utility/electricity/1</wescml:utilityID>
+		<wescml:utilityName>ACME Electricity</wescml:utilityName>
+		<wescml:readingValue>16.1954023</wescml:readingValue>
+		<wescml:readingType>http://wescml.org/def/PeakMeterReadType</wescml:readingType>
+	</wescml:ElectricityMeterReading>
+	</gml:featureMember>
+	<gml:featureMember>
+	<wescml:WaterMeterReading gml:id="w_meter_5005_26012012">
+		<wescml:GNAF_ID>454574568</wescml:GNAF_ID>
+		<wescml:meterID>http://wescml.org/feature/w_meter_5005</wescml:meterID>
+		<wescml:propertyID>http://wescml.org/property/454574568</wescml:propertyID>
+		<wescml:propertyType>http://wescml.org/def/StrataProperty</wescml:propertyType>
+		<wescml:readingDate>2012-01-26</wescml:readingDate>
+		<wescml:resultID>http://wescml.org/feature/w_meter_5005/26012012</wescml:resultID>
+		<wescml:resultMethod>http://wescml.org/def/ManualMeterValue</wescml:resultMethod>
+		<wescml:resultUnitsOfMeasure>http://environment.data.gov.au/water/quality/def/unit/MegaLitre</wescml:resultUnitsOfMeasure>
+		<wescml:spatialGeometry xlink:href="#e_meter_5005_location"/>
+		<wescml:utilityID>http://wescml.org/utility/water/1</wescml:utilityID>
+		<wescml:utilityName>ACME Water</wescml:utilityName>
+		<wescml:readingValue>99670</wescml:readingValue>
+	</wescml:WaterMeterReading>
+	</gml:featureMember>
+	<gml:featureMember>
+	<wescml:WaterSupply gml:id="w_supply_1">
+		<wescml:utilityID>http://wescml.org/utility/water/1</wescml:utilityID>
+		<wescml:utilityName>ACME Water</wescml:utilityName>
+		<wescml:startDeliveryTime>2012-01-01T00:00:00+10:00</wescml:startDeliveryTime>
+		<wescml:utilitySupplyRegion>
+		 <gml:Polygon srsName="http://www.opengis.net/def/crs/EPSG/0/4326" gml:id="LOCAL_ID_1">
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList srsDimension="2" count="7">-3.6470548505734
+                                55.4873225351353 -3.64428004011609 55.488397575696 -3.63483715790909
+                                55.4914599200904 -3.63646799657096 55.4913000575058
+                                -3.64136937627433 55.4903279605393 -3.64694807316954
+                                55.4888017130295 -3.6470548505734 55.4873225351353</gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+		</wescml:utilitySupplyRegion>
+		<wescml:endDeliveryTime>2012-01-01T24:00:00+10:00</wescml:endDeliveryTime>
+		<wescml:supplyRegionName>ACME water region</wescml:supplyRegionName>
+		<wescml:supplyUnitsOfMeasure>http://environment.data.gov.au/water/quality/def/unit/MegaLitre</wescml:supplyUnitsOfMeasure>
+		<wescml:consumerOutflows>1295</wescml:consumerOutflows>
+		<wescml:environmentOutflows>75</wescml:environmentOutflows>
+		<wescml:outflowID></wescml:outflowID>
+	</wescml:WaterSupply>
+	</gml:featureMember>
+	</gml:FeatureCollection>

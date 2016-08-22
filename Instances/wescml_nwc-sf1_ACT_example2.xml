@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection gml:id="BoM-NGIS-Test.1"
+xmlns:wescml="http://wescml.org/schemas/wescml" 
+xmlns:gml="http://www.opengis.net/gml/3.2" 
+xmlns:gmlexr="http://www.opengis.net/gml/3.3/xer" 
+xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" 
+xmlns:sam="http://www.opengis.net/sampling/2.0" 
+xmlns:wml2="http://www.opengis.net/waterml/2.0" 
+xmlns:om="http://www.opengis.net/om/2.0"
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://wescml.org/schemas/wescml C:\Repos\AURIN\Model\XSD\wescml.xsd">
+<gml:featureMember>
+<wescml:WESC_Agent gml:id="ACTEW_01">
+<gml:name>ACTEW</gml:name>
+	<wescml:agentName>ACTEW</wescml:agentName>
+	
+	<wescml:agentType>infrastructure operator</wescml:agentType>
+	<wescml:commodityOfInterest>
+	<wescml:AgentCommodityRelationship gml:id="ACTEW_01-Water">
+		<wescml:agentRole xmlns="http://wescml.org/schemas/wescml"></wescml:agentRole>
+	<wescml:commodityRole xmlns="http://wescml.org/schemas/wescml"></wescml:commodityRole>
+		<wescml:commodityOfInterest xmlns="http://wescml.org/schemas/wescml"  xlink:href="#ACTEW_01-Commodity_01"></wescml:commodityOfInterest>
+		<wescml:agency xmlns="http://wescml.org/schemas/wescml" xlink:href="#ACTEW_01" xlink:title="ACTEW"></wescml:agency>
+		</wescml:AgentCommodityRelationship>
+	</wescml:commodityOfInterest>
+	<wescml:associatedLocation>
+	<wescml:WESC_MonitoringLocation gml:id="ACTEW_01_Shape.1">
+		<gml:name>Australian Capital Territory</gml:name>
+		<sam:sampledFeature></sam:sampledFeature>
+		<sams:shape><gml:Point gml:id="point_103.EPA_CMP.SITE001.01" srsName="http://www.opengis.net/def/crs/EPSG/0/4283" srsDimension="2">
+			<gml:pos>-25.0 119.0</gml:pos>
+		</gml:Point></sams:shape>
+		<wescml:monitoringType xmlns="http://wescml.org/schemas/wescml"></wescml:monitoringType>
+		<wescml:locationName>Australian Capital Territory</wescml:locationName>
+		<wescml:descriptionReference></wescml:descriptionReference>
+		<wescml:responsibleAgent xmlns="http://wescml.org/schemas/wescml" xlink:href="#ACTEW_01"></wescml:responsibleAgent>
+	<wescml:sampledFeature xlink:href="#ACTEW_01-Commodity_01"></wescml:sampledFeature>
+		</wescml:WESC_MonitoringLocation>
+	
+	</wescml:associatedLocation>
+	<!-- Volume of water sourced from surface water (ML) -->
+	<wescml:sourceCommodity>
+		<wescml:WE_Water gml:id="Source_1">
+			<wescml:startDate>2006-07-01</wescml:startDate>
+			<wescml:endDate>2007-06-30</wescml:endDate>
+			<wescml:volume>
+				<gml:measure uom="Ml">51060</gml:measure>
+				<wescml:source>surface water</wescml:source>
+				<wescml:supplier/>
+				<wescml:consumer xlink:href="#ACTEW_01" xlink:title="ACTEW"/>
+			</wescml:volume>
+		</wescml:WE_Water>
+	</wescml:sourceCommodity>
+	<!-- Volume of water sourced from recycling (ML) -->
+	<wescml:sourceCommodity>
+		<wescml:WE_Water gml:id="Source_2">
+			<wescml:startDate>2006-07-01</wescml:startDate>
+			<wescml:endDate>2007-06-30</wescml:endDate>
+			<wescml:volume>
+				<gml:measure uom="Ml">2104</gml:measure>
+				<wescml:source>recycled water</wescml:source>
+				<wescml:supplier/>
+				<wescml:consumer xlink:href="#ACTEW_01" xlink:title="ACTEW"/>
+			</wescml:volume>
+		</wescml:WE_Water>
+	</wescml:sourceCommodity>
+	<!-- Total sourced water (ML) -->
+	<!-- Derived from surface + recycled or deliver as "unspecified" source -->
+	<wescml:sourceCommodity>
+		<wescml:WE_Water gml:id="Source_3">
+			<wescml:startDate>2006-07-01</wescml:startDate>
+			<wescml:endDate>2007-06-30</wescml:endDate>
+			<wescml:volume>
+				<gml:measure uom="Ml">53164</gml:measure>
+				<wescml:source>unspecified</wescml:source>
+				<wescml:supplier/>
+				<wescml:consumer xlink:href="#ACTEW_01" xlink:title="ACTEW"/>
+			</wescml:volume>
+		</wescml:WE_Water>
+	</wescml:sourceCommodity>
+	<!-- Volume of recycled water supplied - Commercial, municipal and industrial (ML) -->
+	<wescml:suppliedCommodity>
+		<wescml:WE_Water gml:id="Supply_1">
+			<wescml:startDate>2006-07-01</wescml:startDate>
+			<wescml:endDate>2007-06-30</wescml:endDate>
+			<wescml:volume>
+				<gml:measure uom="Ml">2009</gml:measure>
+				<wescml:source>recycled water</wescml:source>
+				<wescml:supplier xlink:href="#ACTEW_01" xlink:title="ACTEW"/>
+				<wescml:consumer>
+					<wescml:WE_MultipleConsumer>
+						<wescml:agentName xsi:nil="true" nilReason="inapplicable"/>
+						<wescml:agentType>commercial</wescml:agentType>
+						<wescml:agentType>municipal</wescml:agentType>
+						<wescml:agentType>industrial</wescml:agentType>
+						<wescml:areaName>Australian Capital Territory</wescml:areaName>
+						<wescml:spatialLocation xsi:nil="true" nilReason="unknown"/>
+						<wescml:populationReceivingCommodity xsi:nil="true" nilReason="unknown"/>
+						<wescml:propertiesReceivingCommodity xsi:nil="true" nilReason="unknown"/>
+						<wescml:suppliedCommodity xlink:href="#Supply_1"/>
+						<wescml:sourceCommodity/>
+					</wescml:WE_MultipleConsumer>
+				</wescml:consumer>
+			</wescml:volume>
+		</wescml:WE_Water>
+	</wescml:suppliedCommodity>
+	<!-- Volume of recycled water supplied - Agricultural (ML) -->
+	<wescml:suppliedCommodity>
+		<wescml:WE_Water gml:id="Supply_2">
+			<wescml:startDate>2006-07-01</wescml:startDate>
+			<wescml:endDate>2007-06-30</wescml:endDate>
+			<wescml:volume>
+				<gml:measure uom="Ml">95</gml:measure>
+				<wescml:source>recycled water</wescml:source>
+				<wescml:supplier xlink:href="#ACTEW_01" xlink:title="ACTEW"/>
+				<wescml:consumer>
+					<wescml:WESC_Agent>
+						<wescml:agentName xsi:nil="true" nilReason="unknown"/>
+						<wescml:agentType>agriculture</wescml:agentType>
+						<wescml:areaName>Australian Capital Territory</wescml:areaName>
+						<wescml:spatialLocation xsi:nil="true" nilReason="unknown"/>
+						<wescml:suppliedCommodity xlink:href="#Supply_2"/>
+						<wescml:sourceCommodity/>
+					</wescml:WESC_Agent>
+				</wescml:consumer>
+			</wescml:volume>
+		</wescml:WE_Water>
+	</wescml:suppliedCommodity>
+	<!-- Volume of recycled water supplied - Environmental (ML) -->
+	<wescml:suppliedCommodity>
+		<wescml:WE_Water gml:id="Supply_3">
+			<wescml:startDate>2006-07-01</wescml:startDate>
+			<wescml:endDate>2007-06-30</wescml:endDate>
+			<wescml:volume>
+				<gml:measure uom="Ml">26957</gml:measure>
+				<wescml:source>recycled water</wescml:source>
+				<wescml:supplier xlink:href="#ACTEW_01" xlink:title="ACTEW"/>
+				<wescml:consumer>
+					<wescml:WESC_Agent>
+						<wescml:agentName xsi:nil="true" nilReason="unknown"/>
+						<wescml:agentType>environment</wescml:agentType>
+						<wescml:areaName>Australian Capital Territory</wescml:areaName>
+						<wescml:spatialLocation xsi:nil="true" nilReason="unknown"/>
+						<wescml:suppliedCommodity xlink:href="#Supply_3"/>
+						<wescml:sourceCommodity/>
+					</wescml:WESC_Agent>
+				</wescml:consumer>
+			</wescml:volume>
+		</wescml:WE_Water>
+	</wescml:suppliedCommodity>
+	<!-- Volume of recycled water supplied - On-site (ML) and Volume of recycled water supplied - Other (ML) as per Supply 2 and 3 -->
+	<!-- Volume of water supplied - Other (ML) -->
+	<!--
+Volume of potable water supplied - other (ML)
+Total urban water supplied (ML)
+Total urban potable water supplied (ML)
+Average annual residential water supplied (kL/property)
+Volume of water supplied - Environmental flows (ML)
+Volume of bulk water exports (ML)
+Volume of potable bulk water exports (ML)
+Volume of water supplied - Residential (ML)
+Volume of potable water supplied - residential (ML)
+Volume of water supplied - Commercial, municipal and industrial (ML)
+Volume of potable water supplied - commercial, municipal and industrial (ML)
+-->
+</wescml:WESC_Agent>
+</gml:featureMember>
+</gml:FeatureCollection>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gml:FeatureCollection
+gml:id="SHP1"  xmlns="http://www.opengis.net/wfs" xmlns:wfs="http://www.opengis.net/wfs" xmlns:wescml="http://xmlns.wescml.org" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.wescml.org C:\Repos\AURIN\Model\XSD\wescml.xsd 
+http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
+<!-- xmlns:wescml="http://xmlns.wescml.org" for xmlns:wescml="http://xmlns.wescml" 
+http://xmlns.wescml.org C:\Repos\AURIN\Model\XSD\wescml.xsd for http://xmlns.wescml
+removed:
+http://localhost:3000/geoserver/wescml/wfs?service=WFS&amp;version=1.0.0&amp;request=DescribeFeatureType&amp;typeName=wescml%3Aelectricitymeterreading http://www.opengis.net/wfs http://localhost:3000/geoserver/schemas/wfs/1.0.0/WFS-basic.xsd -
+Added: 
+http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd -->	
+<!--	<gml:boundedBy>
+		<gml:null>unknown</gml:null>
+	</gml:boundedBy> -->
+	<gml:featureMember>
+		<wescml:ElectricityMeterReading gml:id="electricitymeterreading.fid--14b19e97_14210a78ac8_-7fe5">
+			<wescml:GNAF_ID>454574568</wescml:GNAF_ID>
+			<wescml:lotSize>1500.0</wescml:lotSize>
+			<wescml:meterID>'5005'</wescml:meterID>
+			<wescml:propertyID>'1001'</wescml:propertyID>
+			<wescml:propertyType> 'Strata'</wescml:propertyType>
+			<wescml:readingDate>2012-01-26</wescml:readingDate>
+			<wescml:resultID> '2'</wescml:resultID>
+			<wescml:resultMethod> 'Meter Read'</wescml:resultMethod>
+			<wescml:resultUnitsOfMeasure> 'KWh'</wescml:resultUnitsOfMeasure>
+			<wescml:spatialGeometry>
+				<gml:Point gml:id="point1" srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:pos>-31.993491 115.885999</gml:pos>
+<!-- <gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates> -->
+				</gml:Point>
+			</wescml:spatialGeometry>
+			<wescml:utilityID> '12345'</wescml:utilityID>
+			<wescml:utilityName> 'ElectricityCo'</wescml:utilityName>
+			<wescml:readingValue>99670.0</wescml:readingValue>
+			<wescml:readingType>peak</wescml:readingType>
+		</wescml:ElectricityMeterReading>
+	</gml:featureMember>
+	<!-- <gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid14b19e97_14210a78ac8_-7fe4">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-01-26</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>1348.0</wescml:readingvalue>
+			<wescml:readingtype>off-peak</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember>
+	<gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid-14b19e97_14210a78ac8_-7fe3">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-01-26</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>49.0</wescml:readingvalue>
+			<wescml:readingtype>feed-in</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember>
+	<gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid-14b19e97_14210a78ac8_-7fe2">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-01-26</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>147.0</wescml:readingvalue>
+			<wescml:readingtype>self-generated</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember>
+	<gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid-14b19e97_14210a78ac8_-7fe1">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-04-23</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>1079.0</wescml:readingvalue>
+			<wescml:readingtype>peak</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember>
+	<gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid-14b19e97_14210a78ac8_-7fe0">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-04-23</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>1463.0</wescml:readingvalue>
+			<wescml:readingtype>off-peak</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember>
+	<gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid-14b19e97_14210a78ac8_-7fdf">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-04-23</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>75.0</wescml:readingvalue>
+			<wescml:readingtype>feed-in</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember>
+	<gml:featureMember>
+		<wescml:electricitymeterreading fid="electricitymeterreading.fid-14b19e97_14210a78ac8_-7fde">
+			<wescml:gnaf_id>454574568</wescml:gnaf_id>
+			<wescml:lotsize>1500.0</wescml:lotsize>
+			<wescml:meterid>'5005'</wescml:meterid>
+			<wescml:propertyid>'1001'</wescml:propertyid>
+			<wescml:propertytype> 'Strata'</wescml:propertytype>
+			<wescml:readingdate>2012-04-23</wescml:readingdate>
+			<wescml:resultid> '2'</wescml:resultid>
+			<wescml:resultmethod> 'Meter Read'</wescml:resultmethod>
+			<wescml:resultunitsofmeasure> 'KWh'</wescml:resultunitsofmeasure>
+			<wescml:spatialgeometry>
+				<gml:Point srsName="http://www.opengis.net/gml/srs/epsg.xml#4326">
+					<gml:coordinates xmlns:gml="http://www.opengis.net/gml" decimal="." cs="," ts=" ">-31.993491,115.885999</gml:coordinates>
+				</gml:Point>
+			</wescml:spatialgeometry>
+			<wescml:utilityid> '12345'</wescml:utilityid>
+			<wescml:utilityname> 'ElectricityCo'</wescml:utilityname>
+			<wescml:readingvalue>277.0</wescml:readingvalue>
+			<wescml:readingtype>self-generated</wescml:readingtype>
+		</wescml:electricitymeterreading>
+	</gml:featureMember> -->
+</gml:FeatureCollection>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wescml="http://wescml.org/schemas/wescml" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlexr="http://www.opengis.net/gml/3.3/xer" xmlns:sams="http://www.opengis.net/samplingSpatial/2.0" xmlns:wml2="http://www.opengis.net/waterml/2.0" xmlns:om="http://www.opengis.net/om/2.0" xmlns:exr="http://www.opengis.net/gml/3.3/exr" targetNamespace="http://wescml.org/schemas/wescml" elementFormDefault="qualified" version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/samplingSpatial/2.0" schemaLocation="http://schemas.opengis.net/samplingSpatial/2.0/spatialSamplingFeature.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/waterml/2.0" schemaLocation="http://schemas.opengis.net/waterml/2.0/waterml2.xsd"/>
+	<xs:import namespace="http://www.opengis.net/om/2.0" schemaLocation="http://schemas.opengis.net/om/2.0/observation.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Simple Feature Level 1 extension to WaterML2 for Water and Electricity Supply and Consumption Mark-up Language (WescML)</xs:documentation>
+	</xs:annotation>
+	<xs:element name="AgentCommodityRelationship" type="wescml:AgentCommodityRelationshipType" substitutionGroup="gml:AbstractGML"/>
+	<xs:complexType name="AgentCommodityRelationshipType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractGMLType">
+				<xs:sequence>
+					<xs:element name="agentRole" type="gml:CodeType">
+						<xs:annotation>
+							<xs:documentation>Role the agent is playing with respect to the commodity (e.g. supplier, consumer)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="commodityRole" type="gml:CodeType">
+						<xs:annotation>
+							<xs:documentation>Role the commodity is playing with respect to the agent (e.g. supply, consumption)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="commodityOfInterest" type="wescml:WESC_CommodityPropertyType">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>wescml:agency</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="agency" type="wescml:WESC_AgentPropertyType">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>wescml:commodityOfInterest</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AgentCommodityRelationshipPropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="wescml:AgentCommodityRelationship"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="WESC_Agent" type="wescml:WESC_AgentType" substitutionGroup="gml:AbstractFeature">
+		<xs:annotation>
+			<xs:documentation>The utility, organisation, individual, population, or environment supplying or consuming the commodity</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="WESC_AgentType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="agentName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The name of the supplier or consuming agency, population, aquifer, etc</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="agentType" type="wescml:WE_AgentTypeTermType">
+						<xs:annotation>
+							<xs:documentation>The type of agent receiving or providing the service (e.g. residential, commercial, non-residential, infrastructure operator, municipal, industrial, aquifer, irrigation, other)</xs:documentation>
+							<xs:appinfo>
+								<gmlexr:targetCodeList>WE_AgentTypeTerm</gmlexr:targetCodeList>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="commodityOfInterest" type="wescml:AgentCommodityRelationshipPropertyType">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>wescml:agency</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="associatedLocation" type="wescml:WESC_MonitoringLocationPropertyType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>wescml:responsibleAgent</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WESC_AgentPropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="wescml:WESC_Agent"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="WESC_Commodity" type="wescml:WESC_CommodityType" substitutionGroup="gml:AbstractFeature"/>
+	<xs:complexType name="WESC_CommodityType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="agency" type="wescml:AgentCommodityRelationshipPropertyType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>wescml:commodityOfInterest</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="commodityType" type="gml:CodeType">
+						<xs:annotation>
+							<xs:documentation>A characterisation of the type of commodity being monitored. E.g. water, gas, electricity etc. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="commoditySource" type="gml:ReferenceType" minOccurs="1" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>commoditySource to specify the source of the commodity (desalination, stormwater, surface water, groundwater, solar, wind, grid)</xs:documentation>
+							<xs:appinfo>
+								<gmlexr:targetCodeList>CommoditySourceTerm</gmlexr:targetCodeList>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WESC_CommodityPropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="wescml:WESC_Commodity"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="WESC_MonitoringLocation" type="wescml:WESC_MonitoringLocationType" substitutionGroup="sams:SF_SpatialSamplingFeature">
+		<xs:annotation>
+			<xs:documentation>The location associated with a water or energy supply or consumption monitoring device (meter) or devices.
+This may be a single point location (equivalent to WaterML2 MonitoringPoint) or an area, such as an ABS or local government region, where data from an aggregation of meters is reported.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="WESC_MonitoringLocationType">
+		<xs:complexContent>
+			<xs:extension base="sams:SF_SpatialSamplingFeatureType">
+				<xs:sequence>
+					<xs:element name="monitoringType" type="gml:CodeType">
+						<xs:annotation>
+							<xs:documentation>A characterisation of the type of location. E.g. individual meter, smart meter, LGA, ABS 2 region, 
+ Specific types (e.g. Smart Meters) and models may be specified here.
+
+Type of property:
+strata, unit, single dwelling, statistical area
+etc. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="locationName" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>The name of the area being supplied or consuming the commodity. May be a jurisdictional area (e.g. State), region, street address, etc </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="descriptionReference" type="gml:CodeType" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Provide extra description about a monitoring location. This could be a link to an HTML page describing the location, photos of a monitoring point, history records etc. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="responsibleAgent" type="wescml:WESC_AgentPropertyType">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>wescml:associatedLocation</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sampledFeature" type="wescml:WESC_CommodityPropertyType" minOccurs="1" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WESC_MonitoringLocationPropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="wescml:WESC_MonitoringLocation"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="WESC_Procedure" type="wescml:WESC_ProcedureType" substitutionGroup="wml2:ObservationProcess">
+		<xs:annotation>
+			<xs:documentation>Procedures used to determine and/or aggregate water and energy observations</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="WESC_ProcedureType">
+		<xs:complexContent>
+			<xs:extension base="wml2:ObservationProcessType">
+				<xs:sequence>
+					<xs:element name="statisticalMethod" type="wescml:WE_StatisticalMethodTermType">
+						<xs:annotation>
+							<xs:documentation>Method used to determine the results (instance observation) interpolation, average, median, modelled)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="numberOfMeters" type="xs:integer">
+						<xs:annotation>
+							<xs:documentation>Number of meters used for the result</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="numberOfReadings" type="xs:integer">
+						<xs:annotation>
+							<xs:documentation>Number of readings used for the result</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WESC_ProcedurePropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="wescml:WESC_Procedure"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:simpleType name="WE_StatisticalMethodTermType">
+		<xs:annotation>
+			<xs:documentation>Term from a vocabulary to describe the method used to determine the results (instance observation) interpolation, average, median, modelled)</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="wescml:WE_StatisticalMethodTermEnumerationType wescml:WE_StatisticalMethodTermOtherType"/>
+	</xs:simpleType>
+	<xs:simpleType name="WE_StatisticalMethodTermEnumerationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="modelled"/>
+			<xs:enumeration value="median"/>
+			<xs:enumeration value="interpolation"/>
+			<xs:enumeration value="average"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WE_StatisticalMethodTermOtherType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="other: \w{2,}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WE_AgentTypeTermType">
+		<xs:annotation>
+			<xs:documentation>The type of supplier or consumer of the commodity (e.g. residential, commercial, non-residential, infrastructure operator, municipal, industrial, aquifer, irrigator, environment, other)</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="wescml:WE_AgentTypeTermEnumerationType wescml:WE_AgentTypeTermOtherType"/>
+	</xs:simpleType>
+	<xs:simpleType name="WE_AgentTypeTermEnumerationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="agriculture"/>
+			<xs:enumeration value="aquifer"/>
+			<xs:enumeration value="commercial"/>
+			<xs:enumeration value="environment"/>
+			<xs:enumeration value="industrial"/>
+			<xs:enumeration value="infrastructure operator"/>
+			<xs:enumeration value="irrigator"/>
+			<xs:enumeration value="municipal"/>
+			<xs:enumeration value="non-residential"/>
+			<xs:enumeration value="on-site"/>
+			<xs:enumeration value="other"/>
+			<xs:enumeration value="residential"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WE_AgentTypeTermOtherType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="other: \w{2,}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CommoditySourceTermType">
+		<xs:annotation>
+			<xs:documentation>Terms to describe the original source of the commodity</xs:documentation>
+		</xs:annotation>
+		<xs:union memberTypes="wescml:CommoditySourceTermEnumerationType wescml:CommoditySourceTermOtherType"/>
+	</xs:simpleType>
+	<xs:simpleType name="CommoditySourceTermEnumerationType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="coal fired power station"/>
+			<xs:enumeration value="desalination"/>
+			<xs:enumeration value="groundwater"/>
+			<xs:enumeration value="groundwater desalination"/>
+			<xs:enumeration value="hydroelectricity"/>
+			<xs:enumeration value="marine water desalination"/>
+			<xs:enumeration value="recycled water"/>
+			<xs:enumeration value="solar"/>
+			<xs:enumeration value="stormwater"/>
+			<xs:enumeration value="surface water"/>
+			<xs:enumeration value="unspecified"/>
+			<xs:enumeration value="wind farm"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CommoditySourceTermOtherType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="other: \w{2,}"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+<!--
+<simpleType name="DescriptionPurposeType">
+		<union memberTypes="gsml:DescriptionPurposeEnumerationType gsml:DescriptionPurposeOtherType"/>
+	</simpleType>
+	<simpleType name="DescriptionPurposeEnumerationType">
+		<restriction base="string">
+			<enumeration value="instance">
+				<annotation>
+					<documentation>Instance a description ...</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="definingNorm">
+				<annotation>
+					<documentation>DefiningNorm a description ...</documentation>
+				</annotation>
+			</enumeration>
+			<enumeration value="typicalNorm">
+				<annotation>
+					<documentation>TypicalNorm a description ...</documentation>
+				</annotation>
+			</enumeration>
+		</restriction>
+	</simpleType>
+	<simpleType name="DescriptionPurposeOtherType">
+		<restriction base="string">
+			<pattern value="other: \w{2,}"/>
+		</restriction>
+	</simpleType>
+
+-->

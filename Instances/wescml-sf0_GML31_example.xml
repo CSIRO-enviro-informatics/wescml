@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfs:FeatureCollection xmlns="http://www.w3.org/2001/XMLSchema" 
+xmlns:wescml-sf0="http://wescml.org/schemas/SF-0/1.0/wescml-sf0" 
+xmlns:wfs="http://www.opengis.net/wfs" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xlink="http://www.w3.org/1999/xlink" 
+xmlns:gml="http://www.opengis.net/gml"
+xsi:schemaLocation="http://wescml.org/schemas/SF-0/1.0/wescml-sf0 C:\Repos\AURIN\Model\XSD\wescml-sf0_gml3_1.xsd
+http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd">
+	<!-- Should be:
+xsi:schemaLocation="http://wescml.org/schemas/SF-0/1.0/wescml-sf0 http://schemas.wescml.org/wescml/1.0.1/wescml-sf0.xsd
+				http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
+                  http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd 
+http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd
+                  http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd " -->
+	<!-- +++++++++++++++++++++++++++++++++++ -->
+	<!-- This file includes example instances for electricity and water consumption and supply, and an aggragated water consumption for a first quarter time period -->
+	<!-- This wfs:member is an example of an individual electricity meter reading -->
+	<gml:featureMember>
+		<wescml-sf0:ElectricityMeterReading gml:id="e_meter_5005_26012012_peak">
+			<wescml-sf0:GNAF_ID>454574568</wescml-sf0:GNAF_ID>
+			<wescml-sf0:lotSize>25</wescml-sf0:lotSize>
+			<wescml-sf0:meterID>http://wescml.org/feature/e_meter_5005</wescml-sf0:meterID>
+			<wescml-sf0:propertyID>http://wescml.org/property/454574568</wescml-sf0:propertyID>
+			<wescml-sf0:propertyTypeLabel>strata property</wescml-sf0:propertyTypeLabel>
+			<wescml-sf0:propertyTypeURI>http://wescml.org/def/StrataProperty</wescml-sf0:propertyTypeURI>
+			<wescml-sf0:readingDate>2012-01-26</wescml-sf0:readingDate>
+			<wescml-sf0:readingValue>16.1954023</wescml-sf0:readingValue>
+			<wescml-sf0:resultID>http://wescml.org/feature/e_meter_5005/26012012/peak</wescml-sf0:resultID>
+			<wescml-sf0:resultMethod>http://wescml.org/def/CalculatedMeterValue</wescml-sf0:resultMethod>
+			<wescml-sf0:resultUnitsOfMeasure>http://qudt.org/vocab/unit#Kilowatthour</wescml-sf0:resultUnitsOfMeasure>
+			<wescml-sf0:resultUnitsOfMeasureLabel>kilowatthour</wescml-sf0:resultUnitsOfMeasureLabel>
+			<wescml-sf0:spatialGeometry>
+				<gml:Point gml:id="e_meter_5005_location">
+					<gml:pos>-25.0 119.0</gml:pos>
+				</gml:Point>
+			</wescml-sf0:spatialGeometry>
+			<wescml-sf0:utilityID>http://wescml.org/utility/electricity/1</wescml-sf0:utilityID>
+			<wescml-sf0:utilityName>ACME Electricity</wescml-sf0:utilityName>
+			<wescml-sf0:readingType>peak</wescml-sf0:readingType>
+		</wescml-sf0:ElectricityMeterReading>
+	</gml:featureMember>
+	<!-- This wfs:member is an example of an individual electricity meter reading. Lot size is unknown and therefore left out -->
+	<gml:featureMember>
+		<wescml-sf0:WaterMeterReading gml:id="w_meter_5005_26012012">
+			<wescml-sf0:GNAF_ID>454574568</wescml-sf0:GNAF_ID>
+			<wescml-sf0:meterID>http://wescml.org/feature/w_meter_5005</wescml-sf0:meterID>
+			<wescml-sf0:propertyID>http://wescml.org/property/454574568</wescml-sf0:propertyID>
+			<wescml-sf0:propertyTypeLabel>strata property</wescml-sf0:propertyTypeLabel>
+			<wescml-sf0:propertyTypeURI>http://wescml.org/def/StrataProperty</wescml-sf0:propertyTypeURI>
+			<wescml-sf0:readingDate>2012-01-26</wescml-sf0:readingDate>
+			<wescml-sf0:readingValue>99670</wescml-sf0:readingValue>
+			<wescml-sf0:resultID>http://wescml.org/feature/w_meter_5005/26012012</wescml-sf0:resultID>
+			<wescml-sf0:resultMethod>http://wescml.org/def/ManualMeterValue</wescml-sf0:resultMethod>
+			<wescml-sf0:resultUnitsOfMeasure>http://environment.data.gov.au/water/quality/def/unit/Megalitre</wescml-sf0:resultUnitsOfMeasure>
+			<wescml-sf0:resultUnitsOfMeasureLabel>megalitre</wescml-sf0:resultUnitsOfMeasureLabel>
+			<!-- The water meter is at the same location as the electricity meter location, therefore a reference to the geometry specified there can be used. Alternatively a new geometry and id can be specified -->
+			<wescml-sf0:spatialGeometry xlink:href="#e_meter_5005_location"/>
+			<wescml-sf0:utilityID>http://wescml.org/utility/water/1</wescml-sf0:utilityID>
+			<wescml-sf0:utilityName>ACME Water</wescml-sf0:utilityName>
+		</wescml-sf0:WaterMeterReading>
+	</gml:featureMember>
+	<!-- This wfs:member is an example of an individual water supply value -->
+	<gml:featureMember>
+		<wescml-sf0:WaterSupply gml:id="w_supply_1">
+			<wescml-sf0:utilityID>http://wescml.org/utility/water/1</wescml-sf0:utilityID>
+			<wescml-sf0:utilityName>ACME Water</wescml-sf0:utilityName>
+			<wescml-sf0:supplyRegionName>ACME water region</wescml-sf0:supplyRegionName>
+			<wescml-sf0:utilitySupplyRegion>
+				<gml:Polygon srsName="http://www.opengis.net/def/crs/EPSG/0/4326" gml:id="LOCAL_ID_1">
+					<gml:exterior>
+						<gml:LinearRing>
+							<gml:posList srsDimension="2" count="7">-3.6470548505734 55.4873225351353 -3.64428004011609 55.488397575696 -3.63483715790909 55.4914599200904 -3.63646799657096 55.4913000575058 -3.64136937627433 55.4903279605393 -3.64694807316954 55.4888017130295 -3.6470548505734 55.4873225351353</gml:posList>
+						</gml:LinearRing>
+					</gml:exterior>
+				</gml:Polygon>
+			</wescml-sf0:utilitySupplyRegion>
+			<wescml-sf0:startDeliveryTime>2012-01-01T00:00:00+10:00</wescml-sf0:startDeliveryTime>
+			<wescml-sf0:endDeliveryTime>2012-01-01T24:00:00+10:00</wescml-sf0:endDeliveryTime>
+			<wescml-sf0:supplyUnitsOfMeasureLabel>megalitre</wescml-sf0:supplyUnitsOfMeasureLabel>
+			<wescml-sf0:supplyUnitsOfMeasureURI>http://environment.data.gov.au/water/quality/def/unit/MegaLitre</wescml-sf0:supplyUnitsOfMeasureURI>
+			<wescml-sf0:outflowID>http://wescml.org/outflow/utility/water/1/26012012</wescml-sf0:outflowID>
+			<wescml-sf0:consumerOutflows>1295</wescml-sf0:consumerOutflows>
+			<wescml-sf0:environmentOutflows>75</wescml-sf0:environmentOutflows>
+		</wescml-sf0:WaterSupply>
+	</gml:featureMember>
+	<!-- This wfs:member is an example of an individual electricity supply value -->
+	<gml:featureMember>
+		<wescml-sf0:ElectricitySupply gml:id="e_supply_1">
+			<wescml-sf0:utilityID>http://wescml.org/utility/electricity/1</wescml-sf0:utilityID>
+			<wescml-sf0:utilityName>ACME Electricity</wescml-sf0:utilityName>
+			<wescml-sf0:supplyRegionName>ACME water region</wescml-sf0:supplyRegionName>
+			<wescml-sf0:utilitySupplyRegion>
+				<gml:Polygon srsName="http://www.opengis.net/def/crs/EPSG/0/4326" gml:id="LOCAL_ID_2">
+					<gml:exterior>
+						<gml:LinearRing>
+							<gml:posList srsDimension="2" count="7">-3.6470548505734 55.4873225351353 -3.64428004011609 55.488397575696 -3.63483715790909 55.4914599200904 -3.63646799657096 55.4913000575058 -3.64136937627433 55.4903279605393 -3.64694807316954 55.4888017130295 -3.6470548505734 55.4873225351353</gml:posList>
+						</gml:LinearRing>
+					</gml:exterior>
+				</gml:Polygon>
+			</wescml-sf0:utilitySupplyRegion>
+			<wescml-sf0:startDeliveryTime>2012-01-01T00:00:00+10:00</wescml-sf0:startDeliveryTime>
+			<wescml-sf0:endDeliveryTime>2012-01-01T24:00:00+10:00</wescml-sf0:endDeliveryTime>
+			<wescml-sf0:supplyUnitsOfMeasureLabel>megawatthour</wescml-sf0:supplyUnitsOfMeasureLabel>
+			<wescml-sf0:supplyUnitsOfMeasureURI>http://environment.data.gov.au/water/quality/def/unit/MegaWattHour</wescml-sf0:supplyUnitsOfMeasureURI>
+			<wescml-sf0:supplyID>http://wescml.org/outflow/utility/electricity/1/26012012</wescml-sf0:supplyID>
+			<wescml-sf0:totalSupply>1295</wescml-sf0:totalSupply>
+		</wescml-sf0:ElectricitySupply>
+	</gml:featureMember>
+	<!-- This wfs:member is an example of combined water meter readings for 4 meters over the first quarter 2012  -->
+	<gml:featureMember>
+		<wescml-sf0:CombinedMeterReadings gml:id="combined_1">
+			<wescml-sf0:aggregationID>URI/aggregated_water/1Q2012</wescml-sf0:aggregationID>
+			<wescml-sf0:commodityType>water</wescml-sf0:commodityType>
+			<wescml-sf0:utilityID>http://wescml.org/utility/water/1</wescml-sf0:utilityID>
+			<wescml-sf0:utilityName>AACME Water</wescml-sf0:utilityName>
+			<wescml-sf0:aggregationStartDateTime>2012-01-01T00:00:00+10:00</wescml-sf0:aggregationStartDateTime>
+			<wescml-sf0:aggregationEndDateTime>2012-03-31T00:00:00+10:00</wescml-sf0:aggregationEndDateTime>
+			<wescml-sf0:geometryID>ABS/ID</wescml-sf0:geometryID>
+			<wescml-sf0:spatialRepresentation>
+				<gml:Polygon srsName="http://www.opengis.net/def/crs/EPSG/0/4326" gml:id="LOCAL_ID_3">
+					<gml:exterior>
+						<gml:LinearRing>
+							<gml:posList srsDimension="2" count="7">-3.6470548505734 55.4873225351353 -3.64428004011609 55.488397575696 -3.63483715790909 55.4914599200904 -3.63646799657096 55.4913000575058 -3.64136937627433 55.4903279605393 -3.64694807316954 55.4888017130295 -3.6470548505734 55.4873225351353</gml:posList>
+						</gml:LinearRing>
+					</gml:exterior>
+				</gml:Polygon>
+			</wescml-sf0:spatialRepresentation>
+			<wescml-sf0:propertyTypeURI>http://wescml.org/def/StrataProperty</wescml-sf0:propertyTypeURI>
+			<wescml-sf0:propertyTypeLabel>strata property</wescml-sf0:propertyTypeLabel>
+			<wescml-sf0:resultProcedure>interpolated and aggregated</wescml-sf0:resultProcedure>
+			<wescml-sf0:unitsURI>http://environment.data.gov.au/water/quality/def/unit/Megalitre</wescml-sf0:unitsURI>
+			<wescml-sf0:unitsLabel>megalitre</wescml-sf0:unitsLabel>
+			<wescml-sf0:numberOfMeters>4</wescml-sf0:numberOfMeters>
+			<wescml-sf0:numberOfReadings>4</wescml-sf0:numberOfReadings>
+			<wescml-sf0:resultTotal>2400</wescml-sf0:resultTotal>
+			<wescml-sf0:resultAverage>600</wescml-sf0:resultAverage>
+			<wescml-sf0:resultMedian>118</wescml-sf0:resultMedian>
+		</wescml-sf0:CombinedMeterReadings>
+	</gml:featureMember>
+</wfs:FeatureCollection>

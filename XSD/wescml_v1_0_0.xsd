@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wescml="http://xmlns.wescml.org" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://xmlns.wescml.org" elementFormDefault="qualified" version="1.0.0">
+	<xs:import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:annotation>
+		<xs:documentation>Application schema to allow delivery of Utility data (water, gas, electricity) in GML</xs:documentation>
+	</xs:annotation>
+	<xs:element name="ElectricityMeterReading" type="wescml:ElectricityMeterReadingType" substitutionGroup="wescml:MeterReading"/>
+	<xs:complexType name="ElectricityMeterReadingType">
+		<xs:complexContent>
+			<xs:extension base="wescml:MeterReadingType">
+				<xs:sequence>
+					<xs:element name="readingType" type="xs:string">
+					<xs:annotation>
+							<xs:documentation>Type of reading. Examples are 'feed-in', off peak', 'peak', 'self generated'</xs:documentation>
+						</xs:annotation>
+						</xs:element>
+					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricityMeterReadingPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:ElectricityMeterReading"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="ElectricitySupply" type="wescml:ElectricitySupplyType" substitutionGroup="wescml:UtilitySupplyData"/>
+	<xs:complexType name="ElectricitySupplyType">
+		<xs:complexContent>
+			<xs:extension base="wescml:UtilitySupplyDataType">
+				<xs:sequence>
+					<xs:element name="totalSupply" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>The amount of electricity supplied for the period defined by the startDeliveryTime to endDeliveryTime.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supplyID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>ID of the supply record</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ElectricitySupplyPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:ElectricitySupply"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="GasMeterReading" type="wescml:GasMeterReadingType" substitutionGroup="wescml:MeterReading"/>
+	<xs:complexType name="GasMeterReadingType">
+		<xs:complexContent>
+			<xs:extension base="wescml:MeterReadingType">
+			<!--	<xs:sequence>
+					<xs:element name="readingValue" type="xs:double"/>
+				</xs:sequence> -->
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="GasMeterReadingPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:GasMeterReading"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="MeterReading" type="wescml:MeterReadingType" abstract="true" substitutionGroup="gml:AbstractFeature">
+		<xs:annotation>
+			<xs:documentation>Device that records water consumption at a location</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="MeterReadingType" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="GNAF_ID" type="xs:integer"/>
+					<xs:element name="lotSize" type="xs:double" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="meterID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Meter ID - should be a persistent ID in form of http URI</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="propertyID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>ID of the individual property</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="propertyType" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Type of property</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="readingDate" type="xs:date">
+						<xs:annotation>
+							<xs:documentation>Date that the recorded value was made or inferred</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="resultID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>ID of the individual result</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="resultMethod" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Method used to calculate reading ("Manual Reading", "Customer Value", "Calculated")</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="resultUnitsOfMeasure" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Specifies the result units of measure. Note that the same units of measure must be used for all results for any reading (eg peak, off-peak, feed-in, self-generated results must all have the same units).</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="spatialGeometry" type="gml:PointPropertyType"/>
+					<xs:element name="utilityID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>ID of the supplying utility</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="utilityName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>ID of the supplying utility</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="readingValue" type="xs:double">
+					<xs:annotation>
+							<xs:documentation>Value of the reading</xs:documentation>
+						</xs:annotation>
+						</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="MeterReadingPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:MeterReading"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="UtilitySupplyData" type="wescml:UtilitySupplyDataType" substitutionGroup="gml:AbstractFeature">
+		<xs:annotation>
+			<xs:documentation>Features to deliver utility supply data </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="UtilitySupplyDataType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="utilityID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The identifier of the Utility supplying the energy or water</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="utilityName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The name of the Utility supplying the energy or water</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="startDeliveryTime" type="xs:dateTime">
+						<xs:annotation>
+							<xs:documentation>Starting date and time of the supply period </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="utilitySupplyRegion" type="gml:GeometryPropertyType">
+						<xs:annotation>
+							<xs:documentation>The geographical area for the data from the Utility supplying the energy or water</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="endDeliveryTime" type="xs:dateTime">
+						<xs:annotation>
+							<xs:documentation>Finishing date and time of the supply period </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supplyRegionName" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The name of the region being supplied by energy or water</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="supplyUnitsOfMeasure" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>Units used to record the supply data</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UtilitySupplyDataPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:UtilitySupplyData"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="WaterMeterReading" type="wescml:WaterMeterReadingType" substitutionGroup="wescml:MeterReading"/>
+	<xs:complexType name="WaterMeterReadingType">
+		<xs:complexContent>
+			<xs:extension base="wescml:MeterReadingType">
+			<!--
+				<xs:sequence>
+					<xs:element name="readingValue" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>Value of the reading</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+-->
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WaterMeterReadingPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:WaterMeterReading"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+	<xs:element name="WaterSupply" type="wescml:WaterSupplyType" substitutionGroup="wescml:UtilitySupplyData">
+		<xs:annotation>
+			<xs:documentation>Water supplied from a Utility</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="WaterSupplyType">
+		<xs:complexContent>
+			<xs:extension base="wescml:UtilitySupplyDataType">
+				<xs:sequence>
+					<xs:element name="consumerOutflows" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>The amount of water supplied to customers</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="environmentOutflows" type="xs:double">
+						<xs:annotation>
+							<xs:documentation>The amount of water supplied to the environment</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="outflowID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>The ID of the water outflow</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="WaterSupplyPropertyType">
+		<xs:sequence>
+			<xs:element ref="wescml:WaterSupply"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
+		<xs:attributeGroup ref="gml:OwnershipAttributeGroup"/>
+	</xs:complexType>
+</xs:schema>
