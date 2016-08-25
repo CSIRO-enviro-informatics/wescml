@@ -18,7 +18,7 @@ See also [wescml.org](http://wescml.org#overview) for an overview.
 - Simons, Bruce; Yu, Jonathan (2015): WESCML Information Model. v1. CSIRO. Data Collection. [http://doi.org/10.4225/08/574D1DEEA50DD](http://doi.org/10.4225/08/574D1DEEA50DD)
 - Simons, Bruce; Yu, Jonathan; Leighton, Benjamin (2016): [WESCML: A Data Standard for Exchanging Water and Energy Supply and Consumption Data](http://dx.doi.org/10.1016/j.proeng.2016.07.451), 12th International Hydroinformatics Conference, Incheon, South Korea, August 2016., IWA. [dx.doi.org/10.1016/j.proeng.2016.07.451](http://dx.doi.org/10.1016/j.proeng.2016.07.451)
 
-# Related papers
+## Related papers
 
 - Yu, Jonathan; Leighton, Ben; Mirza, Fareed; Singh, Ramneek. [Tools for enabling rapid deployment of water and energy consumption and supply data services](http://www.mssanz.org.au/modsim2015/C8/yu.pdf). In: MODSIM 2015; 29/11/15 to 4/12/15; Gold Coast, Queensland, Australia. Modelling and Simulation Society of Australia and New Zealand (MSSANZ); 2015. pp. 781-787.
 - Yu, Jonathan; Lipkin, Felix; Moglia, Magnus. [Novel spatial analysis of residential resource consumption via the Melbourne train network](http://www.mssanz.org.au/modsim2015/M4/yu.pdf). In: Weber, T.; McPhee, M.J.; Anderssen, R.S., editor/s. MODSIM 2015; 29/11/15 to Friday 4/12/15; Gold Coast, Queensland, Australia. Modelling and Simulation Society of Australia and New Zealand (MSSANZ); 2015. p. 1188-1194.
