@@ -1,5 +1,5 @@
-# wescml
-Water and Energy Supply and Consumption info model - A data standard for water and energy supply and consumption
+# WESCML
+Water and Energy Supply and Consumption info model - A data standard for water and energy supply and consumption.
 
 ##About 
 
