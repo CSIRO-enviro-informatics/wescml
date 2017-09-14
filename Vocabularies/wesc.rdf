@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:wesc="http://wescml.org/def/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://wescml.org/def/">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Water and Energy Supply and Consumption Vocabulary</owl:versionInfo>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+  </owl:Ontology>
+  <owl:Ontology rdf:about="http://wesc.org/vocab/inference/">
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></skos:prefLabel>
+  </owl:Ontology>
+  <skos:Collection rdf:about="http://wescml.org/def/WaterDomain">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Water domain</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Water domain</skos:prefLabel>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/WaterConsumption">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Water consumption</skos:prefLabel>
+        <skos:broader>
+          <skos:Concept rdf:about="http://wescml.org/def/Consumption">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Consumption definition</skos:prefLabel>
+            <skos:narrower rdf:resource="http://wescml.org/def/WaterConsumption"/>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/ElectricityConsumption">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Electricity consumption</skos:prefLabel>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/ElectricityConsumptionByDistributionNetwork">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Electricity consumption by distribution network</skos:prefLabel>
+                    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >This type of metering is typically conducted at three levels - residential (which might be approx 100 homes); district and zoned (perhaps only a handful of zones for a large city).  The data is a very important tool in managing and optimising the distribution network and is typically considered as highly confidential due to the competitive nature of the energy distribution and retail marketplace.   </skos:definition>
+                    <rdfs:label>Electricity Consumption By District</rdfs:label>
+                    <skos:broader rdf:resource="http://wescml.org/def/ElectricityConsumption"/>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/ElectricityConsumptionByEndUsers">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Electricity consumption by end users</skos:prefLabel>
+                    <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >For the residential sector, energy data has historically been collected on a quarterly basis.  As with water, it can be assumed that the meter reading process is staged over the year for properties in a given supply zone meaning that consumption for any given three month period will need to be aggregated from more than one meter read.  </skos:definition>
+                    <rdfs:label>Electricity Consumption by end user</rdfs:label>
+                    <skos:broader rdf:resource="http://wescml.org/def/ElectricityConsumption"/>
+                  </skos:Concept>
+                </skos:narrower>
+                <rdfs:label>Electricity Consumption</rdfs:label>
+                <skos:broader rdf:resource="http://wescml.org/def/Consumption"/>
+              </skos:Concept>
+            </skos:narrower>
+            <rdfs:label>Consumption</rdfs:label>
+          </skos:Concept>
+        </skos:broader>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Metered Water consumption for a residential property, or larger commercial/industry properties. For many residential apartments and flats, water consumption meter is read on a monthly basis and the total is split across all units based on a floor space factor not actual consumption.  Meter readings for water can be on-site read or an estimate.</skos:definition>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/WaterConsumptionByEndUsers">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Water consumption by end users</skos:prefLabel>
+            <rdfs:label>Water Consumption by end user</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/WaterConsumption"/>
+          </skos:Concept>
+        </skos:narrower>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/DistrictWaterConsumption">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >District water consumption</skos:prefLabel>
+            <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >District Metering of the Water Supply Network. Typically this data is collected at much higher frequency (daily or higher) and is used by the utility to manage operations.  It can be useful from a research perspective but is often very difficult to interpret as there is no relation to specific end user consumption.  For a single house, the complexity of the distribution network means that water may flow through several different sections of pipe to arrive at the property; from an operational perspective, the utility may be moving water through a section of pipe and it bares no relationship to consumption</skos:definition>
+            <rdfs:label>District water consumption</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/WaterConsumption"/>
+          </skos:Concept>
+        </skos:narrower>
+        <rdfs:label>Water Consumption</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member rdf:resource="http://wescml.org/def/WaterConsumptionByEndUsers"/>
+    <skos:member rdf:resource="http://wescml.org/def/DistrictWaterConsumption"/>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/BulkWaterSupply">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Bulk water supply</skos:prefLabel>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >This single daily total volume released into the network data point has been more widely used than the district metering data as it provides a total consumption number and can be matched up with weather data to look at the influence of rainfall, evaporation, temperature etc on overall demand.  This data is also typically reported publicly already so there should be no barrier to making it available in AURIN but will not generate much excitement in the research community as it not considered new or novel data</skos:definition>
+        <rdfs:label>Bulk Water Supply</rdfs:label>
+        <skos:broader>
+          <skos:Concept rdf:about="http://wescml.org/def/Supply">
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/BulkElectricityGeneratorSupply">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Bulk electricity generator supply</skos:prefLabel>
+                <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Some information would be available at the scale of the energy generators - however the temporal scale that can be made available to the project is likely to be heavily dependent on the commercial nature of the data.  </skos:definition>
+                <rdfs:label>Bulk Electricity Generator Supply</rdfs:label>
+                <skos:broader rdf:resource="http://wescml.org/def/Supply"/>
+              </skos:Concept>
+            </skos:narrower>
+            <skos:narrower rdf:resource="http://wescml.org/def/BulkWaterSupply"/>
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Supply</skos:prefLabel>
+            <rdfs:label>Supply</rdfs:label>
+          </skos:Concept>
+        </skos:broader>
+      </skos:Concept>
+    </skos:member>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/MeteringCollection">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metering collection</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/MeterReadingType">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Meter reading type</skos:prefLabel>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/PeakMeterReadType">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Peak meter read type</skos:prefLabel>
+            <rdfs:label>Peak Meter Read Type</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeterReadingType"/>
+          </skos:Concept>
+        </skos:narrower>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/OffPeakMeterReadType">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Off peak meter read type</skos:prefLabel>
+            <rdfs:label>Off-peak Meter Read Type</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeterReadingType"/>
+          </skos:Concept>
+        </skos:narrower>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/FeedInMeterReadType">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Feed in meter read type</skos:prefLabel>
+            <rdfs:label>Feed-in Meter Read Type</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeterReadingType"/>
+          </skos:Concept>
+        </skos:narrower>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/SelfGeneratedMeterReadType">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Self generated meter read type</skos:prefLabel>
+            <rdfs:label>Self-generated Meter Read type</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeterReadingType"/>
+          </skos:Concept>
+        </skos:narrower>
+        <rdfs:label>Meter Reading Type</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/MeteringMethod">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Metering method</skos:prefLabel>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/CalculatedMeterValue">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Calculated meter value</skos:prefLabel>
+            <rdfs:label>Calculated Meter Value</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeteringMethod"/>
+          </skos:Concept>
+        </skos:narrower>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/CustomerMeterValue">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Customer meter value</skos:prefLabel>
+            <rdfs:label>Customer Meter Value method</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeteringMethod"/>
+          </skos:Concept>
+        </skos:narrower>
+        <skos:narrower>
+          <skos:Concept rdf:about="http://wescml.org/def/ManualMeterValue">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Manual meter read</skos:prefLabel>
+            <rdfs:label>Manual Meter Value read method</rdfs:label>
+            <skos:broader rdf:resource="http://wescml.org/def/MeteringMethod"/>
+          </skos:Concept>
+        </skos:narrower>
+        <rdfs:label>Metering method</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Metering collection</skos:prefLabel>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/EnergyDomainCollection">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Energy domain collection</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Energy domain collection</skos:prefLabel>
+    <skos:member rdf:resource="http://wescml.org/def/ElectricityConsumptionByDistributionNetwork"/>
+    <skos:member rdf:resource="http://wescml.org/def/BulkElectricityGeneratorSupply"/>
+    <skos:member rdf:resource="http://wescml.org/def/ElectricityConsumptionByEndUsers"/>
+    <skos:member rdf:resource="http://wescml.org/def/ElectricityConsumption"/>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/SupplyDefinitions">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Supply definitions</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Supply definitions</skos:prefLabel>
+    <skos:member rdf:resource="http://wescml.org/def/BulkElectricityGeneratorSupply"/>
+    <skos:member rdf:resource="http://wescml.org/def/Supply"/>
+    <skos:member rdf:resource="http://wescml.org/def/BulkWaterSupply"/>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/LandUseDefinitions">
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/RuralProperty">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Rural property</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Rural property</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/CommercialProperty">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >commercial</skos:prefLabel>
+        <rdfs:label>Commercial Property</rdfs:label>
+        <skos:broader>
+          <skos:Concept rdf:about="http://wescml.org/def/LandUseProperty">
+            <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Property</skos:prefLabel>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/ResidentialProperty">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >residential</skos:prefLabel>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/MultiDwellingResProperty">
+                    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >multi dwelling</skos:altLabel>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Multi dwelling residential property</rdfs:label>
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Multi dwelling residential property</skos:prefLabel>
+                    <skos:narrower>
+                      <skos:Concept rdf:about="http://wescml.org/def/StrataProperty">
+                        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Strata property</skos:prefLabel>
+                        <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >strata</skos:altLabel>
+                        <rdfs:label>Strata property</rdfs:label>
+                        <skos:broader rdf:resource="http://wescml.org/def/MultiDwellingResProperty"/>
+                      </skos:Concept>
+                    </skos:narrower>
+                    <skos:narrower>
+                      <skos:Concept rdf:about="http://wescml.org/def/UnitProperty">
+                        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >unit dwelling</skos:prefLabel>
+                        <rdfs:label>Unit property</rdfs:label>
+                        <skos:broader rdf:resource="http://wescml.org/def/MultiDwellingResProperty"/>
+                      </skos:Concept>
+                    </skos:narrower>
+                    <skos:broader rdf:resource="http://wescml.org/def/ResidentialProperty"/>
+                    <skos:narrower>
+                      <skos:Concept rdf:about="http://wescml.org/def/LowRiseHighDensityResidentialProperty">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Low rise high density residential property</rdfs:label>
+                        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Low rise high density residential property</skos:prefLabel>
+                      </skos:Concept>
+                    </skos:narrower>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/SingleDwellingProperty">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >single dwelling</skos:prefLabel>
+                    <rdfs:label>Single Dwelling Property</rdfs:label>
+                    <skos:broader rdf:resource="http://wescml.org/def/ResidentialProperty"/>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:broader rdf:resource="http://wescml.org/def/LandUseProperty"/>
+                <rdfs:label>Residential Property</rdfs:label>
+              </skos:Concept>
+            </skos:narrower>
+            <skos:narrower rdf:resource="http://wescml.org/def/CommercialProperty"/>
+            <rdfs:label>Land use</rdfs:label>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/IndustrialProperty">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >industrial</skos:prefLabel>
+                <skos:broader rdf:resource="http://wescml.org/def/LandUseProperty"/>
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Industrial property</rdfs:label>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/LightIndustrialProperty">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >light industrial</skos:prefLabel>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Light industrial property</rdfs:label>
+                    <skos:broader rdf:resource="http://wescml.org/def/IndustrialProperty"/>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/HeavyIndustrialProperty">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >heavy industrial</skos:prefLabel>
+                    <skos:broader rdf:resource="http://wescml.org/def/IndustrialProperty"/>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Heavy industrial property</rdfs:label>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/LightManufacturing">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >light manufacturing</skos:prefLabel>
+                    <skos:broader rdf:resource="http://wescml.org/def/IndustrialProperty"/>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Light manufacturing</rdfs:label>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/HeavyManufacturingProperty">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >heavy manufacturing</skos:prefLabel>
+                    <skos:broader rdf:resource="http://wescml.org/def/IndustrialProperty"/>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Heavy manufacturing property</rdfs:label>
+                  </skos:Concept>
+                </skos:narrower>
+              </skos:Concept>
+            </skos:narrower>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/UnknownLandUse">
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Unknown land use</rdfs:label>
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >unknown</skos:prefLabel>
+              </skos:Concept>
+            </skos:narrower>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/MixedLandUse">
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Mixed land use</rdfs:label>
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Mixed land use</skos:prefLabel>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/ResidentialAndCommercialLandUse">
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mixed residential and commercial land use</skos:prefLabel>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mixed residential and commercial land use</rdfs:label>
+                    <skos:broader rdf:resource="http://wescml.org/def/MixedLandUse"/>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:narrower>
+                  <skos:Concept rdf:about="http://wescml.org/def/CommercialAndIndustrialLandUse">
+                    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >nonresidential</skos:altLabel>
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Commercial and industrial land use</rdfs:label>
+                    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Commercial and industrial land use</skos:prefLabel>
+                    <skos:broader rdf:resource="http://wescml.org/def/MixedLandUse"/>
+                  </skos:Concept>
+                </skos:narrower>
+                <skos:broader rdf:resource="http://wescml.org/def/LandUseProperty"/>
+              </skos:Concept>
+            </skos:narrower>
+          </skos:Concept>
+        </skos:broader>
+      </skos:Concept>
+    </skos:member>
+    <skos:member rdf:resource="http://wescml.org/def/ResidentialProperty"/>
+    <skos:member rdf:resource="http://wescml.org/def/UnknownLandUse"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Land use definitions</rdfs:label>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/UnmeteredProperty">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Unmetered property</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Unmetered property</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/SolarMeteredProperty">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Solar metered property</skos:prefLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Solar metered property</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member rdf:resource="http://wescml.org/def/MixedLandUse"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Land use definitions</skos:prefLabel>
+    <skos:member rdf:resource="http://wescml.org/def/IndustrialProperty"/>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/CommodityCollection">
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Commodity collection</skos:prefLabel>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/Electricity">
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >electricity</skos:prefLabel>
+        <skos:broader>
+          <skos:Concept rdf:about="http://wescml.org/def/CommodityType">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Commodity type</rdfs:label>
+            <skos:narrower rdf:resource="http://wescml.org/def/Electricity"/>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/Water">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >water</skos:prefLabel>
+                <skos:broader rdf:resource="http://wescml.org/def/CommodityType"/>
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Water commodity</rdfs:label>
+              </skos:Concept>
+            </skos:narrower>
+            <skos:narrower>
+              <skos:Concept rdf:about="http://wescml.org/def/Gas">
+                <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >gas</skos:prefLabel>
+                <skos:broader rdf:resource="http://wescml.org/def/CommodityType"/>
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Gas Commodity</rdfs:label>
+              </skos:Concept>
+            </skos:narrower>
+          </skos:Concept>
+        </skos:broader>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Electricity Commodity</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+    <skos:member rdf:resource="http://wescml.org/def/Water"/>
+    <skos:member rdf:resource="http://wescml.org/def/Gas"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Commodity collection</rdfs:label>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/UnitsOfMeasureCollection">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Units of measure collection</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Units of measure collection</skos:prefLabel>
+    <skos:member>
+      <skos:Concept rdf:about="http://wescml.org/def/UnitOfMeasure">
+        <skos:narrower>
+          <rdf:Description rdf:about="http://qudt.org/vocab/unit#Kilowatthour">
+            <skos:broader rdf:resource="http://wescml.org/def/UnitOfMeasure"/>
+          </rdf:Description>
+        </skos:narrower>
+        <skos:narrower>
+          <rdf:Description rdf:about="http://environment.data.gov.au/water/quality/def/unit/MegaLitre">
+            <skos:broader rdf:resource="http://wescml.org/def/UnitOfMeasure"/>
+          </rdf:Description>
+        </skos:narrower>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Unit of measure</skos:prefLabel>
+        <rdfs:label>Unit of Measure</rdfs:label>
+      </skos:Concept>
+    </skos:member>
+  </skos:Collection>
+  <skos:Collection rdf:about="http://wescml.org/def/DemandDefinitions">
+    <skos:member rdf:resource="http://wescml.org/def/Consumption"/>
+    <skos:member rdf:resource="http://wescml.org/def/DistrictWaterConsumption"/>
+    <skos:member rdf:resource="http://wescml.org/def/WaterConsumptionByEndUsers"/>
+    <skos:member rdf:resource="http://wescml.org/def/ElectricityConsumptionByDistributionNetwork"/>
+    <skos:member rdf:resource="http://wescml.org/def/ElectricityConsumptionByEndUsers"/>
+    <skos:member rdf:resource="http://wescml.org/def/WaterConsumption"/>
+    <skos:member rdf:resource="http://wescml.org/def/ElectricityConsumption"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Demand definitions</skos:prefLabel>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Demand definitions</rdfs:label>
+  </skos:Collection>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

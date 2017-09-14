@@ -1,0 +1,87 @@
+# baseURI: http://wescml.org/id/organisation/
+# imports: http://w3.org/ns/org
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://xmlns.com/foaf/spec/
+
+@prefix :        <http://wescml.org/id/organisation/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://wescml.org/def/OrganisationCollection>
+      rdf:type skos:Collection ;
+      rdfs:label "Organisation collection"^^xsd:string ;
+      skos:member :nwc , :chw , :esaa , :actewagl , :actewwater , :ausgrid , :abs , :energex , :yvw , :sydney-water ;
+      skos:prefLabel "Organisation collection"^^xsd:string .
+
+:     rdf:type owl:Ontology ;
+      owl:imports <http://w3.org/ns/org> , <http://www.w3.org/2004/02/skos/core> , <http://xmlns.com/foaf/spec/> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+:abs  rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for the ABS. The ABS is Australia’s official statistical organisation which provides statistical datasets across a number of domains relating to government activity. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "Australian Bureau of Statistics"@en ;
+      rdfs:seeAlso <http://www.abs.gov.au> .
+
+:actewagl
+      rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for ACTEW AGL. ACTEW AGL is an energy retailer and distributor supplying reliable essential services to Canberra and the ACT region. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "ACTEW AGL"^^xsd:string ;
+      rdfs:seeAlso <http://www.actewagl.com.au> ;
+      skos:prefLabel "ActewAGL"@en .
+
+:actewwater
+      rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for ACTEW Water. ACTEW Water (soon to be renamed to ICON Water) owns and manages the water and sewerage business and assets in the ACT. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "ACTEW Water"^^xsd:string ;
+      rdfs:seeAlso <http://www.actew.com.au> ;
+      skos:prefLabel "ACTEW Water"@en .
+
+:ausgrid
+      rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for Ausgrid. Ausgrid is a electricity distributor and retailer providing an electricity network homes and businesses throughout Sydney, the Hunter and the Central Coast. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "Ausgrid"^^xsd:string ;
+      rdfs:seeAlso <https://www.ausgrid.com.au> ;
+      skos:prefLabel "Ausgrid"@en .
+
+:chw  rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for CHW. CHW is a regional water corporation providing high quality drinking water, sewerage, trade waste and recycled water services to customers in Ballarat and surrounding towns. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "CHW"^^xsd:string ;
+      rdfs:seeAlso <http://www.chw.net.au> ;
+      skos:prefLabel "Central Highlands Water"@en .
+
+:energex
+      rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for Energex. Energex is manages energy distribution networks and provides energy products, services and expertise to communities in South East Queensland. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "Energex"^^xsd:string ;
+      rdfs:seeAlso <https://www.energex.com.au> ;
+      skos:prefLabel "Energex"@en .
+
+:esaa
+      rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for ESAA. ESAA is the peak industry body representing the stationary energy sector in Australia. ESAA members include government owned corporations and private companies who retail, generate or supply electricity and natural gas to consumers in Australia. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "ESAA"^^xsd:string ;
+      rdfs:seeAlso <http://www.esaa.com.au> ;
+      skos:prefLabel "Energy Supply Association of Australia"@en .
+
+:nwc  rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for NWC. NWC has been providing independent, evidence-based advice to the Council of Australian Governments (COAG) and the Australian Government on national water issues. A function of the NWC was to provide strong, transparent and public reporting on water reform progress through our core functions—monitoring, audit and assessment. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "National Water Commission"^^xsd:string ;
+      rdfs:seeAlso <http://www.nwc.gov.au> ;
+      skos:prefLabel "National Water Commission"@en .
+
+:sydney-water
+      rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for Sydney Water. Sydney Water is a water utility   which supplies water, wastewater, recycled water and some stormwater services to regions including Sydney, the Illawarra and the Blue Mountains regions. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "Sydney Water"^^xsd:string ;
+      rdfs:seeAlso <http://www.sydneywater.com.au> ;
+      skos:prefLabel "Sydney Water"@en .
+
+:yvw  rdf:type skos:Concept , org:Organization ;
+      rdfs:comment "This is a WESC organisation vocabulary definition for Yarra Valley Water. Yarra Valley Water is a water utility that provides water supply and sewerage services communities in the northern and eastern suburbs of Greater Melbourne. This definition uses SKOS/RDF. See rdfs:seeAlso for the organisation's homepage."^^xsd:string ;
+      rdfs:label "Yarra Valley Water"^^xsd:string ;
+      rdfs:seeAlso <https://www.yvw.com.au> ;
+      skos:prefLabel "Yarra Valley Water"@en .

@@ -1,0 +1,3895 @@
+# baseURI: http://wescml.org/def/avpcc/
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix avpcc:   <http://wescml.org/def/avpcc/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf123:  <http://rdf123.umbc.edu/ns/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+avpcc:
+      rdf:type owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> ;
+      owl:versionInfo "Created with TopBraid Composer"^^xsd:string .
+
+<http://wescml.org/def/avpcc/10>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Use Development Land" ;
+      skos:narrower <http://wescml.org/def/avpcc/109> , <http://wescml.org/def/avpcc/103> , <http://wescml.org/def/avpcc/102> , <http://wescml.org/def/avpcc/100> , <http://wescml.org/def/avpcc/101> ;
+      skos:prefLabel "Residential Use Development Land" .
+
+<http://wescml.org/def/avpcc/100>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Residential Dwelling Site/Surveyed Lot" ;
+      skos:definition "Vacant land suitable for the erection of a detached or semi-detached dwelling." ;
+      skos:note "Home Changed to Dwelling" ;
+      skos:prefLabel "Vacant Residential Dwelling Site/Surveyed Lot" .
+
+<http://wescml.org/def/avpcc/101>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for high density residential purposes." ;
+      skos:prefLabel "Residential Development Site" .
+
+<http://wescml.org/def/avpcc/102>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant In globo Residential Subdivisional Land" ;
+      skos:definition "Vacant land zoned for future residential subdivision." ;
+      skos:narrower <http://wescml.org/def/avpcc/102.3> , <http://wescml.org/def/avpcc/102.2> , <http://wescml.org/def/avpcc/102.1> ;
+      skos:prefLabel "Vacant In globo Residential Subdivisional Land" .
+
+<http://wescml.org/def/avpcc/102.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/102.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Subdivisional Land (Multi Lot)" ;
+      skos:prefLabel "Subdivisional Land (Multi Lot)" .
+
+<http://wescml.org/def/avpcc/102.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Subdivisional Land (In globo/Potential)" ;
+      skos:prefLabel "Subdivisional Land (In globo/Potential)" .
+
+<http://wescml.org/def/avpcc/103>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Residential Rural/Rural Lifestyle" ;
+      skos:definition "Vacant land in a rural, semi-rural or bushland setting capable of being developed with a single residential dwelling." ;
+      skos:prefLabel "Vacant Residential Rural/Rural Lifestyle" .
+
+<http://wescml.org/def/avpcc/109>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Airspace" ;
+      skos:definition "Airspace capable of being developed for residential purposes, usually above a rooftop, roadway or railway." ;
+      skos:prefLabel "Residential Airspace" .
+
+<http://wescml.org/def/avpcc/11>
+      rdf:type skos:Concept ;
+      rdfs:label "Single Residential Accommodation" ;
+      skos:narrower <http://wescml.org/def/avpcc/111> , <http://wescml.org/def/avpcc/118> , <http://wescml.org/def/avpcc/115> , <http://wescml.org/def/avpcc/112> , <http://wescml.org/def/avpcc/110> , <http://wescml.org/def/avpcc/116> , <http://wescml.org/def/avpcc/113> , <http://wescml.org/def/avpcc/117> , <http://wescml.org/def/avpcc/114> ;
+      skos:prefLabel "Single Residential Accommodation" .
+
+<http://wescml.org/def/avpcc/110>
+      rdf:type skos:Concept ;
+      rdfs:label "Detached Dwelling" ;
+      skos:definition "Freestanding dwelling on residential land." ;
+      skos:narrower <http://wescml.org/def/avpcc/110.3> , <http://wescml.org/def/avpcc/110.5> , <http://wescml.org/def/avpcc/110.2> , <http://wescml.org/def/avpcc/110.1> , <http://wescml.org/def/avpcc/110.4> ;
+      skos:note "Home Changed to Dwelling" ;
+      skos:prefLabel "Detached Dwelling" .
+
+<http://wescml.org/def/avpcc/110.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/110.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Detached Dwelling (new)" ;
+      skos:note "Home Changed to Dwelling" ;
+      skos:prefLabel "Detached Dwelling (new)" .
+
+<http://wescml.org/def/avpcc/110.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Detached Dwelling (existing)" ;
+      skos:note "Home Changed to Dwelling" ;
+      skos:prefLabel "Detached Dwelling (existing)" .
+
+<http://wescml.org/def/avpcc/110.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Detached Dwelling Non-Conforming Use-Commercial" ;
+      skos:definition "Detached dwelling used for residential purposes on commercial land." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Detached Dwelling Non-Conforming Use-Commercial" .
+
+<http://wescml.org/def/avpcc/110.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Detached Dwelling Non-Conforming Use-Industrial" ;
+      skos:definition "Detached dwelling used for residential purposes on industrial land." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Detached Dwelling Non-Conforming Use-Industrial" .
+
+<http://wescml.org/def/avpcc/111>
+      rdf:type skos:Concept ;
+      rdfs:label "Separate Dwelling and Curtilage" ;
+      skos:definition "Freestanding dwelling on defined curtilage, being part of a larger holding of varying use, e.g. caretaker’s dwelling on industrial site, second dwelling on farm." ;
+      skos:note "Separate House and Curtilage changed to Separate Dwelling and Curtilage" ;
+      skos:prefLabel "Separate Dwelling and Curtilage" .
+
+<http://wescml.org/def/avpcc/112>
+      rdf:type skos:Concept ;
+      rdfs:label "Semi-Detached/Terrace/Row House" ;
+      skos:definition "Attached or semi-detached dwelling that does not share common land." ;
+      skos:narrower <http://wescml.org/def/avpcc/112.3> , <http://wescml.org/def/avpcc/112.4> , <http://wescml.org/def/avpcc/112.1> , <http://wescml.org/def/avpcc/112.2> , <http://wescml.org/def/avpcc/112.5> ;
+      skos:note "Semi-Detached/Terrace Home/Row House changed to Semi-Detached/Terrace/Row House" ;
+      skos:prefLabel "Semi-Detached/Terrace/Row House" .
+
+<http://wescml.org/def/avpcc/112.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/112.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Semi-detached" ;
+      skos:prefLabel "Semi-detached" .
+
+<http://wescml.org/def/avpcc/112.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Terrace" ;
+      skos:prefLabel "Terrace" .
+
+<http://wescml.org/def/avpcc/112.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Row House" ;
+      skos:prefLabel "Row House" .
+
+<http://wescml.org/def/avpcc/112.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Half Pair or Duplex" ;
+      skos:prefLabel "Half Pair or Duplex" .
+
+<http://wescml.org/def/avpcc/113>
+      rdf:type skos:Concept ;
+      rdfs:label "Granny Flat/Studio" ;
+      skos:definition "Dwelling either detached or adjoined to a principal dwelling that is self-contained, connected to services but not subdivided in the present form." ;
+      skos:prefLabel "Granny Flat/Studio" .
+
+<http://wescml.org/def/avpcc/114>
+      rdf:type skos:Concept ;
+      rdfs:label "Dwelling and Dependant Unit" ;
+      skos:definition "Dwelling and dependant unit not permitted to be separately occupied either detached or adjoined, each self-contained, connected to services but not subdivided in the present form." ;
+      skos:note "House and Flat/Studio changed to Dwelling and Dependant Unit" ;
+      skos:prefLabel "Dwelling and Dependant Unit" .
+
+<http://wescml.org/def/avpcc/115>
+      rdf:type skos:Concept ;
+      rdfs:label "Shack/Hut/Donga" ;
+      skos:definition "Basic structure with limited services and amenities, providing basic, short-term accommodation." ;
+      skos:prefLabel "Shack/Hut/Donga" .
+
+<http://wescml.org/def/avpcc/116>
+      rdf:type skos:Concept ;
+      rdfs:label "Cabin/Accommodation (rental/leased individual residential site)" ;
+      skos:definition "A dwelling subject to a site agreement within a larger complex, e.g. caravan park or lifestyle village. The basis of valuation may vary according to legislation." ;
+      skos:prefLabel "Cabin/Accommodation (rental/leased individual residential site)" .
+
+<http://wescml.org/def/avpcc/117>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Rural/Rural Lifestyle" ;
+      skos:definition "A single residential dwelling on land in a rural, semi-rural or bushland setting.  Primary production uses and associated improvements are secondary to the residential use." ;
+      skos:prefLabel "Residential Rural/Rural Lifestyle" .
+
+<http://wescml.org/def/avpcc/118>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Land (with buildings that add no value)" ;
+      skos:definition "Residential land on which the benefit of works (structures erected) upon the land is exhausted." ;
+      skos:prefLabel "Residential Land (with buildings that add no value)" .
+
+<http://wescml.org/def/avpcc/12>
+      rdf:type skos:Concept ;
+      rdfs:label "Multiple Occupation (within residential development)" ;
+      skos:narrower <http://wescml.org/def/avpcc/120> , <http://wescml.org/def/avpcc/125> , <http://wescml.org/def/avpcc/127> , <http://wescml.org/def/avpcc/129> , <http://wescml.org/def/avpcc/124> , <http://wescml.org/def/avpcc/126> , <http://wescml.org/def/avpcc/121> , <http://wescml.org/def/avpcc/123> , <http://wescml.org/def/avpcc/128> ;
+      skos:prefLabel "Multiple Occupation (within residential development)" .
+
+<http://wescml.org/def/avpcc/120>
+      rdf:type skos:Concept ;
+      rdfs:label "Single Strata Unit/Villa Unit/Townhouse" ;
+      skos:definition "Freestanding and unattached unit with ground level footprint." ;
+      skos:narrower <http://wescml.org/def/avpcc/120.1> , <http://wescml.org/def/avpcc/120.7> , <http://wescml.org/def/avpcc/120.2> , <http://wescml.org/def/avpcc/120.4> , <http://wescml.org/def/avpcc/120.3> , <http://wescml.org/def/avpcc/120.6> , <http://wescml.org/def/avpcc/120.5> ;
+      skos:prefLabel "Single Strata Unit/Villa Unit/Townhouse" .
+
+<http://wescml.org/def/avpcc/120.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/120.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Single Strata Unit" ;
+      skos:prefLabel "Single Strata Unit" .
+
+<http://wescml.org/def/avpcc/120.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Villa Unit" ;
+      skos:prefLabel "Villa Unit" .
+
+<http://wescml.org/def/avpcc/120.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Townhouse" ;
+      skos:prefLabel "Townhouse" .
+
+<http://wescml.org/def/avpcc/120.5>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Subdivided Dwelling" ;
+      skos:prefLabel "OYO Subdivided Dwelling" .
+
+<http://wescml.org/def/avpcc/120.6>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Subdivided Unit" ;
+      skos:prefLabel "OYO Subdivided Unit" .
+
+<http://wescml.org/def/avpcc/120.7>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Unit" ;
+      skos:prefLabel "OYO Unit" .
+
+<http://wescml.org/def/avpcc/121>
+      rdf:type skos:Concept ;
+      rdfs:label "Conjoined Strata Unit/Townhouse" ;
+      skos:definition "Unit/Townhouse with common walls/party walls with ground level footprint." ;
+      skos:narrower <http://wescml.org/def/avpcc/121.4> , <http://wescml.org/def/avpcc/121.3> , <http://wescml.org/def/avpcc/121.1> , <http://wescml.org/def/avpcc/121.2> ;
+      skos:prefLabel "Conjoined Strata Unit/Townhouse" .
+
+<http://wescml.org/def/avpcc/121.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/121.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Half Pair or Duplex" ;
+      skos:prefLabel "Half Pair or Duplex" .
+
+<http://wescml.org/def/avpcc/121.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Conjoined Strata Unit" ;
+      skos:prefLabel "Conjoined Strata Unit" .
+
+<http://wescml.org/def/avpcc/121.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Townhouse" ;
+      skos:prefLabel "Townhouse" .
+
+<http://wescml.org/def/avpcc/123>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Company Share Unit (ground level)" ;
+      skos:definition "Unit with a ground level footprint where the land is defined by shares in a complex, which gives right to occupy a particular unit. Fully serviced and equipped for long term residential occupation." ;
+      skos:narrower <http://wescml.org/def/avpcc/123.4> , <http://wescml.org/def/avpcc/123.3> , <http://wescml.org/def/avpcc/123.6> , <http://wescml.org/def/avpcc/123.2> , <http://wescml.org/def/avpcc/123.5> , <http://wescml.org/def/avpcc/123.1> ;
+      skos:prefLabel "Residential Company Share Unit (ground level)" .
+
+<http://wescml.org/def/avpcc/123.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/123.2>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Company Share Unit" ;
+      skos:prefLabel "OYO Company Share Unit" .
+
+<http://wescml.org/def/avpcc/123.3>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Stratum Flat" ;
+      skos:prefLabel "OYO Stratum Flat" .
+
+<http://wescml.org/def/avpcc/123.4>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Stratum Unit" ;
+      skos:prefLabel "OYO Stratum Unit" .
+
+<http://wescml.org/def/avpcc/123.5>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Company Share Flat" ;
+      skos:prefLabel "OYO Company Share Flat" .
+
+<http://wescml.org/def/avpcc/123.6>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Cluster Unit" ;
+      skos:prefLabel "OYO Cluster Unit" .
+
+<http://wescml.org/def/avpcc/124>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Company Share Unit (within multi-storey development)" ;
+      skos:definition "Unit which forms part of a multi-storey development where the land is defined by shares in a complex which gives rights to occupy a particular unit. Fully serviced and equipped for long term residential occupation." ;
+      skos:prefLabel "Residential Company Share Unit (within multi-storey development)" .
+
+<http://wescml.org/def/avpcc/125>
+      rdf:type skos:Concept ;
+      rdfs:label "Strata unit or flat" ;
+      skos:definition "Unit or flat that forms part of a multi-storey development that has been subdivided." ;
+      skos:narrower <http://wescml.org/def/avpcc/125.2> , <http://wescml.org/def/avpcc/125.1> , <http://wescml.org/def/avpcc/125.4> , <http://wescml.org/def/avpcc/125.3> ;
+      skos:prefLabel "Strata unit or flat" .
+
+<http://wescml.org/def/avpcc/125.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/125.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Strata Dwelling" ;
+      skos:prefLabel "Strata Dwelling" .
+
+<http://wescml.org/def/avpcc/125.3>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Subdivided Flat" ;
+      skos:prefLabel "OYO Subdivided Flat" .
+
+<http://wescml.org/def/avpcc/125.4>
+      rdf:type skos:Concept ;
+      rdfs:label "OYO Strata Flat" ;
+      skos:prefLabel "OYO Strata Flat" .
+
+<http://wescml.org/def/avpcc/126>
+      rdf:type skos:Concept ;
+      rdfs:label "Individual Car Park" ;
+      skos:definition "Individual car park associated with residential use." ;
+      skos:prefLabel "Individual Car Park" .
+
+<http://wescml.org/def/avpcc/127>
+      rdf:type skos:Concept ;
+      rdfs:label "Individual Berth" ;
+      skos:definition "Individual berth associated with residential use." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Individual Berth" .
+
+<http://wescml.org/def/avpcc/128>
+      rdf:type skos:Concept ;
+      rdfs:label "Individual Flat" ;
+      skos:definition "Single flat used for residential purposes within a larger property, e.g. caretakers flat or dwelling above a shop." ;
+      skos:note "New AVPCC moved from 132" ;
+      skos:prefLabel "Individual Flat" .
+
+<http://wescml.org/def/avpcc/129>
+      rdf:type skos:Concept ;
+      rdfs:label "Common Land associated with a residential development" ;
+      skos:definition "Designated common space, e.g. driveway, gardens or common parking." ;
+      skos:prefLabel "Common Land associated with a residential development" .
+
+<http://wescml.org/def/avpcc/13>
+      rdf:type skos:Concept ;
+      rdfs:label "Investment Residential" ;
+      skos:narrower <http://wescml.org/def/avpcc/135> , <http://wescml.org/def/avpcc/133> , <http://wescml.org/def/avpcc/131> , <http://wescml.org/def/avpcc/130> ;
+      skos:prefLabel "Investment Residential" .
+
+<http://wescml.org/def/avpcc/130>
+      rdf:type skos:Concept ;
+      rdfs:label "Boarding House" ;
+      skos:definition "Land with a building that is registered to provide long term single room accommodation with shared facilities." ;
+      skos:note "Changed from Boarding House/Private Hotel/Dormitory Accommodation/University Residential College to Boarding House" ;
+      skos:prefLabel "Boarding House" .
+
+<http://wescml.org/def/avpcc/131>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Investment Flats" ;
+      skos:definition "A flat that forms part of a complex of two or more flats on land not subdivided." ;
+      skos:prefLabel "Residential Investment Flats" .
+
+<http://wescml.org/def/avpcc/133>
+      rdf:type skos:Concept ;
+      rdfs:label "Short Term Holiday Accommodation" ;
+      skos:definition "A residential property used exclusively for short term holiday accommodation for persons away from their normal place of residence." ;
+      skos:prefLabel "Short Term Holiday Accommodation" .
+
+<http://wescml.org/def/avpcc/135>
+      rdf:type skos:Concept ;
+      rdfs:label "Dormitory Accommodation/University Residential College" ;
+      skos:definition "Residential accommodation for students usually with shared facilities which is controlled or operated by a registered educational provider." ;
+      skos:narrower <http://wescml.org/def/avpcc/135.3> , <http://wescml.org/def/avpcc/135.1> , <http://wescml.org/def/avpcc/135.2> ;
+      skos:note "New AVPCC was previously part of 130" ;
+      skos:prefLabel "Dormitory Accommodation/University Residential College" .
+
+<http://wescml.org/def/avpcc/135.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/135.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Dormitory Accommodation" ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Dormitory Accommodation" .
+
+<http://wescml.org/def/avpcc/135.3>
+      rdf:type skos:Concept ;
+      rdfs:label "University Residential College" ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "University Residential College" .
+
+<http://wescml.org/def/avpcc/14>
+      rdf:type skos:Concept ;
+      rdfs:label "Retirement/Aged Care Accommodation/Special Accommodation" ;
+      skos:narrower <http://wescml.org/def/avpcc/144> , <http://wescml.org/def/avpcc/143> , <http://wescml.org/def/avpcc/142> , <http://wescml.org/def/avpcc/141> , <http://wescml.org/def/avpcc/140> ;
+      skos:prefLabel "Retirement/Aged Care Accommodation/Special Accommodation" .
+
+<http://wescml.org/def/avpcc/140>
+      rdf:type skos:Concept ;
+      rdfs:label "Retirement Village Unit" ;
+      skos:definition "Individual unit with self-contained facilities that forms part of retirement village." ;
+      skos:prefLabel "Retirement Village Unit" .
+
+<http://wescml.org/def/avpcc/141>
+      rdf:type skos:Concept ;
+      rdfs:label "Retirement Village Complex" ;
+      skos:definition "Land on which a retirement village complex which provides accommodation with shared facilities, amenities and services is erected." ;
+      skos:prefLabel "Retirement Village Complex" .
+
+<http://wescml.org/def/avpcc/142>
+      rdf:type skos:Concept ;
+      rdfs:label "Aged Care Complex" ;
+      skos:definition "Land developed with a registered care facility that provides residential accommodation and care services for people, particularly the elderly who can no longer live independently." ;
+      skos:narrower <http://wescml.org/def/avpcc/142.3> , <http://wescml.org/def/avpcc/142.2> , <http://wescml.org/def/avpcc/142.1> ;
+      skos:note "Changed from Aged Care Complex/Special Accommodation/Nursing Home to Aged Care Complex" ;
+      skos:prefLabel "Aged Care Complex" .
+
+<http://wescml.org/def/avpcc/142.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/142.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Aged Care Complex" ;
+      skos:prefLabel "Aged Care Complex" .
+
+<http://wescml.org/def/avpcc/142.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Nursing Home" ;
+      skos:prefLabel "Nursing Home" .
+
+<http://wescml.org/def/avpcc/143>
+      rdf:type skos:Concept ;
+      rdfs:label "Special Accommodation" ;
+      skos:definition "Land with residential accommodation provided by registered providers for people with defined medical, social or special support needs." ;
+      skos:note "Changed from Aged Care Amenities Buildings to Special Accommodation" ;
+      skos:prefLabel "Special Accommodation" .
+
+<http://wescml.org/def/avpcc/144>
+      rdf:type skos:Concept ;
+      rdfs:label "Disability Housing" ;
+      skos:definition "Land on which purpose built housing accommodation for people with disabilities is erected." ;
+      skos:prefLabel "Disability Housing" .
+
+<http://wescml.org/def/avpcc/15>
+      rdf:type skos:Concept ;
+      rdfs:label "Ancillary Buildings" ;
+      skos:narrower <http://wescml.org/def/avpcc/151> , <http://wescml.org/def/avpcc/150> ;
+      skos:prefLabel "Ancillary Buildings" .
+
+<http://wescml.org/def/avpcc/150>
+      rdf:type skos:Concept ;
+      rdfs:label "Miscellaneous Improvements on Residential Land" ;
+      skos:definition "Residential land, on which miscellaneous improvements only are erected, e.g. garages and sheds." ;
+      skos:narrower <http://wescml.org/def/avpcc/150.3> , <http://wescml.org/def/avpcc/150.2> , <http://wescml.org/def/avpcc/150.1> ;
+      skos:prefLabel "Miscellaneous Improvements on Residential Land" .
+
+<http://wescml.org/def/avpcc/150.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/150.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Storage Area" ;
+      skos:prefLabel "Storage Area" .
+
+<http://wescml.org/def/avpcc/150.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Garage/Outbuilding" ;
+      skos:prefLabel "Garage/Outbuilding" .
+
+<http://wescml.org/def/avpcc/151>
+      rdf:type skos:Concept ;
+      rdfs:label "Miscellaneous Improvements on Residential Rural Land" ;
+      skos:definition "Land within a rural, semi-rural or bushland setting and capable of being developed with a single residential dwelling on which miscellaneous improvements only are erected, e.g. garages and sheds." ;
+      skos:narrower <http://wescml.org/def/avpcc/151.4> , <http://wescml.org/def/avpcc/151.3> , <http://wescml.org/def/avpcc/151.2> , <http://wescml.org/def/avpcc/151.1> ;
+      skos:prefLabel "Miscellaneous Improvements on Residential Rural Land" .
+
+<http://wescml.org/def/avpcc/151.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/151.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Storage Area" ;
+      skos:prefLabel "Storage Area" .
+
+<http://wescml.org/def/avpcc/151.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Garage/Outbuilding" ;
+      skos:prefLabel "Garage/Outbuilding" .
+
+<http://wescml.org/def/avpcc/151.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Site Improvements" ;
+      skos:prefLabel "Site Improvements" .
+
+<http://wescml.org/def/avpcc/20>
+      rdf:type skos:Concept ;
+      rdfs:label "Commercial Use Development Land" ;
+      skos:narrower <http://wescml.org/def/avpcc/209> , <http://wescml.org/def/avpcc/202> , <http://wescml.org/def/avpcc/201> , <http://wescml.org/def/avpcc/200> ;
+      skos:prefLabel "Commercial Use Development Land" .
+
+<http://wescml.org/def/avpcc/200>
+      rdf:type skos:Concept ;
+      rdfs:label "Commercial Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for commercial or mixed use purposes." ;
+      skos:prefLabel "Commercial Development Site" .
+
+<http://wescml.org/def/avpcc/201>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant In globo Commercial Land" ;
+      skos:definition "Land which is zoned for future commercial subdivision/development." ;
+      skos:prefLabel "Vacant In globo Commercial Land" .
+
+<http://wescml.org/def/avpcc/202>
+      rdf:type skos:Concept ;
+      rdfs:label "Commercial Land (with buildings that add no value)" ;
+      skos:definition "Commercial land on which the benefit of works (structures erected) upon it is exhausted." ;
+      skos:prefLabel "Commercial Land (with buildings that add no value)" .
+
+<http://wescml.org/def/avpcc/209>
+      rdf:type skos:Concept ;
+      rdfs:label "Commercial Airspace" ;
+      skos:definition "Airspace capable of being developed for commercial purposes, usually above a rooftop, roadway, railway." ;
+      skos:note "Changed from Commercial Development Airspace to Commercial Airspace" ;
+      skos:prefLabel "Commercial Airspace" .
+
+<http://wescml.org/def/avpcc/21>
+      rdf:type skos:Concept ;
+      rdfs:label "Retail" ;
+      skos:narrower <http://wescml.org/def/avpcc/217> , <http://wescml.org/def/avpcc/214> , <http://wescml.org/def/avpcc/211> , <http://wescml.org/def/avpcc/219> , <http://wescml.org/def/avpcc/215> , <http://wescml.org/def/avpcc/212> , <http://wescml.org/def/avpcc/216> , <http://wescml.org/def/avpcc/213> , <http://wescml.org/def/avpcc/210> , <http://wescml.org/def/avpcc/218> ;
+      skos:prefLabel "Retail" .
+
+<http://wescml.org/def/avpcc/210>
+      rdf:type skos:Concept ;
+      rdfs:label "Retail Premises (single occupancy)" ;
+      skos:definition "Land with retail premises used for the sale of goods or services." ;
+      skos:narrower <http://wescml.org/def/avpcc/210.8> , <http://wescml.org/def/avpcc/210.1> , <http://wescml.org/def/avpcc/210.6> , <http://wescml.org/def/avpcc/210.4> , <http://wescml.org/def/avpcc/210.9> , <http://wescml.org/def/avpcc/210.7> , <http://wescml.org/def/avpcc/210.5> , <http://wescml.org/def/avpcc/210.2> , <http://wescml.org/def/avpcc/210.3> ;
+      skos:note "Retail Premises (single occupancy/single title/single stratum) changed to Retail Premises (single occupancy)" ;
+      skos:prefLabel "Retail Premises (single occupancy)" .
+
+<http://wescml.org/def/avpcc/210.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/210.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Bank" ;
+      skos:prefLabel "Bank" .
+
+<http://wescml.org/def/avpcc/210.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Retail Store/Showroom" ;
+      skos:prefLabel "Retail Store/Showroom" .
+
+<http://wescml.org/def/avpcc/210.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Shop" ;
+      skos:prefLabel "Shop" .
+
+<http://wescml.org/def/avpcc/210.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Café" ;
+      skos:prefLabel "Café" .
+
+<http://wescml.org/def/avpcc/210.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Timber Yard/Trade Supplies" ;
+      skos:prefLabel "Timber Yard/Trade Supplies" .
+
+<http://wescml.org/def/avpcc/210.7>
+      rdf:type skos:Concept ;
+      rdfs:label "Display Yard" ;
+      skos:prefLabel "Display Yard" .
+
+<http://wescml.org/def/avpcc/210.8>
+      rdf:type skos:Concept ;
+      rdfs:label "Convenience Store/Fast Food" ;
+      skos:prefLabel "Convenience Store/Fast Food" .
+
+<http://wescml.org/def/avpcc/210.9>
+      rdf:type skos:Concept ;
+      rdfs:label "Plant/Tree Nursery" ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Plant/Tree Nursery" .
+
+<http://wescml.org/def/avpcc/211>
+      rdf:type skos:Concept ;
+      rdfs:label "Retail Premises (multiple occupancies)" ;
+      skos:definition "Land with more than one retail premises used for the sale of goods or services, regarded as a complex and not subdivided." ;
+      skos:narrower <http://wescml.org/def/avpcc/211.3> , <http://wescml.org/def/avpcc/211.2> , <http://wescml.org/def/avpcc/211.1> ;
+      skos:note "Retail Premises (multiple occupancies, usually single title, or the parent title for stratum units) changed to Retail Premises (multiple occupancies)" ;
+      skos:prefLabel "Retail Premises (multiple occupancies)" .
+
+<http://wescml.org/def/avpcc/211.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/211.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Shop and Dwelling (single occupancy)" ;
+      skos:prefLabel "Shop and Dwelling (single occupancy)" .
+
+<http://wescml.org/def/avpcc/211.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Office and Dwelling (single occupancy)" ;
+      skos:prefLabel "Office and Dwelling (single occupancy)" .
+
+<http://wescml.org/def/avpcc/212>
+      rdf:type skos:Concept ;
+      rdfs:label "Mixed Use Occupation" ;
+      skos:definition "Land that includes mixed occupancies, including shops and offices regarded as a complex and not subdivided." ;
+      skos:narrower <http://wescml.org/def/avpcc/212.6> , <http://wescml.org/def/avpcc/212.5> , <http://wescml.org/def/avpcc/212.4> , <http://wescml.org/def/avpcc/212.3> , <http://wescml.org/def/avpcc/212.1> ;
+      skos:prefLabel "Mixed Use Occupation" .
+
+<http://wescml.org/def/avpcc/212.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/212.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Office" ;
+      skos:note "212.2 Dwelling removed, alternative/s in residential." ;
+      skos:prefLabel "Office" .
+
+<http://wescml.org/def/avpcc/212.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Shop" ;
+      skos:prefLabel "Shop" .
+
+<http://wescml.org/def/avpcc/212.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Studio" ;
+      skos:prefLabel "Studio" .
+
+<http://wescml.org/def/avpcc/212.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Workroom" ;
+      skos:prefLabel "Workroom" .
+
+<http://wescml.org/def/avpcc/213>
+      rdf:type skos:Concept ;
+      rdfs:label "Shopping Centre" ;
+      skos:definition "Land developed with a significant retail complex comprising a number of unsubdivided retail premises, parking and associated infrastructure." ;
+      skos:narrower <http://wescml.org/def/avpcc/213.2> , <http://wescml.org/def/avpcc/213.1> , <http://wescml.org/def/avpcc/213.6> , <http://wescml.org/def/avpcc/213.5> , <http://wescml.org/def/avpcc/213.4> , <http://wescml.org/def/avpcc/213.3> ;
+      skos:prefLabel "Shopping Centre" .
+
+<http://wescml.org/def/avpcc/213.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/213.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Super Regional" ;
+      skos:prefLabel "Super Regional" .
+
+<http://wescml.org/def/avpcc/213.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Major Regional" ;
+      skos:prefLabel "Major Regional" .
+
+<http://wescml.org/def/avpcc/213.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Regional" ;
+      skos:prefLabel "Regional" .
+
+<http://wescml.org/def/avpcc/213.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Sub Regional" ;
+      skos:prefLabel "Sub Regional" .
+
+<http://wescml.org/def/avpcc/213.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Neighbourhood" ;
+      skos:prefLabel "Neighbourhood" .
+
+<http://wescml.org/def/avpcc/214>
+      rdf:type skos:Concept ;
+      rdfs:label "National Company Retail" ;
+      skos:definition "Land developed with a purpose built structure and normally occupied by a national company, e.g. supermarket, hardware and home wares." ;
+      skos:narrower <http://wescml.org/def/avpcc/214.4> , <http://wescml.org/def/avpcc/214.3> , <http://wescml.org/def/avpcc/214.2> , <http://wescml.org/def/avpcc/214.1> ;
+      skos:prefLabel "National Company Retail" .
+
+<http://wescml.org/def/avpcc/214.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/214.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Supermarket" ;
+      skos:prefLabel "Supermarket" .
+
+<http://wescml.org/def/avpcc/214.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Department/Discount Department Store" ;
+      skos:prefLabel "Department/Discount Department Store" .
+
+<http://wescml.org/def/avpcc/214.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Bulky Goods" ;
+      skos:prefLabel "Bulky Goods" .
+
+<http://wescml.org/def/avpcc/215>
+      rdf:type skos:Concept ;
+      rdfs:label "Fuel Outlet/Garage/Service Station" ;
+      skos:definition "Land used predominantly for fuel sales (multiple pumps) may include car repair and servicing facilities." ;
+      skos:prefLabel "Fuel Outlet/Garage/Service Station" .
+
+<http://wescml.org/def/avpcc/216>
+      rdf:type skos:Concept ;
+      rdfs:label "Multi-Purpose Fuel Outlet (fuel/food/groceries)" ;
+      skos:definition "Land used as a service centre usually including fuel sales, retail, restaurant and takeaway food facilities." ;
+      skos:prefLabel "Multi-Purpose Fuel Outlet (fuel/food/groceries)" .
+
+<http://wescml.org/def/avpcc/217>
+      rdf:type skos:Concept ;
+      rdfs:label "Bottle Shop/Licensed Liquor Outlet" ;
+      skos:definition "Land developed with a purpose built structure and normally occupied by a national company licensed for the sale of packaged alcohol." ;
+      skos:prefLabel "Bottle Shop/Licensed Liquor Outlet" .
+
+<http://wescml.org/def/avpcc/218>
+      rdf:type skos:Concept ;
+      rdfs:label "Licensed Retail Premises" ;
+      skos:definition "Retail premises licensed to sell packaged alcohol." ;
+      skos:prefLabel "Licensed Retail Premises" .
+
+<http://wescml.org/def/avpcc/219>
+      rdf:type skos:Concept ;
+      rdfs:label "Market Stall" ;
+      skos:definition "A stall within a market used for the sale of goods and services, e.g. stall at Queen Victoria Market." ;
+      skos:prefLabel "Market Stall" .
+
+<http://wescml.org/def/avpcc/22>
+      rdf:type skos:Concept ;
+      rdfs:label "Office" ;
+      skos:narrower <http://wescml.org/def/avpcc/223> , <http://wescml.org/def/avpcc/222> , <http://wescml.org/def/avpcc/221> , <http://wescml.org/def/avpcc/220> ;
+      skos:prefLabel "Office" .
+
+<http://wescml.org/def/avpcc/220>
+      rdf:type skos:Concept ;
+      rdfs:label "Office Premises" ;
+      skos:definition "Land used as an office for administration, technical, professional or other like business activity." ;
+      skos:narrower <http://wescml.org/def/avpcc/220.4> , <http://wescml.org/def/avpcc/220.3> , <http://wescml.org/def/avpcc/220.2> , <http://wescml.org/def/avpcc/220.1> ;
+      skos:note "Changed from Office Premises (single occupancy/single title/single stratum) to Office Premises" ;
+      skos:prefLabel "Office Premises" .
+
+<http://wescml.org/def/avpcc/220.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/220.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Office (Converted dwelling)" ;
+      skos:prefLabel "Office (Converted dwelling)" .
+
+<http://wescml.org/def/avpcc/220.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Serviced Office" ;
+      skos:prefLabel "Serviced Office" .
+
+<http://wescml.org/def/avpcc/220.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Strata/Subdivided Office" ;
+      skos:prefLabel "Strata/Subdivided Office" .
+
+<http://wescml.org/def/avpcc/221>
+      rdf:type skos:Concept ;
+      rdfs:label "Low Rise Office Building" ;
+      skos:definition "Land developed with a 1-3 level office building and used for administration, technical, professional or other like business activity." ;
+      skos:prefLabel "Low Rise Office Building" .
+
+<http://wescml.org/def/avpcc/222>
+      rdf:type skos:Concept ;
+      rdfs:label "Multi-Level Office Building" ;
+      skos:definition "Land developed with a 4+ level office building and used for administration, technical, professional or other like business activity." ;
+      skos:narrower <http://wescml.org/def/avpcc/222.3> , <http://wescml.org/def/avpcc/222.2> , <http://wescml.org/def/avpcc/222.1> ;
+      skos:prefLabel "Multi-Level Office Building" .
+
+<http://wescml.org/def/avpcc/222.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/222.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Medium rise (4 to 50 levels)" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Medium rise (4 to 50 levels)" .
+
+<http://wescml.org/def/avpcc/222.3>
+      rdf:type skos:Concept ;
+      rdfs:label "High Rise (50+ levels)" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "High Rise (50+ levels)" .
+
+<http://wescml.org/def/avpcc/223>
+      rdf:type skos:Concept ;
+      rdfs:label "Special Purpose (built-in technology)" ;
+      skos:definition "Land developed as a purpose-built facility with a high technology component, e.g. call centre." ;
+      skos:prefLabel "Special Purpose (built-in technology)" .
+
+<http://wescml.org/def/avpcc/23>
+      rdf:type skos:Concept ;
+      rdfs:label "Short Term Business and Tourist Accommodation" ;
+      skos:narrower <http://wescml.org/def/avpcc/232> , <http://wescml.org/def/avpcc/237> , <http://wescml.org/def/avpcc/236> , <http://wescml.org/def/avpcc/235> , <http://wescml.org/def/avpcc/234> , <http://wescml.org/def/avpcc/231> , <http://wescml.org/def/avpcc/233> , <http://wescml.org/def/avpcc/230> ;
+      skos:prefLabel "Short Term Business and Tourist Accommodation" .
+
+<http://wescml.org/def/avpcc/230>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Hotel/Motel/Apartment Hotel Complex" ;
+      skos:definition "Land used to provide accommodation in serviced rooms for persons away from their normal place of residence." ;
+      skos:narrower <http://wescml.org/def/avpcc/230.2> , <http://wescml.org/def/avpcc/230.5> , <http://wescml.org/def/avpcc/230.4> , <http://wescml.org/def/avpcc/230.7> , <http://wescml.org/def/avpcc/230.6> , <http://wescml.org/def/avpcc/230.1> , <http://wescml.org/def/avpcc/230.3> ;
+      skos:prefLabel "Residential Hotel/Motel/Apartment Hotel Complex" .
+
+<http://wescml.org/def/avpcc/230.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/230.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Hotel" ;
+      skos:prefLabel "Residential Hotel" .
+
+<http://wescml.org/def/avpcc/230.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Motel" ;
+      skos:prefLabel "Motel" .
+
+<http://wescml.org/def/avpcc/230.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Apartment Hotel Complex" ;
+      skos:prefLabel "Apartment Hotel Complex" .
+
+<http://wescml.org/def/avpcc/230.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Tourist Resort Complex" ;
+      skos:prefLabel "Tourist Resort Complex" .
+
+<http://wescml.org/def/avpcc/230.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Hotel" ;
+      skos:prefLabel "Hotel" .
+
+<http://wescml.org/def/avpcc/230.7>
+      rdf:type skos:Concept ;
+      rdfs:label "Private Hotel" ;
+      skos:note "New AVPCC moved from residential was part of 130" ;
+      skos:prefLabel "Private Hotel" .
+
+<http://wescml.org/def/avpcc/231>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential Hotel/Motel/Apartment Hotel Units" ;
+      skos:definition "Subdivided units forming part of a single complex operated as a hotel/motel." ;
+      skos:prefLabel "Residential Hotel/Motel/Apartment Hotel Units" .
+
+<http://wescml.org/def/avpcc/232>
+      rdf:type skos:Concept ;
+      rdfs:label "Serviced Apartments/Holiday Units" ;
+      skos:definition "Unit/s within a development used to provide short term accommodation as serviced apartments." ;
+      skos:narrower <http://wescml.org/def/avpcc/232.3> , <http://wescml.org/def/avpcc/232.2> , <http://wescml.org/def/avpcc/232.1> ;
+      skos:prefLabel "Serviced Apartments/Holiday Units" .
+
+<http://wescml.org/def/avpcc/232.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/232.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Holiday Units" ;
+      skos:prefLabel "Holiday Units" .
+
+<http://wescml.org/def/avpcc/232.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Serviced Apartments" ;
+      skos:prefLabel "Serviced Apartments" .
+
+<http://wescml.org/def/avpcc/233>
+      rdf:type skos:Concept ;
+      rdfs:label "Bed and Breakfast" ;
+      skos:definition "Land developed with short-term accommodation, permitted in serviced rooms for persons away from their normal place of residence." ;
+      skos:prefLabel "Bed and Breakfast" .
+
+<http://wescml.org/def/avpcc/234>
+      rdf:type skos:Concept ;
+      rdfs:label "Tourist Park/Caravan Park/Camping Ground" ;
+      skos:definition "Land registered as a caravan park and developed with cabins, caravan and camping sites, administration/ablution amenities and recreational facilities." ;
+      skos:prefLabel "Tourist Park/Caravan Park/Camping Ground" .
+
+<http://wescml.org/def/avpcc/235>
+      rdf:type skos:Concept ;
+      rdfs:label "Guest Lodge/Back Packers/Bunkhouse/Hostel" ;
+      skos:definition "Land providing basic, short-term residential accommodation usually with shared bathroom and self-service catering facilities." ;
+      skos:narrower <http://wescml.org/def/avpcc/235.4> , <http://wescml.org/def/avpcc/235.3> , <http://wescml.org/def/avpcc/235.2> , <http://wescml.org/def/avpcc/235.1> ;
+      skos:prefLabel "Guest Lodge/Back Packers/Bunkhouse/Hostel" .
+
+<http://wescml.org/def/avpcc/235.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/235.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Guest Lodge" ;
+      skos:prefLabel "Guest Lodge" .
+
+<http://wescml.org/def/avpcc/235.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Back Packers/ Hostel" ;
+      skos:prefLabel "Back Packers/ Hostel" .
+
+<http://wescml.org/def/avpcc/235.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Bunkhouse" ;
+      skos:prefLabel "Bunkhouse" .
+
+<http://wescml.org/def/avpcc/236>
+      rdf:type skos:Concept ;
+      rdfs:label "Ski lodge/ Member facility" ;
+      skos:definition "Land developed with short term accommodation for members or guests of a ski lodge/club." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Ski lodge/ Member facility" .
+
+<http://wescml.org/def/avpcc/237>
+      rdf:type skos:Concept ;
+      rdfs:label "Recreation Camp" ;
+      skos:definition "Land developed with accommodation used by persons or groups for holiday or recreational purposes provided by a commercial operator, e.g. student, youth or family groups." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Recreation Camp" .
+
+<http://wescml.org/def/avpcc/24>
+      rdf:type skos:Concept ;
+      rdfs:label "Hospitality" ;
+      skos:narrower <http://wescml.org/def/avpcc/246> , <http://wescml.org/def/avpcc/240> , <http://wescml.org/def/avpcc/242> , <http://wescml.org/def/avpcc/245> , <http://wescml.org/def/avpcc/244> , <http://wescml.org/def/avpcc/247> , <http://wescml.org/def/avpcc/241> , <http://wescml.org/def/avpcc/243> ;
+      skos:prefLabel "Hospitality" .
+
+<http://wescml.org/def/avpcc/240>
+      rdf:type skos:Concept ;
+      rdfs:label "Pub/Tavern/Hotel/Licensed Club/Restaurant/Licensed Restaurant/Nightclub" ;
+      skos:definition "Land licensed to sell liquor but is not permitted to provide gaming facilities. May provide meals, limited accommodation, and/or entertainment." ;
+      skos:narrower <http://wescml.org/def/avpcc/240.1> , <http://wescml.org/def/avpcc/240.9> , <http://wescml.org/def/avpcc/240.5> , <http://wescml.org/def/avpcc/240.2> , <http://wescml.org/def/avpcc/240.6> , <http://wescml.org/def/avpcc/240.3> , <http://wescml.org/def/avpcc/240.7> , <http://wescml.org/def/avpcc/240.4> , <http://wescml.org/def/avpcc/240.8> ;
+      skos:prefLabel "Pub/Tavern/Hotel/Licensed Club/Restaurant/Licensed Restaurant/Nightclub" .
+
+<http://wescml.org/def/avpcc/240.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/240.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Pub" ;
+      skos:prefLabel "Pub" .
+
+<http://wescml.org/def/avpcc/240.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Tavern" ;
+      skos:prefLabel "Tavern" .
+
+<http://wescml.org/def/avpcc/240.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Hotel" ;
+      skos:prefLabel "Hotel" .
+
+<http://wescml.org/def/avpcc/240.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Licensed Club" ;
+      skos:prefLabel "Licensed Club" .
+
+<http://wescml.org/def/avpcc/240.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Restaurant" ;
+      skos:prefLabel "Restaurant" .
+
+<http://wescml.org/def/avpcc/240.7>
+      rdf:type skos:Concept ;
+      rdfs:label "Licensed Restaurant" ;
+      skos:prefLabel "Licensed Restaurant" .
+
+<http://wescml.org/def/avpcc/240.8>
+      rdf:type skos:Concept ;
+      rdfs:label "Nightclub/Cabaret" ;
+      skos:prefLabel "Nightclub/Cabaret" .
+
+<http://wescml.org/def/avpcc/240.9>
+      rdf:type skos:Concept ;
+      rdfs:label "Reception/Function Centre" ;
+      skos:note "Changed from Reception/Function Room to Reception/Function Centre" ;
+      skos:prefLabel "Reception/Function Centre" .
+
+<http://wescml.org/def/avpcc/241>
+      rdf:type skos:Concept ;
+      rdfs:label "Hotel–Gaming" ;
+      skos:definition "Land licensed to sell liquor and is permitted to provide gaming facilities. May provide meals, limited accommodation, and/or entertainment." ;
+      skos:prefLabel "Hotel–Gaming" .
+
+<http://wescml.org/def/avpcc/242>
+      rdf:type skos:Concept ;
+      rdfs:label "Club–Gaming – stand alone" ;
+      skos:definition "Land permitted to provide gaming facilities associated with a special purpose organisation, e.g. ethnic club, RSL. Access is normally subject to entry conditions." ;
+      skos:prefLabel "Club–Gaming – stand alone" .
+
+<http://wescml.org/def/avpcc/243>
+      rdf:type skos:Concept ;
+      rdfs:label "Member Club Facility" ;
+      skos:definition "Land upon which the use of the facilities are restricted by membership requirements. Entry is not available to non-members. May contain any combination of liquor sales, meals and limited accommodation, e.g. RACV member club, The Australian Club." ;
+      skos:prefLabel "Member Club Facility" .
+
+<http://wescml.org/def/avpcc/244>
+      rdf:type skos:Concept ;
+      rdfs:label "Casino" ;
+      skos:definition "Land with special operating permit for a large gaming facility." ;
+      skos:prefLabel "Casino" .
+
+<http://wescml.org/def/avpcc/245>
+      rdf:type skos:Concept ;
+      rdfs:label "National Company Restaurant" ;
+      skos:definition "Land occupied by a national company and used as a fast food outlet, e.g. KFC, McDonalds." ;
+      skos:prefLabel "National Company Restaurant" .
+
+<http://wescml.org/def/avpcc/246>
+      rdf:type skos:Concept ;
+      rdfs:label "Kiosk" ;
+      skos:definition "Land developed with a small retail facility commonly found in public areas, e.g. parks, transport hubs." ;
+      skos:prefLabel "Kiosk" .
+
+<http://wescml.org/def/avpcc/247>
+      rdf:type skos:Concept ;
+      rdfs:label "Conference/Convention centre" ;
+      skos:definition "Land developed with purpose built facilities used for conference or convention centre purposes." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Conference/Convention centre" .
+
+<http://wescml.org/def/avpcc/25>
+      rdf:type skos:Concept ;
+      rdfs:label "Entertainment – Cinema, Live Theatre and Amusements (non-sporting)" ;
+      skos:narrower <http://wescml.org/def/avpcc/253> , <http://wescml.org/def/avpcc/252> , <http://wescml.org/def/avpcc/251> , <http://wescml.org/def/avpcc/250> ;
+      skos:prefLabel "Entertainment – Cinema, Live Theatre and Amusements (non-sporting)" .
+
+<http://wescml.org/def/avpcc/250>
+      rdf:type skos:Concept ;
+      rdfs:label "Live Entertainment – Major Multi-Purpose Complex" ;
+      skos:definition "Land developed with a large purpose-built venue used for a wide variety of live entertainment, e.g. Melbourne Arts Centre." ;
+      skos:prefLabel "Live Entertainment – Major Multi-Purpose Complex" .
+
+<http://wescml.org/def/avpcc/251>
+      rdf:type skos:Concept ;
+      rdfs:label "Cinema Complex" ;
+      skos:definition "Land developed as a cinema complex incorporating theatres, either stand alone or within a larger complex." ;
+      skos:prefLabel "Cinema Complex" .
+
+<http://wescml.org/def/avpcc/252>
+      rdf:type skos:Concept ;
+      rdfs:label "Playhouse/Traditional Theatre" ;
+      skos:definition "Land developed as a theatre, either stand alone or within a larger complex." ;
+      skos:prefLabel "Playhouse/Traditional Theatre" .
+
+<http://wescml.org/def/avpcc/253>
+      rdf:type skos:Concept ;
+      rdfs:label "Drive-In" ;
+      skos:definition "Land with an outdoor movie theatre with drive-in parking facilities." ;
+      skos:note "Changed from Drive-Ins to Drive-In" ;
+      skos:prefLabel "Drive-In" .
+
+<http://wescml.org/def/avpcc/26>
+      rdf:type skos:Concept ;
+      rdfs:label "Tourism Facilities/Infrastructure" ;
+      skos:narrower <http://wescml.org/def/avpcc/263> , <http://wescml.org/def/avpcc/262> , <http://wescml.org/def/avpcc/261> , <http://wescml.org/def/avpcc/260> ;
+      skos:prefLabel "Tourism Facilities/Infrastructure" .
+
+<http://wescml.org/def/avpcc/260>
+      rdf:type skos:Concept ;
+      rdfs:label "Large Theme Attraction/Park" ;
+      skos:definition "Land developed as a high profile theme park with attractions, e.g. Sovereign Hill, Ballarat." ;
+      skos:note "Changed from Large Theme Attractions/Parks (includes heritage villages etc.) to Large Theme Attraction/Park" ;
+      skos:prefLabel "Large Theme Attraction/Park" .
+
+<http://wescml.org/def/avpcc/261>
+      rdf:type skos:Concept ;
+      rdfs:label "Amusement Park" ;
+      skos:definition "Land developed as purpose built amusement park with limited rides and attractions, e.g. Luna Park, Melbourne." ;
+      skos:note "Changed from Amusement Parks etc. to Amusement Park" ;
+      skos:prefLabel "Amusement Park" .
+
+<http://wescml.org/def/avpcc/262>
+      rdf:type skos:Concept ;
+      rdfs:label "Major Infrastructure Attractions (often associated with a major historic or feature natural location)." ;
+      skos:definition "Land associated with a major tourist attraction destination, e.g. Penguin Parade at Phillip Island, Otway Fly Treetop Walk." ;
+      skos:prefLabel "Major Infrastructure Attractions (often associated with a major historic or feature natural location)." .
+
+<http://wescml.org/def/avpcc/263>
+      rdf:type skos:Concept ;
+      rdfs:label "Tourism Infrastructure – Local Attractions" ;
+      skos:definition "Land associated with a local tourist attraction, e.g. cable cars, water slides, chair lifts, tourist railways." ;
+      skos:prefLabel "Tourism Infrastructure – Local Attractions" .
+
+<http://wescml.org/def/avpcc/27>
+      rdf:type skos:Concept ;
+      rdfs:label "Personal Services" ;
+      skos:narrower <http://wescml.org/def/avpcc/275> , <http://wescml.org/def/avpcc/274> , <http://wescml.org/def/avpcc/273> , <http://wescml.org/def/avpcc/272> , <http://wescml.org/def/avpcc/271> , <http://wescml.org/def/avpcc/270> ;
+      skos:prefLabel "Personal Services" .
+
+<http://wescml.org/def/avpcc/270>
+      rdf:type skos:Concept ;
+      rdfs:label "Health Surgery" ;
+      skos:definition "Land used by a health practitioner in a stand-alone practice." ;
+      skos:prefLabel "Health Surgery" .
+
+<http://wescml.org/def/avpcc/271>
+      rdf:type skos:Concept ;
+      rdfs:label "Health Clinic" ;
+      skos:definition "Land used as consulting suites by health practitioners within an unsubdivided complex, e.g. doctor, chiropractor, dentist, radiologist." ;
+      skos:narrower <http://wescml.org/def/avpcc/271.5> , <http://wescml.org/def/avpcc/271.4> , <http://wescml.org/def/avpcc/271.3> , <http://wescml.org/def/avpcc/271.2> , <http://wescml.org/def/avpcc/271.1> ;
+      skos:prefLabel "Health Clinic" .
+
+<http://wescml.org/def/avpcc/271.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/271.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Diagnostic Centre/X-Ray" ;
+      skos:prefLabel "Diagnostic Centre/X-Ray" .
+
+<http://wescml.org/def/avpcc/271.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Medical Centre/Surgery" ;
+      skos:prefLabel "Medical Centre/Surgery" .
+
+<http://wescml.org/def/avpcc/271.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Dental Clinic" ;
+      skos:prefLabel "Dental Clinic" .
+
+<http://wescml.org/def/avpcc/271.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Super Clinic" ;
+      skos:prefLabel "Super Clinic" .
+
+<http://wescml.org/def/avpcc/272>
+      rdf:type skos:Concept ;
+      rdfs:label "Brothel" ;
+      skos:definition "Land permitted to be used for the business of providing prostitution services." ;
+      skos:prefLabel "Brothel" .
+
+<http://wescml.org/def/avpcc/273>
+      rdf:type skos:Concept ;
+      rdfs:label "Crematorium/Funeral Services" ;
+      skos:definition "Land that is purpose built for undertaking funeral services." ;
+      skos:prefLabel "Crematorium/Funeral Services" .
+
+<http://wescml.org/def/avpcc/274>
+      rdf:type skos:Concept ;
+      rdfs:label "Automatic Teller Machine" ;
+      skos:definition "An ATM facility that is not within or attached to banking premises. Can be standalone or separately occupied." ;
+      skos:prefLabel "Automatic Teller Machine" .
+
+<http://wescml.org/def/avpcc/275>
+      rdf:type skos:Concept ;
+      rdfs:label "Veterinary Clinic" ;
+      skos:definition "Land used by a veterinary practitioner to treat animals. It may include keeping animals on the premises for treatment or adoption." ;
+      skos:prefLabel "Veterinary Clinic" .
+
+<http://wescml.org/def/avpcc/28>
+      rdf:type skos:Concept ;
+      rdfs:label "Vehicle Car Parking, Washing and Sales" ;
+      skos:narrower <http://wescml.org/def/avpcc/285> , <http://wescml.org/def/avpcc/284> , <http://wescml.org/def/avpcc/283> , <http://wescml.org/def/avpcc/282> , <http://wescml.org/def/avpcc/281> , <http://wescml.org/def/avpcc/280> ;
+      skos:prefLabel "Vehicle Car Parking, Washing and Sales" .
+
+<http://wescml.org/def/avpcc/280>
+      rdf:type skos:Concept ;
+      rdfs:label "Ground Level Parking" ;
+      skos:definition "Land used for ground level parking." ;
+      skos:prefLabel "Ground Level Parking" .
+
+<http://wescml.org/def/avpcc/281>
+      rdf:type skos:Concept ;
+      rdfs:label "Multi-Storey Car Park" ;
+      skos:definition "Land developed as a multi-storey car parking facility." ;
+      skos:prefLabel "Multi-Storey Car Park" .
+
+<http://wescml.org/def/avpcc/282>
+      rdf:type skos:Concept ;
+      rdfs:label "Individual Car Park Site" ;
+      skos:definition "A subdivided car park within a commercial property. Can be leased individually or as part of a single complex by a car park operator." ;
+      skos:narrower <http://wescml.org/def/avpcc/282.3> , <http://wescml.org/def/avpcc/282.2> , <http://wescml.org/def/avpcc/282.1> ;
+      skos:prefLabel "Individual Car Park Site" .
+
+<http://wescml.org/def/avpcc/282.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/282.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Car park – Under Cover" ;
+      skos:prefLabel "Car park – Under Cover" .
+
+<http://wescml.org/def/avpcc/282.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Car park – Open Air" ;
+      skos:prefLabel "Car park – Open Air" .
+
+<http://wescml.org/def/avpcc/283>
+      rdf:type skos:Concept ;
+      rdfs:label "Car Wash" ;
+      skos:definition "Land developed as a purpose built car wash facility. Can be stand alone or part of a larger property." ;
+      skos:prefLabel "Car Wash" .
+
+<http://wescml.org/def/avpcc/284>
+      rdf:type skos:Concept ;
+      rdfs:label "Vehicle Sales Centre" ;
+      skos:definition "Land used for the preparation and display of new or second hand vehicles for sale." ;
+      skos:prefLabel "Vehicle Sales Centre" .
+
+<http://wescml.org/def/avpcc/285>
+      rdf:type skos:Concept ;
+      rdfs:label "Vehicle Rental Centre" ;
+      skos:definition "Land used for the preparation, storage and display of vehicles available for hire." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Vehicle Rental Centre" .
+
+<http://wescml.org/def/avpcc/29>
+      rdf:type skos:Concept ;
+      rdfs:label "Advertising or Public Information Screens" ;
+      skos:narrower <http://wescml.org/def/avpcc/293> , <http://wescml.org/def/avpcc/290> ;
+      skos:prefLabel "Advertising or Public Information Screens" .
+
+<http://wescml.org/def/avpcc/290>
+      rdf:type skos:Concept ;
+      rdfs:label "Advertising Sign" ;
+      skos:definition "Land upon which an advertising sign is erected may be stand alone or form part of a larger property." ;
+      skos:narrower <http://wescml.org/def/avpcc/290.5> , <http://wescml.org/def/avpcc/290.2> , <http://wescml.org/def/avpcc/290.3> , <http://wescml.org/def/avpcc/290.1> , <http://wescml.org/def/avpcc/290.4> ;
+      skos:note "Changed from Static Non Electrical Advertising sign non lighting to Advertising Sign." ;
+      skos:prefLabel "Advertising Sign" .
+
+<http://wescml.org/def/avpcc/290.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/290.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Self-Standing Pole" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Self-Standing Pole" .
+
+<http://wescml.org/def/avpcc/290.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Bridge Fixed" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Bridge Fixed" .
+
+<http://wescml.org/def/avpcc/290.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Roof Mounted" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Roof Mounted" .
+
+<http://wescml.org/def/avpcc/290.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Wall Fixed" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Wall Fixed" .
+
+<http://wescml.org/def/avpcc/293>
+      rdf:type skos:Concept ;
+      rdfs:label "Electronic Stadium/Street TV Relay Screen/Scoreboard" ;
+      skos:definition "Land upon which electronic screen or scoreboard used for the display of live media and information. May be stand alone or form part of a larger property." ;
+      skos:prefLabel "Electronic Stadium/Street TV Relay Screen/Scoreboard" .
+
+<http://wescml.org/def/avpcc/30>
+      rdf:type skos:Concept ;
+      rdfs:label "Industrial Use Development Land" ;
+      skos:narrower <http://wescml.org/def/avpcc/303> , <http://wescml.org/def/avpcc/302> , <http://wescml.org/def/avpcc/301> , <http://wescml.org/def/avpcc/300> ;
+      skos:prefLabel "Industrial Use Development Land" .
+
+<http://wescml.org/def/avpcc/300>
+      rdf:type skos:Concept ;
+      rdfs:label "Industrial Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for industrial use." ;
+      skos:prefLabel "Industrial Development Site" .
+
+<http://wescml.org/def/avpcc/301>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Industrial In globo Land" ;
+      skos:definition "Land which is zoned for future industrial subdivision/development." ;
+      skos:prefLabel "Vacant Industrial In globo Land" .
+
+<http://wescml.org/def/avpcc/302>
+      rdf:type skos:Concept ;
+      rdfs:label "Industrial Airspace" ;
+      skos:definition "Airspace capable of being developed for industrial purposes, usually above a rooftop, roadway, railway." ;
+      skos:prefLabel "Industrial Airspace" .
+
+<http://wescml.org/def/avpcc/303>
+      rdf:type skos:Concept ;
+      rdfs:label "Industrial Land (with buildings which add no value)" ;
+      skos:definition "Industrial land on which the benefit of works (structures erected) upon it is exhausted." ;
+      skos:prefLabel "Industrial Land (with buildings which add no value)" .
+
+<http://wescml.org/def/avpcc/31>
+      rdf:type skos:Concept ;
+      rdfs:label "Manufacturing" ;
+      skos:narrower <http://wescml.org/def/avpcc/312> , <http://wescml.org/def/avpcc/311> , <http://wescml.org/def/avpcc/310> ;
+      skos:prefLabel "Manufacturing" .
+
+<http://wescml.org/def/avpcc/310>
+      rdf:type skos:Concept ;
+      rdfs:label "General Purpose Factory" ;
+      skos:definition "Land used for manufacturing, assembly or repairs.  May have specialised/purpose built structures." ;
+      skos:narrower <http://wescml.org/def/avpcc/310.4> , <http://wescml.org/def/avpcc/310.3> , <http://wescml.org/def/avpcc/310.2> , <http://wescml.org/def/avpcc/310.1> , <http://wescml.org/def/avpcc/310.6> , <http://wescml.org/def/avpcc/310.5> ;
+      skos:prefLabel "General Purpose Factory" .
+
+<http://wescml.org/def/avpcc/310.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/310.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Factory Unit" ;
+      skos:prefLabel "Factory Unit" .
+
+<http://wescml.org/def/avpcc/310.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Factory" ;
+      skos:prefLabel "Factory" .
+
+<http://wescml.org/def/avpcc/310.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Garage/Motor Vehicle Repairs" ;
+      skos:prefLabel "Garage/Motor Vehicle Repairs" .
+
+<http://wescml.org/def/avpcc/310.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Office/Factory" ;
+      skos:prefLabel "Office/Factory" .
+
+<http://wescml.org/def/avpcc/310.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Workshop" ;
+      skos:prefLabel "Workshop" .
+
+<http://wescml.org/def/avpcc/311>
+      rdf:type skos:Concept ;
+      rdfs:label "Food Processing Factory" ;
+      skos:definition "Land developed with purpose built food processing facilities, e.g. cannery, milk production plant." ;
+      skos:narrower <http://wescml.org/def/avpcc/311.3> , <http://wescml.org/def/avpcc/311.2> , <http://wescml.org/def/avpcc/311.1> ;
+      skos:prefLabel "Food Processing Factory" .
+
+<http://wescml.org/def/avpcc/311.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/311.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Processing Plant" ;
+      skos:prefLabel "Processing Plant" .
+
+<http://wescml.org/def/avpcc/311.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Dairy" ;
+      skos:prefLabel "Dairy" .
+
+<http://wescml.org/def/avpcc/312>
+      rdf:type skos:Concept ;
+      rdfs:label "Major Industrial Complex – Special Purpose Improvements" ;
+      skos:definition "Land developed with purpose built facilities for large scale industrial use, e.g. car plant, paper mills." ;
+      skos:prefLabel "Major Industrial Complex – Special Purpose Improvements" .
+
+<http://wescml.org/def/avpcc/32>
+      rdf:type skos:Concept ;
+      rdfs:label "Warehouse/Distribution/Storage" ;
+      skos:narrower <http://wescml.org/def/avpcc/324> , <http://wescml.org/def/avpcc/321> , <http://wescml.org/def/avpcc/325> , <http://wescml.org/def/avpcc/322> , <http://wescml.org/def/avpcc/323> , <http://wescml.org/def/avpcc/320> , <http://wescml.org/def/avpcc/326> ;
+      skos:prefLabel "Warehouse/Distribution/Storage" .
+
+<http://wescml.org/def/avpcc/320>
+      rdf:type skos:Concept ;
+      rdfs:label "General Purpose Warehouse" ;
+      skos:definition "Land used for the storage of goods." ;
+      skos:narrower <http://wescml.org/def/avpcc/320.3> , <http://wescml.org/def/avpcc/320.4> , <http://wescml.org/def/avpcc/320.2> , <http://wescml.org/def/avpcc/320.7> , <http://wescml.org/def/avpcc/320.1> , <http://wescml.org/def/avpcc/320.6> , <http://wescml.org/def/avpcc/320.5> ;
+      skos:prefLabel "General Purpose Warehouse" .
+
+<http://wescml.org/def/avpcc/320.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/320.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Warehouse" ;
+      skos:prefLabel "Warehouse" .
+
+<http://wescml.org/def/avpcc/320.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Warehouse/Office" ;
+      skos:prefLabel "Warehouse/Office" .
+
+<http://wescml.org/def/avpcc/320.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Warehouse/Factory" ;
+      skos:prefLabel "Warehouse/Factory" .
+
+<http://wescml.org/def/avpcc/320.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Warehouse/Showroom" ;
+      skos:prefLabel "Warehouse/Showroom" .
+
+<http://wescml.org/def/avpcc/320.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Depot" ;
+      skos:prefLabel "Depot" .
+
+<http://wescml.org/def/avpcc/320.7>
+      rdf:type skos:Concept ;
+      rdfs:label "Store" ;
+      skos:prefLabel "Store" .
+
+<http://wescml.org/def/avpcc/321>
+      rdf:type skos:Concept ;
+      rdfs:label "Open Area Storage" ;
+      skos:definition "Land with extensive hardstand area used for the storage of goods and equipment." ;
+      skos:narrower <http://wescml.org/def/avpcc/321.5> , <http://wescml.org/def/avpcc/321.4> , <http://wescml.org/def/avpcc/321.3> , <http://wescml.org/def/avpcc/321.2> , <http://wescml.org/def/avpcc/321.1> ;
+      skos:prefLabel "Open Area Storage" .
+
+<http://wescml.org/def/avpcc/321.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/321.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Hardstand/Storage Yard" ;
+      skos:prefLabel "Hardstand/Storage Yard" .
+
+<http://wescml.org/def/avpcc/321.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Wrecking Yard" ;
+      skos:prefLabel "Wrecking Yard" .
+
+<http://wescml.org/def/avpcc/321.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Concrete Batching Plant" ;
+      skos:prefLabel "Concrete Batching Plant" .
+
+<http://wescml.org/def/avpcc/321.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Container storage" ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Container storage" .
+
+<http://wescml.org/def/avpcc/322>
+      rdf:type skos:Concept ;
+      rdfs:label "Bulk Grain Storage (structures)" ;
+      skos:definition "Land developed with silos used for the storage of grain." ;
+      skos:note "Changed from Bulk Grain Storage (structures) to Bulk Grain Storage (structures)" ;
+      skos:prefLabel "Bulk Grain Storage (structures)" .
+
+<http://wescml.org/def/avpcc/323>
+      rdf:type skos:Concept ;
+      rdfs:label "Bulk Grain Storage (earthen walls and flooring - pit bunker)" ;
+      skos:definition "Land developed with bunkers used for the storage of grain." ;
+      skos:prefLabel "Bulk Grain Storage (earthen walls and flooring - pit bunker)" .
+
+<http://wescml.org/def/avpcc/324>
+      rdf:type skos:Concept ;
+      rdfs:label "Bulk Liquid Storage Fuel Depot/Tank Farm" ;
+      skos:definition "Land developed with tanks for the storage and distribution of bulk liquids, e.g. tank farms, fuel depot." ;
+      skos:prefLabel "Bulk Liquid Storage Fuel Depot/Tank Farm" .
+
+<http://wescml.org/def/avpcc/325>
+      rdf:type skos:Concept ;
+      rdfs:label "Coolstore/Coldstore" ;
+      skos:definition "Land with a purpose built structure used for the cold storage of perishable products." ;
+      skos:prefLabel "Coolstore/Coldstore" .
+
+<http://wescml.org/def/avpcc/326>
+      rdf:type skos:Concept ;
+      rdfs:label "Works Depot" ;
+      skos:definition "Land developed as a works depot used in conjunction with infrastructure maintenance, e.g. municipal depot." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Works Depot" .
+
+<http://wescml.org/def/avpcc/33>
+      rdf:type skos:Concept ;
+      rdfs:label "Noxious/Offensive/Dangerous Industry" ;
+      skos:narrower <http://wescml.org/def/avpcc/330> , <http://wescml.org/def/avpcc/335> , <http://wescml.org/def/avpcc/332> , <http://wescml.org/def/avpcc/336> , <http://wescml.org/def/avpcc/333> , <http://wescml.org/def/avpcc/334> , <http://wescml.org/def/avpcc/331> ;
+      skos:prefLabel "Noxious/Offensive/Dangerous Industry" .
+
+<http://wescml.org/def/avpcc/330>
+      rdf:type skos:Concept ;
+      rdfs:label "Tannery/Skins Depot and Drying" ;
+      skos:definition "Land developed for the tanning of skins and hides." ;
+      skos:prefLabel "Tannery/Skins Depot and Drying" .
+
+<http://wescml.org/def/avpcc/331>
+      rdf:type skos:Concept ;
+      rdfs:label "Abattoirs" ;
+      skos:definition "Land developed with purpose built structures used for the holding and slaughter of stock and the preparation of meat for the wholesale market." ;
+      skos:prefLabel "Abattoirs" .
+
+<http://wescml.org/def/avpcc/332>
+      rdf:type skos:Concept ;
+      rdfs:label "Stock sales yards" ;
+      skos:definition "Land developed with purpose built structures used for the yarding and selling of stock." ;
+      skos:prefLabel "Stock sales yards" .
+
+<http://wescml.org/def/avpcc/333>
+      rdf:type skos:Concept ;
+      rdfs:label "Rendering Plant" ;
+      skos:definition "Land developed with purpose built structures used for the extraction of lard, tallow, and oil from animal parts." ;
+      skos:prefLabel "Rendering Plant" .
+
+<http://wescml.org/def/avpcc/334>
+      rdf:type skos:Concept ;
+      rdfs:label "Oil Refinery" ;
+      skos:definition "Land developed with purpose built structures used in the refinement and storage of petroleum products." ;
+      skos:prefLabel "Oil Refinery" .
+
+<http://wescml.org/def/avpcc/335>
+      rdf:type skos:Concept ;
+      rdfs:label "Petro-chemical Manufacturing" ;
+      skos:definition "Land developed with purpose built structures used in the production of chemical based products from petroleum." ;
+      skos:prefLabel "Petro-chemical Manufacturing" .
+
+<http://wescml.org/def/avpcc/336>
+      rdf:type skos:Concept ;
+      rdfs:label "Sawmill" ;
+      skos:definition "Land developed with purpose built structures used for the milling and curing of timber." ;
+      skos:prefLabel "Sawmill" .
+
+<http://wescml.org/def/avpcc/40>
+      rdf:type skos:Concept ;
+      rdfs:label "Extractive industry site with permit or reserve not in use" ;
+      skos:narrower <http://wescml.org/def/avpcc/403> , <http://wescml.org/def/avpcc/402> , <http://wescml.org/def/avpcc/409> , <http://wescml.org/def/avpcc/406> , <http://wescml.org/def/avpcc/408> , <http://wescml.org/def/avpcc/401> , <http://wescml.org/def/avpcc/400> , <http://wescml.org/def/avpcc/407> , <http://wescml.org/def/avpcc/405> , <http://wescml.org/def/avpcc/404> ;
+      skos:prefLabel "Extractive industry site with permit or reserve not in use" .
+
+<http://wescml.org/def/avpcc/400>
+      rdf:type skos:Concept ;
+      rdfs:label "Sand" ;
+      skos:definition "Land permitted to be used, for the extraction of building/manufacture materials (silica)." ;
+      skos:prefLabel "Sand" .
+
+<http://wescml.org/def/avpcc/401>
+      rdf:type skos:Concept ;
+      rdfs:label "Gravel/Stone" ;
+      skos:definition "Land permitted to be used, for the extraction of materials used for road works/ construction." ;
+      skos:prefLabel "Gravel/Stone" .
+
+<http://wescml.org/def/avpcc/402>
+      rdf:type skos:Concept ;
+      rdfs:label "Manufacturing Materials" ;
+      skos:definition "Land permitted to be used, for the extraction of materials used for manufacturing, such as clay (paper and pottery), Limestone, Dolomite (fertiliser) and Cement/Gypsum (cement)." ;
+      skos:prefLabel "Manufacturing Materials" .
+
+<http://wescml.org/def/avpcc/403>
+      rdf:type skos:Concept ;
+      rdfs:label "Soil" ;
+      skos:definition "Land permitted to be used, for the extraction of soil." ;
+      skos:prefLabel "Soil" .
+
+<http://wescml.org/def/avpcc/404>
+      rdf:type skos:Concept ;
+      rdfs:label "Coal" ;
+      skos:definition "Land permitted to be used, for the extraction of coal." ;
+      skos:prefLabel "Coal" .
+
+<http://wescml.org/def/avpcc/405>
+      rdf:type skos:Concept ;
+      rdfs:label "Minerals/Ores" ;
+      skos:definition "Land permitted to be used, for the extraction of various types of minerals and ore." ;
+      skos:prefLabel "Minerals/Ores" .
+
+<http://wescml.org/def/avpcc/406>
+      rdf:type skos:Concept ;
+      rdfs:label "Precious Metals" ;
+      skos:definition "Land permitted to be used, for the extraction of precious metals, e.g. gold, silver." ;
+      skos:prefLabel "Precious Metals" .
+
+<http://wescml.org/def/avpcc/407>
+      rdf:type skos:Concept ;
+      rdfs:label "Uranium" ;
+      skos:definition "Land permitted to be used, for the extraction/storage of uranium." ;
+      skos:prefLabel "Uranium" .
+
+<http://wescml.org/def/avpcc/408>
+      rdf:type skos:Concept ;
+      rdfs:label "Quarry/Mine (open cut) – Exhausted (dry)" ;
+      skos:definition "Land formerly used for extractive industries whose materials have been exhausted." ;
+      skos:prefLabel "Quarry/Mine (open cut) – Exhausted (dry)" .
+
+<http://wescml.org/def/avpcc/409>
+      rdf:type skos:Concept ;
+      rdfs:label "Quarry/Mine (open cut) – Exhausted (wet)" ;
+      skos:definition "Land formerly used for extractive industries whose materials have been exhausted and is now inundated with water." ;
+      skos:prefLabel "Quarry/Mine (open cut) – Exhausted (wet)" .
+
+<http://wescml.org/def/avpcc/41>
+      rdf:type skos:Concept ;
+      rdfs:label "Quarry (in use)" ;
+      skos:narrower <http://wescml.org/def/avpcc/413> , <http://wescml.org/def/avpcc/412> , <http://wescml.org/def/avpcc/411> , <http://wescml.org/def/avpcc/410> ;
+      skos:prefLabel "Quarry (in use)" .
+
+<http://wescml.org/def/avpcc/410>
+      rdf:type skos:Concept ;
+      rdfs:label "Sand" ;
+      skos:definition "Land from which sand is being extracted by a licensed operator." ;
+      skos:prefLabel "Sand" .
+
+<http://wescml.org/def/avpcc/411>
+      rdf:type skos:Concept ;
+      rdfs:label "Gravel/Stone" ;
+      skos:definition "Land from which stone and gravel are being extracted by a licensed operator." ;
+      skos:prefLabel "Gravel/Stone" .
+
+<http://wescml.org/def/avpcc/412>
+      rdf:type skos:Concept ;
+      rdfs:label "Manufacturing Materials" ;
+      skos:definition "Land from which manufacturing materials, such as clay (paper and pottery), limestone, dolomite (fertiliser) and cement/gypsum (cement), are being extracted by a licensed operator." ;
+      skos:prefLabel "Manufacturing Materials" .
+
+<http://wescml.org/def/avpcc/413>
+      rdf:type skos:Concept ;
+      rdfs:label "Soil" ;
+      skos:definition "Land from which soil is being extracted for by a licensed operator." ;
+      skos:prefLabel "Soil" .
+
+<http://wescml.org/def/avpcc/42>
+      rdf:type skos:Concept ;
+      rdfs:label "Mine (open cut)" ;
+      skos:narrower <http://wescml.org/def/avpcc/425> , <http://wescml.org/def/avpcc/426> , <http://wescml.org/def/avpcc/420> , <http://wescml.org/def/avpcc/423> , <http://wescml.org/def/avpcc/424> , <http://wescml.org/def/avpcc/421> , <http://wescml.org/def/avpcc/427> , <http://wescml.org/def/avpcc/422> ;
+      skos:prefLabel "Mine (open cut)" .
+
+<http://wescml.org/def/avpcc/420>
+      rdf:type skos:Concept ;
+      rdfs:label "Black or Brown Coal" ;
+      skos:definition "Land from which black or brown coal are being extracted by a licensed operator." ;
+      skos:prefLabel "Black or Brown Coal" .
+
+<http://wescml.org/def/avpcc/421>
+      rdf:type skos:Concept ;
+      rdfs:label "Iron Ore" ;
+      skos:definition "Land from which iron ore is being extracted by a licensed operator." ;
+      skos:prefLabel "Iron Ore" .
+
+<http://wescml.org/def/avpcc/422>
+      rdf:type skos:Concept ;
+      rdfs:label "Bauxite" ;
+      skos:definition "Land from which bauxite is being extracted by a licensed operator." ;
+      skos:prefLabel "Bauxite" .
+
+<http://wescml.org/def/avpcc/423>
+      rdf:type skos:Concept ;
+      rdfs:label "Gold" ;
+      skos:definition "Land from which gold is being extracted by a licensed operator." ;
+      skos:prefLabel "Gold" .
+
+<http://wescml.org/def/avpcc/424>
+      rdf:type skos:Concept ;
+      rdfs:label "Metals (other than gold)" ;
+      skos:definition "Land from which metals (other than gold) are being extracted by a licensed operator." ;
+      skos:prefLabel "Metals (other than gold)" .
+
+<http://wescml.org/def/avpcc/425>
+      rdf:type skos:Concept ;
+      rdfs:label "Precious Stones" ;
+      skos:definition "Land from which precious stones are being extracted for by a licensed operator." ;
+      skos:prefLabel "Precious Stones" .
+
+<http://wescml.org/def/avpcc/426>
+      rdf:type skos:Concept ;
+      rdfs:label "Uranium" ;
+      skos:definition "Land from which uranium is being extracted for by a licensed operator." ;
+      skos:prefLabel "Uranium" .
+
+<http://wescml.org/def/avpcc/427>
+      rdf:type skos:Concept ;
+      rdfs:label "Non Metals (other than Uranium)" ;
+      skos:definition "Land from which non-metals (other than uranium) being extracted by a licensed operator." ;
+      skos:prefLabel "Non Metals (other than Uranium)" .
+
+<http://wescml.org/def/avpcc/43>
+      rdf:type skos:Concept ;
+      rdfs:label "Mine (deep shaft)" ;
+      skos:narrower <http://wescml.org/def/avpcc/439> , <http://wescml.org/def/avpcc/434> , <http://wescml.org/def/avpcc/433> , <http://wescml.org/def/avpcc/432> , <http://wescml.org/def/avpcc/431> , <http://wescml.org/def/avpcc/430> ;
+      skos:prefLabel "Mine (deep shaft)" .
+
+<http://wescml.org/def/avpcc/430>
+      rdf:type skos:Concept ;
+      rdfs:label "Non-metals" ;
+      skos:definition "Land from which non-metals are being extracted by a licensed operator, from deep underground, by way of an inclined or vertical passageway or shaft equipped with lifting machinery." ;
+      skos:prefLabel "Non-metals" .
+
+<http://wescml.org/def/avpcc/431>
+      rdf:type skos:Concept ;
+      rdfs:label "Black Coal" ;
+      skos:definition "Land from which black coal is being extracted by a licensed operator from deep underground, by way of an inclined or vertical passageway or shaft equipped with lifting machinery." ;
+      skos:prefLabel "Black Coal" .
+
+<http://wescml.org/def/avpcc/432>
+      rdf:type skos:Concept ;
+      rdfs:label "Precious Stones" ;
+      skos:definition "Land from which precious stones are being extracted by a licensed operator from deep underground, by way of an inclined or vertical passageway or shaft equipped with lifting machinery." ;
+      skos:prefLabel "Precious Stones" .
+
+<http://wescml.org/def/avpcc/433>
+      rdf:type skos:Concept ;
+      rdfs:label "Gold" ;
+      skos:definition "Land from which gold is being extracted by a licensed operator from deep underground, by way of an inclined or vertical passageway or shaft equipped with lifting machinery." ;
+      skos:prefLabel "Gold" .
+
+<http://wescml.org/def/avpcc/434>
+      rdf:type skos:Concept ;
+      rdfs:label "Metals (other than gold)" ;
+      skos:definition "Land from which metals (other than gold) are being extracted by a licensed operator from deep underground, by way of an inclined or vertical passageway or shaft equipped with lifting machinery. Gold may be extracted from ore but it is not the principle mining activity." ;
+      skos:prefLabel "Metals (other than gold)" .
+
+<http://wescml.org/def/avpcc/439>
+      rdf:type skos:Concept ;
+      rdfs:label "Closed Mine Shaft" ;
+      skos:definition "Land containing a decommissioned mine shaft, where above ground structures may remain." ;
+      skos:prefLabel "Closed Mine Shaft" .
+
+<http://wescml.org/def/avpcc/44>
+      rdf:type skos:Concept ;
+      rdfs:label "Tailings Dumps" ;
+      skos:narrower <http://wescml.org/def/avpcc/441> , <http://wescml.org/def/avpcc/440> ;
+      skos:prefLabel "Tailings Dumps" .
+
+<http://wescml.org/def/avpcc/440>
+      rdf:type skos:Concept ;
+      rdfs:label "Tailings Dump (minerals)" ;
+      skos:definition "Land permitted to be used for the storage/treatment of minerals in tailing dumps and dams." ;
+      skos:prefLabel "Tailings Dump (minerals)" .
+
+<http://wescml.org/def/avpcc/441>
+      rdf:type skos:Concept ;
+      rdfs:label "Tailings Dump (non-minerals)" ;
+      skos:definition "Land permitted to be used for the storage/treatment of non-minerals in tailing dumps and dams." ;
+      skos:prefLabel "Tailings Dump (non-minerals)" .
+
+<http://wescml.org/def/avpcc/45>
+      rdf:type skos:Concept ;
+      rdfs:label "Well/Bore" ;
+      skos:narrower <http://wescml.org/def/avpcc/459> , <http://wescml.org/def/avpcc/454> , <http://wescml.org/def/avpcc/453> , <http://wescml.org/def/avpcc/452> , <http://wescml.org/def/avpcc/451> , <http://wescml.org/def/avpcc/450> ;
+      skos:prefLabel "Well/Bore" .
+
+<http://wescml.org/def/avpcc/450>
+      rdf:type skos:Concept ;
+      rdfs:label "Oil" ;
+      skos:definition "Land containing a narrow hole drilled or dug into the earth for the production oil." ;
+      skos:prefLabel "Oil" .
+
+<http://wescml.org/def/avpcc/451>
+      rdf:type skos:Concept ;
+      rdfs:label "Gas" ;
+      skos:definition "Land containing a narrow hole drilled or dug into the earth for the production of natural gas." ;
+      skos:prefLabel "Gas" .
+
+<http://wescml.org/def/avpcc/452>
+      rdf:type skos:Concept ;
+      rdfs:label "Water (mineral)" ;
+      skos:definition "Land containing a narrow hole drilled or dug into the earth for the production of water (mineral)." ;
+      skos:prefLabel "Water (mineral)" .
+
+<http://wescml.org/def/avpcc/453>
+      rdf:type skos:Concept ;
+      rdfs:label "Water (stock and domestic)" ;
+      skos:definition "Land containing a narrow hole drilled or dug into the earth for the production of water, for use for stock and domestic purposes." ;
+      skos:prefLabel "Water (stock and domestic)" .
+
+<http://wescml.org/def/avpcc/454>
+      rdf:type skos:Concept ;
+      rdfs:label "Water (irrigation)" ;
+      skos:definition "Land containing a narrow hole drilled or dug into the earth for the production of water, for use in irrigation." ;
+      skos:prefLabel "Water (irrigation)" .
+
+<http://wescml.org/def/avpcc/459>
+      rdf:type skos:Concept ;
+      rdfs:label "Disused Bore/Well" ;
+      skos:definition "Land containing a narrow hole drilled into the earth that is decommissioned. Above ground structures may remain." ;
+      skos:prefLabel "Disused Bore/Well" .
+
+<http://wescml.org/def/avpcc/46>
+      rdf:type skos:Concept ;
+      rdfs:label "Salt Pan (evaporative)" ;
+      skos:narrower <http://wescml.org/def/avpcc/461> , <http://wescml.org/def/avpcc/460> ;
+      skos:prefLabel "Salt Pan (evaporative)" .
+
+<http://wescml.org/def/avpcc/460>
+      rdf:type skos:Concept ;
+      rdfs:label "Lake – Salt Extraction" ;
+      skos:definition "Land containing a lake from which salt is extracted." ;
+      skos:prefLabel "Lake – Salt Extraction" .
+
+<http://wescml.org/def/avpcc/461>
+      rdf:type skos:Concept ;
+      rdfs:label "Man-made Evaporative Basin" ;
+      skos:definition "Land containing a man-made evaporative basin from which salt is extracted." ;
+      skos:prefLabel "Man-made Evaporative Basin" .
+
+<http://wescml.org/def/avpcc/47>
+      rdf:type skos:Concept ;
+      rdfs:label "Dredging Operations" ;
+      skos:narrower <http://wescml.org/def/avpcc/471> , <http://wescml.org/def/avpcc/470> ;
+      skos:prefLabel "Dredging Operations" .
+
+<http://wescml.org/def/avpcc/470>
+      rdf:type skos:Concept ;
+      rdfs:label "Dredging (minerals)" ;
+      skos:definition "Land on which dredging for the extraction, treatment and restoration of submerged minerals occurs. Usually licensed operations on Crown/State land subject to inundation." ;
+      skos:prefLabel "Dredging (minerals)" .
+
+<http://wescml.org/def/avpcc/471>
+      rdf:type skos:Concept ;
+      rdfs:label "Dredging (non-minerals)" ;
+      skos:definition "Land on which dredging for the extraction, treatment and restoration of submerged materials that are not minerals occurs. Usually licensed operations on Crown/State land subject to inundation." ;
+      skos:prefLabel "Dredging (non-minerals)" .
+
+<http://wescml.org/def/avpcc/48>
+      rdf:type skos:Concept ;
+      rdfs:label "Other Unspecified" ;
+      skos:narrower <http://wescml.org/def/avpcc/482> , <http://wescml.org/def/avpcc/481> , <http://wescml.org/def/avpcc/480> ;
+      skos:prefLabel "Other Unspecified" .
+
+<http://wescml.org/def/avpcc/480>
+      rdf:type skos:Concept ;
+      rdfs:label "Extractive less than 2 Metres" ;
+      skos:definition "Land from which material is extracted, that do not exceed 2 metres in depth." ;
+      skos:prefLabel "Extractive less than 2 Metres" .
+
+<http://wescml.org/def/avpcc/481>
+      rdf:type skos:Concept ;
+      rdfs:label "Operating mine unspecified" ;
+      skos:definition "Land from which material is extracted, but is not otherwise specified." ;
+      skos:prefLabel "Operating mine unspecified" .
+
+<http://wescml.org/def/avpcc/482>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Land mining unspecified" ;
+      skos:definition "Land from which material has been extracted in the past, that is decommissioned, is vacant land and not otherwise specified." ;
+      skos:prefLabel "Vacant Land mining unspecified" .
+
+<http://wescml.org/def/avpcc/50>
+      rdf:type skos:Concept ;
+      rdfs:label "Native Vegetation" ;
+      skos:narrower <http://wescml.org/def/avpcc/501> , <http://wescml.org/def/avpcc/500> ;
+      skos:prefLabel "Native Vegetation" .
+
+<http://wescml.org/def/avpcc/500>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Land - Native Vegetation/Bushland" ;
+      skos:definition "Vacant land that is not cleared with native vegetation coverage typical of the district that is not covered by a covenant or other formal agreement to preserve the vegetation." ;
+      skos:note "Changed to Vacant Land - Native Vegetation/Bushland" ;
+      skos:prefLabel "Vacant Land - Native Vegetation/Bushland" .
+
+<http://wescml.org/def/avpcc/501>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Land - Native Vegetation/Bushland with Covenant/Agreement" ;
+      skos:definition "Vacant land that is not cleared with native vegetation coverage typical of the district, covered by a covenant or other formal agreement to preserve the vegetation." ;
+      skos:note "Changed to Vacant Land - Native Vegetation/Bushland with Covenant/Agreement" ;
+      skos:prefLabel "Vacant Land - Native Vegetation/Bushland with Covenant/Agreement" .
+
+<http://wescml.org/def/avpcc/51>
+      rdf:type skos:Concept ;
+      rdfs:label "Agriculture Cropping" ;
+      skos:narrower <http://wescml.org/def/avpcc/511> , <http://wescml.org/def/avpcc/510> ;
+      skos:prefLabel "Agriculture Cropping" .
+
+<http://wescml.org/def/avpcc/510>
+      rdf:type skos:Concept ;
+      rdfs:label "General Cropping" ;
+      skos:definition "Land used for the production of broad-acre crops, e.g. grains, oilseeds and cotton." ;
+      skos:narrower <http://wescml.org/def/avpcc/510.5> , <http://wescml.org/def/avpcc/510.2> , <http://wescml.org/def/avpcc/510.4> , <http://wescml.org/def/avpcc/510.1> , <http://wescml.org/def/avpcc/510.3> ;
+      skos:note "Changed from General Cropping (generally more than 20ha plantings) to General Cropping" ;
+      skos:prefLabel "General Cropping" .
+
+<http://wescml.org/def/avpcc/510.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/510.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Crop Production – Mixed/Other" ;
+      skos:prefLabel "Crop Production – Mixed/Other" .
+
+<http://wescml.org/def/avpcc/510.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Crop Production – Other Grains/Oil Seeds" ;
+      skos:prefLabel "Crop Production – Other Grains/Oil Seeds" .
+
+<http://wescml.org/def/avpcc/510.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Crop Production – Wheat" ;
+      skos:prefLabel "Crop Production – Wheat" .
+
+<http://wescml.org/def/avpcc/510.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Crop Production – Fodder Crops" ;
+      skos:prefLabel "Crop Production – Fodder Crops" .
+
+<http://wescml.org/def/avpcc/511>
+      rdf:type skos:Concept ;
+      rdfs:label "Specialised Cropping" ;
+      skos:definition "Land used in the production of broad-acre crops that require a permit, license or specialist infrastructure, e.g. pyrethrum, poppies." ;
+      skos:prefLabel "Specialised Cropping" .
+
+<http://wescml.org/def/avpcc/52>
+      rdf:type skos:Concept ;
+      rdfs:label "Livestock Grazing" ;
+      skos:narrower <http://wescml.org/def/avpcc/525> , <http://wescml.org/def/avpcc/524> , <http://wescml.org/def/avpcc/523> , <http://wescml.org/def/avpcc/522> , <http://wescml.org/def/avpcc/521> , <http://wescml.org/def/avpcc/520> ;
+      skos:prefLabel "Livestock Grazing" .
+
+<http://wescml.org/def/avpcc/520>
+      rdf:type skos:Concept ;
+      rdfs:label "Domestic Livestock Grazing" ;
+      skos:definition "Land used for the grazing of domestic livestock." ;
+      skos:prefLabel "Domestic Livestock Grazing" .
+
+<http://wescml.org/def/avpcc/521>
+      rdf:type skos:Concept ;
+      rdfs:label "Non-Native Animals" ;
+      skos:definition "Land used for the grazing of specialist/exotic animals." ;
+      skos:prefLabel "Non-Native Animals" .
+
+<http://wescml.org/def/avpcc/522>
+      rdf:type skos:Concept ;
+      rdfs:label "Native Animals" ;
+      skos:definition "Land used for the grazing of native animals." ;
+      skos:prefLabel "Native Animals" .
+
+<http://wescml.org/def/avpcc/523>
+      rdf:type skos:Concept ;
+      rdfs:label "Livestock Production – Sheep" ;
+      skos:definition "Land developed with specialist infrastructure and used for the farming of sheep." ;
+      skos:prefLabel "Livestock Production – Sheep" .
+
+<http://wescml.org/def/avpcc/524>
+      rdf:type skos:Concept ;
+      rdfs:label "Livestock Production – Beef Cattle" ;
+      skos:definition "Land developed with specialist infrastructure and used for the farming of beef cattle." ;
+      skos:prefLabel "Livestock Production – Beef Cattle" .
+
+<http://wescml.org/def/avpcc/525>
+      rdf:type skos:Concept ;
+      rdfs:label "Livestock Production – Dairy Cattle" ;
+      skos:definition "Land developed with specialist infrastructure and used for the farming of dairy cattle." ;
+      skos:prefLabel "Livestock Production – Dairy Cattle" .
+
+<http://wescml.org/def/avpcc/53>
+      rdf:type skos:Concept ;
+      rdfs:label "Mixed Farming and Grazing" ;
+      skos:narrower <http://wescml.org/def/avpcc/530> ;
+      skos:prefLabel "Mixed Farming and Grazing" .
+
+<http://wescml.org/def/avpcc/530>
+      rdf:type skos:Concept ;
+      rdfs:label "Mixed farming and grazing" ;
+      skos:definition "Land used for mixed use farming purpose, e.g. cropping and grazing/livestock production." ;
+      skos:narrower <http://wescml.org/def/avpcc/530.3> , <http://wescml.org/def/avpcc/530.2> , <http://wescml.org/def/avpcc/530.1> ;
+      skos:prefLabel "Mixed farming and grazing" .
+
+<http://wescml.org/def/avpcc/530.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/530.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Mixed farming and grazing with infrastructure" ;
+      skos:note "Changed from Mixed farming and grazing with structural improvements to farming and grazing with infrastructure" ;
+      skos:prefLabel "Mixed farming and grazing with infrastructure" .
+
+<http://wescml.org/def/avpcc/530.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Mixed farming and grazing without infrastructure" ;
+      skos:note "Changed from Mixed farming and grazing without structural improvements to farming and grazing without infrastructure" ;
+      skos:prefLabel "Mixed farming and grazing without infrastructure" .
+
+<http://wescml.org/def/avpcc/54>
+      rdf:type skos:Concept ;
+      rdfs:label "Livestock – special purpose fencing, pens, cages, yards or shedding, stables" ;
+      skos:narrower <http://wescml.org/def/avpcc/543> , <http://wescml.org/def/avpcc/540> , <http://wescml.org/def/avpcc/541> , <http://wescml.org/def/avpcc/546> , <http://wescml.org/def/avpcc/544> , <http://wescml.org/def/avpcc/545> , <http://wescml.org/def/avpcc/542> ;
+      skos:prefLabel "Livestock – special purpose fencing, pens, cages, yards or shedding, stables" .
+
+<http://wescml.org/def/avpcc/540>
+      rdf:type skos:Concept ;
+      rdfs:label "Cattle Feed Lot" ;
+      skos:definition "Land developed with specialist infrastructure used for intensive feeding of cattle." ;
+      skos:prefLabel "Cattle Feed Lot" .
+
+<http://wescml.org/def/avpcc/541>
+      rdf:type skos:Concept ;
+      rdfs:label "Poultry – Open Range" ;
+      skos:definition "Land used for poultry run as free range." ;
+      skos:prefLabel "Poultry – Open Range" .
+
+<http://wescml.org/def/avpcc/542>
+      rdf:type skos:Concept ;
+      rdfs:label "Poultry (egg production)" ;
+      skos:definition "Land developed with specialist infrastructure used for egg production." ;
+      skos:prefLabel "Poultry (egg production)" .
+
+<http://wescml.org/def/avpcc/543>
+      rdf:type skos:Concept ;
+      rdfs:label "Poultry (broiler production)" ;
+      skos:definition "Land developed with specialist infrastructure used for broiler production." ;
+      skos:prefLabel "Poultry (broiler production)" .
+
+<http://wescml.org/def/avpcc/544>
+      rdf:type skos:Concept ;
+      rdfs:label "Horse Stud/Training Facilities/Stables" ;
+      skos:definition "Land developed with specialist infrastructure used as a horse stud farm or horse training facility." ;
+      skos:narrower <http://wescml.org/def/avpcc/544.4> , <http://wescml.org/def/avpcc/544.3> , <http://wescml.org/def/avpcc/544.2> , <http://wescml.org/def/avpcc/544.1> ;
+      skos:prefLabel "Horse Stud/Training Facilities/Stables" .
+
+<http://wescml.org/def/avpcc/544.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/544.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Horse Stud" ;
+      skos:prefLabel "Horse Stud" .
+
+<http://wescml.org/def/avpcc/544.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Training Facilities" ;
+      skos:prefLabel "Training Facilities" .
+
+<http://wescml.org/def/avpcc/544.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Stables" ;
+      skos:prefLabel "Stables" .
+
+<http://wescml.org/def/avpcc/545>
+      rdf:type skos:Concept ;
+      rdfs:label "Piggery" ;
+      skos:definition "Land developed with specialist infrastructure for use as a piggery." ;
+      skos:prefLabel "Piggery" .
+
+<http://wescml.org/def/avpcc/546>
+      rdf:type skos:Concept ;
+      rdfs:label "Kennel/Cattery" ;
+      skos:definition "Land developed with specialist infrastructure for use as a kennel and/or cattery." ;
+      skos:prefLabel "Kennel/Cattery" .
+
+<http://wescml.org/def/avpcc/55>
+      rdf:type skos:Concept ;
+      rdfs:label "Horticulture Fruit and Vegetable Crops" ;
+      skos:narrower <http://wescml.org/def/avpcc/551> , <http://wescml.org/def/avpcc/550> ;
+      skos:prefLabel "Horticulture Fruit and Vegetable Crops" .
+
+<http://wescml.org/def/avpcc/550>
+      rdf:type skos:Concept ;
+      rdfs:label "Market Garden – Vegetables" ;
+      skos:definition "Land used for the planting of vegetable crops." ;
+      skos:note "Changed from Market Garden – Vegetables (generally less than 20ha plantings) to Market Garden – Vegetable" ;
+      skos:prefLabel "Market Garden – Vegetables" .
+
+<http://wescml.org/def/avpcc/551>
+      rdf:type skos:Concept ;
+      rdfs:label "Orchards, Groves and Plantations" ;
+      skos:definition "Land used for the planting of trees for the production of fruit and nuts, e.g. olives, stone fruits, tropical fruits, citrus." ;
+      skos:prefLabel "Orchards, Groves and Plantations" .
+
+<http://wescml.org/def/avpcc/56>
+      rdf:type skos:Concept ;
+      rdfs:label "Horticulture – Special Purpose Structural Improvements" ;
+      skos:narrower <http://wescml.org/def/avpcc/564> , <http://wescml.org/def/avpcc/563> , <http://wescml.org/def/avpcc/562> , <http://wescml.org/def/avpcc/561> ;
+      skos:prefLabel "Horticulture – Special Purpose Structural Improvements" .
+
+<http://wescml.org/def/avpcc/561>
+      rdf:type skos:Concept ;
+      rdfs:label "Vineyard" ;
+      skos:definition "Land developed with specialist infrastructure to facilitate the growing of grapes." ;
+      skos:prefLabel "Vineyard" .
+
+<http://wescml.org/def/avpcc/562>
+      rdf:type skos:Concept ;
+      rdfs:label "Plant/Tree Nursery" ;
+      skos:definition "Land used for the propagation, growing and storage of plants." ;
+      skos:prefLabel "Plant/Tree Nursery" .
+
+<http://wescml.org/def/avpcc/563>
+      rdf:type skos:Concept ;
+      rdfs:label "Commercial Flower and Plant Growing – (outdoor)" ;
+      skos:definition "Land used for the propagation, growing and storage of flowers and plants." ;
+      skos:prefLabel "Commercial Flower and Plant Growing – (outdoor)" .
+
+<http://wescml.org/def/avpcc/564>
+      rdf:type skos:Concept ;
+      rdfs:label "Glasshouse Plant/Vegetable Production" ;
+      skos:definition "Land developed with specialist infrastructure for the indoor propagation and growing of plants and plant crops." ;
+      skos:prefLabel "Glasshouse Plant/Vegetable Production" .
+
+<http://wescml.org/def/avpcc/57>
+      rdf:type skos:Concept ;
+      rdfs:label "Forestry – Commercial Timber Production" ;
+      skos:narrower <http://wescml.org/def/avpcc/572> , <http://wescml.org/def/avpcc/571> , <http://wescml.org/def/avpcc/570> ;
+      skos:prefLabel "Forestry – Commercial Timber Production" .
+
+<http://wescml.org/def/avpcc/570>
+      rdf:type skos:Concept ;
+      rdfs:label "Softwood Plantation" ;
+      skos:definition "Land used for the growing and harvesting of softwood trees, e.g. Radiata Pine." ;
+      skos:prefLabel "Softwood Plantation" .
+
+<http://wescml.org/def/avpcc/571>
+      rdf:type skos:Concept ;
+      rdfs:label "Hardwood Plantation" ;
+      skos:definition "Land used for the growing and harvesting of hardwood trees, e.g. Blue Gum." ;
+      skos:prefLabel "Hardwood Plantation" .
+
+<http://wescml.org/def/avpcc/572>
+      rdf:type skos:Concept ;
+      rdfs:label "Native Hardwood (standing timber)" ;
+      skos:definition "Land used for the growing and harvesting of native trees within a revegetated area." ;
+      skos:prefLabel "Native Hardwood (standing timber)" .
+
+<http://wescml.org/def/avpcc/58>
+      rdf:type skos:Concept ;
+      rdfs:label "Aquaculture" ;
+      skos:narrower <http://wescml.org/def/avpcc/583> , <http://wescml.org/def/avpcc/582> , <http://wescml.org/def/avpcc/581> , <http://wescml.org/def/avpcc/580> ;
+      skos:prefLabel "Aquaculture" .
+
+<http://wescml.org/def/avpcc/580>
+      rdf:type skos:Concept ;
+      rdfs:label "Oyster Beds" ;
+      skos:definition "Land developed with specialist infrastructure used for the cultivation of oysters." ;
+      skos:prefLabel "Oyster Beds" .
+
+<http://wescml.org/def/avpcc/581>
+      rdf:type skos:Concept ;
+      rdfs:label "Fish Farming – Sea Water Based" ;
+      skos:definition "Land developed with specialist infrastructure used for sea-water based fish farming." ;
+      skos:prefLabel "Fish Farming – Sea Water Based" .
+
+<http://wescml.org/def/avpcc/582>
+      rdf:type skos:Concept ;
+      rdfs:label "Yabby Farming" ;
+      skos:definition "Land developed with specialist infrastructure used for yabby farming." ;
+      skos:prefLabel "Yabby Farming" .
+
+<http://wescml.org/def/avpcc/583>
+      rdf:type skos:Concept ;
+      rdfs:label "Aquaculture Breeding/Research Facilities/ Fish Hatchery" ;
+      skos:definition "Land upon which special purpose aquaculture breeding and/or research facilities are constructed. Includes the breeding and growing of fish for commercial purposes." ;
+      skos:prefLabel "Aquaculture Breeding/Research Facilities/ Fish Hatchery" .
+
+<http://wescml.org/def/avpcc/60>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant" ;
+      skos:narrower <http://wescml.org/def/avpcc/601> , <http://wescml.org/def/avpcc/600> ;
+      skos:prefLabel "Vacant" .
+
+<http://wescml.org/def/avpcc/600>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Land" ;
+      skos:definition "Vacant land reserved or capable of being developed for infrastructure purposes." ;
+      skos:prefLabel "Vacant Land" .
+
+<http://wescml.org/def/avpcc/601>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified – Transport, Storage, Utilities and Communication" ;
+      skos:definition "Vacant land reserved or capable of being developed for transportation, storage, utilities and communication uses." ;
+      skos:prefLabel "Unspecified – Transport, Storage, Utilities and Communication" .
+
+<http://wescml.org/def/avpcc/61>
+      rdf:type skos:Concept ;
+      rdfs:label "Gas or Fuel" ;
+      skos:narrower <http://wescml.org/def/avpcc/614> , <http://wescml.org/def/avpcc/613> , <http://wescml.org/def/avpcc/612> , <http://wescml.org/def/avpcc/611> , <http://wescml.org/def/avpcc/610> ;
+      skos:note "Changed from Gas to Gas or Fuels" ;
+      skos:prefLabel "Gas or Fuel" .
+
+<http://wescml.org/def/avpcc/610>
+      rdf:type skos:Concept ;
+      rdfs:label "Wells" ;
+      skos:definition "Land developed with specialist infrastructure used as a gas or fuel well." ;
+      skos:note "Changed from Gas Wells to  Wells" ;
+      skos:prefLabel "Wells" .
+
+<http://wescml.org/def/avpcc/611>
+      rdf:type skos:Concept ;
+      rdfs:label "Production/Refinery" ;
+      skos:definition "Land developed with specialist infrastructure used for the production/refinery of gas or fuel." ;
+      skos:note "Changed from Gas Production/Refinery to Production/Refinery" ;
+      skos:prefLabel "Production/Refinery" .
+
+<http://wescml.org/def/avpcc/612>
+      rdf:type skos:Concept ;
+      rdfs:label "Storage" ;
+      skos:definition "Land developed with specialist infrastructure used for the storage of gas or fuel." ;
+      skos:note "Changed from Gas Storage to Storage" ;
+      skos:prefLabel "Storage" .
+
+<http://wescml.org/def/avpcc/613>
+      rdf:type skos:Concept ;
+      rdfs:label "Transmission Pipeline (through easements, freehold and public land)" ;
+      skos:definition "Land developed with specialist infrastructure used for the transmission of gas or fuel including pipelines and pressure control facilities." ;
+      skos:note "Changed from Gas Transmission Pipeline (through easements, freehold and public land) to Transmission Pipeline (through easements, freehold and public land)" ;
+      skos:prefLabel "Transmission Pipeline (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/614>
+      rdf:type skos:Concept ;
+      rdfs:label "Distribution/Reticulation Pipelines (through easements, freehold and public land)" ;
+      skos:definition "Land developed with specialist infrastructure used for the reticulation of gas or fuel for domestic/commercial purposes." ;
+      skos:note "Changed from Gas Distribution/Reticulation Pipelines (through easements, freehold and public land) to Distribution/Reticulation Pipelines (through easements, freehold and public land)" ;
+      skos:prefLabel "Distribution/Reticulation Pipelines (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/62>
+      rdf:type skos:Concept ;
+      rdfs:label "Electricity" ;
+      skos:narrower <http://wescml.org/def/avpcc/620> , <http://wescml.org/def/avpcc/622> , <http://wescml.org/def/avpcc/621> , <http://wescml.org/def/avpcc/624> , <http://wescml.org/def/avpcc/623> , <http://wescml.org/def/avpcc/626> , <http://wescml.org/def/avpcc/625> ;
+      skos:prefLabel "Electricity" .
+
+<http://wescml.org/def/avpcc/620>
+      rdf:type skos:Concept ;
+      rdfs:label "Electricity Power Generators – Fuel Powered (includes brown coal, black coal, natural steam, gas, oil and nuclear)" ;
+      skos:definition "Land developed with specialist infrastructure used in the generation of fossil fuelled electricity." ;
+      skos:prefLabel "Electricity Power Generators – Fuel Powered (includes brown coal, black coal, natural steam, gas, oil and nuclear)" .
+
+<http://wescml.org/def/avpcc/621>
+      rdf:type skos:Concept ;
+      rdfs:label "Hydroelectricity Generation" ;
+      skos:definition "Land developed with specialist infrastructure used in the generation of hydroelectricity." ;
+      skos:prefLabel "Hydroelectricity Generation" .
+
+<http://wescml.org/def/avpcc/622>
+      rdf:type skos:Concept ;
+      rdfs:label "Wind Farm Electricity Generation" ;
+      skos:definition "Land developed with specialist infrastructure used in the generation of wind powered electricity." ;
+      skos:prefLabel "Wind Farm Electricity Generation" .
+
+<http://wescml.org/def/avpcc/623>
+      rdf:type skos:Concept ;
+      rdfs:label "Electricity Substation/Terminal" ;
+      skos:definition "Land developed with specialist infrastructure associated with the reticulation of electricity." ;
+      skos:prefLabel "Electricity Substation/Terminal" .
+
+<http://wescml.org/def/avpcc/624>
+      rdf:type skos:Concept ;
+      rdfs:label "Electricity Transmission Lines (through easements, freehold and public land)" ;
+      skos:definition "Land developed with transmission lines used for electricity transmission." ;
+      skos:prefLabel "Electricity Transmission Lines (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/625>
+      rdf:type skos:Concept ;
+      rdfs:label "Electricity Distribution/Reticulation Lines (through easements, freehold and public land)" ;
+      skos:definition "Land developed with specialist infrastructure with a transmission line used for domestic/commercial reticulation." ;
+      skos:prefLabel "Electricity Distribution/Reticulation Lines (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/626>
+      rdf:type skos:Concept ;
+      rdfs:label "Solar Electricity Generation" ;
+      skos:definition "Land developed with specialist infrastructure used in the generation of solar electricity." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Solar Electricity Generation" .
+
+<http://wescml.org/def/avpcc/63>
+      rdf:type skos:Concept ;
+      rdfs:label "Waste Disposal, Treatment and Recycling" ;
+      skos:narrower <http://wescml.org/def/avpcc/634> , <http://wescml.org/def/avpcc/631> , <http://wescml.org/def/avpcc/630> , <http://wescml.org/def/avpcc/637> , <http://wescml.org/def/avpcc/633> , <http://wescml.org/def/avpcc/636> , <http://wescml.org/def/avpcc/632> , <http://wescml.org/def/avpcc/635> , <http://wescml.org/def/avpcc/638> ;
+      skos:prefLabel "Waste Disposal, Treatment and Recycling" .
+
+<http://wescml.org/def/avpcc/630>
+      rdf:type skos:Concept ;
+      rdfs:label "Refuse Incinerator" ;
+      skos:definition "Land developed with specialist infrastructure used for the incineration of refuse." ;
+      skos:prefLabel "Refuse Incinerator" .
+
+<http://wescml.org/def/avpcc/631>
+      rdf:type skos:Concept ;
+      rdfs:label "Refuse Transfer Station" ;
+      skos:definition "Land developed with specialist infrastructure used in the storage and transfer of refuse." ;
+      skos:prefLabel "Refuse Transfer Station" .
+
+<http://wescml.org/def/avpcc/632>
+      rdf:type skos:Concept ;
+      rdfs:label "Sanitary Land Fill" ;
+      skos:definition "Land permitted to be used for the disposal of household, commercial, industrial and public waste." ;
+      skos:prefLabel "Sanitary Land Fill" .
+
+<http://wescml.org/def/avpcc/633>
+      rdf:type skos:Concept ;
+      rdfs:label "Refuse Recycling" ;
+      skos:definition "Land developed with specialist infrastructure used in the recycling of refuse." ;
+      skos:prefLabel "Refuse Recycling" .
+
+<http://wescml.org/def/avpcc/634>
+      rdf:type skos:Concept ;
+      rdfs:label "Hazardous Materials/Toxic Storage Centre" ;
+      skos:definition "Land permitted to be used for the storage of hazardous materials and toxic waste." ;
+      skos:prefLabel "Hazardous Materials/Toxic Storage Centre" .
+
+<http://wescml.org/def/avpcc/635>
+      rdf:type skos:Concept ;
+      rdfs:label "Toxic By-product Storage and Decontamination Site" ;
+      skos:definition "Land permitted to be used for the storage of mining waste." ;
+      skos:prefLabel "Toxic By-product Storage and Decontamination Site" .
+
+<http://wescml.org/def/avpcc/636>
+      rdf:type skos:Concept ;
+      rdfs:label "Sewerage/Stormwater Treatment Plant Site" ;
+      skos:definition "Land developed with specialist infrastructure used in the treatment of sewerage and stormwater." ;
+      skos:prefLabel "Sewerage/Stormwater Treatment Plant Site" .
+
+<http://wescml.org/def/avpcc/637>
+      rdf:type skos:Concept ;
+      rdfs:label "Sewerage/Stormwater Pump Stations" ;
+      skos:definition "Land developed with specialist infrastructure used in the pumping of sewerage and stormwater." ;
+      skos:prefLabel "Sewerage/Stormwater Pump Stations" .
+
+<http://wescml.org/def/avpcc/638>
+      rdf:type skos:Concept ;
+      rdfs:label "Sewerage/Stormwater Pipelines (through easements, freehold and public land)" ;
+      skos:definition "Land developed with pipelines or channels used for domestic sewerage or stormwater reticulation." ;
+      skos:narrower <http://wescml.org/def/avpcc/638.5> , <http://wescml.org/def/avpcc/638.4> , <http://wescml.org/def/avpcc/638.3> , <http://wescml.org/def/avpcc/638.2> , <http://wescml.org/def/avpcc/638.1> ;
+      skos:prefLabel "Sewerage/Stormwater Pipelines (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/638.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/638.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Public Utility – Drainage" ;
+      skos:prefLabel "Public Utility – Drainage" .
+
+<http://wescml.org/def/avpcc/638.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Public Utility – Sewerage" ;
+      skos:prefLabel "Public Utility – Sewerage" .
+
+<http://wescml.org/def/avpcc/638.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Reserve for Drainage or Sewerage Purposes" ;
+      skos:note "Changed from Reserve for Drainage Purposes to Reserve for Drainage or sewerage Purposes" ;
+      skos:prefLabel "Reserve for Drainage or Sewerage Purposes" .
+
+<http://wescml.org/def/avpcc/638.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Retarding Basin" ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Retarding Basin" .
+
+<http://wescml.org/def/avpcc/64>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Supply" ;
+      skos:narrower <http://wescml.org/def/avpcc/642> , <http://wescml.org/def/avpcc/645> , <http://wescml.org/def/avpcc/646> , <http://wescml.org/def/avpcc/640> , <http://wescml.org/def/avpcc/643> , <http://wescml.org/def/avpcc/644> , <http://wescml.org/def/avpcc/641> ;
+      skos:prefLabel "Water Supply" .
+
+<http://wescml.org/def/avpcc/640>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Catchment Area" ;
+      skos:definition "Land used for the purpose of water catchment within a designated water catchment area." ;
+      skos:prefLabel "Water Catchment Area" .
+
+<http://wescml.org/def/avpcc/641>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Catchment Dam/Reservoir" ;
+      skos:definition "Land developed with specialist infrastructure and used as a dam, weir, storage basin or reservoir for water catchment." ;
+      skos:prefLabel "Water Catchment Dam/Reservoir" .
+
+<http://wescml.org/def/avpcc/642>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Storage Dam/Reservoir (Non-Catchment)" ;
+      skos:definition "Land developed with specialist infrastructure and used as a dam, weir, storage basin or reservoir for water storage." ;
+      skos:prefLabel "Water Storage Dam/Reservoir (Non-Catchment)" .
+
+<http://wescml.org/def/avpcc/643>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Treatment Plant" ;
+      skos:definition "Land developed with specialist infrastructure used for the treatment of water, e.g. desalination plant." ;
+      skos:prefLabel "Water Treatment Plant" .
+
+<http://wescml.org/def/avpcc/644>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Storage Tanks, Pressure Control Towers and Pumping Stations." ;
+      skos:definition "Land developed with water storage tanks, pressure control towers and pumping stations used for water supply." ;
+      skos:prefLabel "Water Storage Tanks, Pressure Control Towers and Pumping Stations." .
+
+<http://wescml.org/def/avpcc/645>
+      rdf:type skos:Concept ;
+      rdfs:label "Major Water Conduits" ;
+      skos:definition "Land developed with canals, flumes, pipes to carry water to power stations, treatment plants and irrigation supply channels used for the supply of water." ;
+      skos:prefLabel "Major Water Conduits" .
+
+<http://wescml.org/def/avpcc/646>
+      rdf:type skos:Concept ;
+      rdfs:label "Water – Urban Distribution Network (through easements, freehold and public land)" ;
+      skos:definition "Land developed with infrastructure for the domestic reticulation of water." ;
+      skos:prefLabel "Water – Urban Distribution Network (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/65>
+      rdf:type skos:Concept ;
+      rdfs:label "Transport – Road Systems" ;
+      skos:narrower <http://wescml.org/def/avpcc/655> , <http://wescml.org/def/avpcc/656> , <http://wescml.org/def/avpcc/650> , <http://wescml.org/def/avpcc/658> , <http://wescml.org/def/avpcc/653> , <http://wescml.org/def/avpcc/654> , <http://wescml.org/def/avpcc/657> , <http://wescml.org/def/avpcc/651> , <http://wescml.org/def/avpcc/659> , <http://wescml.org/def/avpcc/652> ;
+      skos:prefLabel "Transport – Road Systems" .
+
+<http://wescml.org/def/avpcc/650>
+      rdf:type skos:Concept ;
+      rdfs:label "Freeways" ;
+      skos:definition "Land that forms part of a freeway." ;
+      skos:prefLabel "Freeways" .
+
+<http://wescml.org/def/avpcc/651>
+      rdf:type skos:Concept ;
+      rdfs:label "Main Highways (including national routes)" ;
+      skos:definition "Land that forms part of a main highway." ;
+      skos:prefLabel "Main Highways (including national routes)" .
+
+<http://wescml.org/def/avpcc/652>
+      rdf:type skos:Concept ;
+      rdfs:label "Secondary Roads" ;
+      skos:definition "Land that forms part of a secondary road." ;
+      skos:prefLabel "Secondary Roads" .
+
+<http://wescml.org/def/avpcc/653>
+      rdf:type skos:Concept ;
+      rdfs:label "Suburban and Rural Roads" ;
+      skos:definition "Land that forms part of a suburban or rural road." ;
+      skos:prefLabel "Suburban and Rural Roads" .
+
+<http://wescml.org/def/avpcc/654>
+      rdf:type skos:Concept ;
+      rdfs:label "Closed Roads" ;
+      skos:definition "Land that forms part of a road that is now closed." ;
+      skos:prefLabel "Closed Roads" .
+
+<http://wescml.org/def/avpcc/655>
+      rdf:type skos:Concept ;
+      rdfs:label "Reserved Roads" ;
+      skos:definition "Land reserved for future roads." ;
+      skos:note "Changed from Reserved Roads/Unused Roads to Reserved Roads" ;
+      skos:prefLabel "Reserved Roads" .
+
+<http://wescml.org/def/avpcc/656>
+      rdf:type skos:Concept ;
+      rdfs:label "Bus Maintenance Depot" ;
+      skos:definition "Land developed for the parking and maintenance of passenger buses." ;
+      skos:prefLabel "Bus Maintenance Depot" .
+
+<http://wescml.org/def/avpcc/657>
+      rdf:type skos:Concept ;
+      rdfs:label "Bus Interchange Centre/Bus Terminal" ;
+      skos:definition "Land developed as a bus interchange centre/bus terminal." ;
+      skos:prefLabel "Bus Interchange Centre/Bus Terminal" .
+
+<http://wescml.org/def/avpcc/658>
+      rdf:type skos:Concept ;
+      rdfs:label "Designated Bus/Taxi Stops/Stands/Shelters" ;
+      skos:definition "Land developed as a bus/taxi stop. Includes designated areas, stands and shelters." ;
+      skos:prefLabel "Designated Bus/Taxi Stops/Stands/Shelters" .
+
+<http://wescml.org/def/avpcc/659>
+      rdf:type skos:Concept ;
+      rdfs:label "Weighbridge" ;
+      skos:definition "Land developed with a weighbridge." ;
+      skos:prefLabel "Weighbridge" .
+
+<http://wescml.org/def/avpcc/66>
+      rdf:type skos:Concept ;
+      rdfs:label "Transport – Rail and Tramway Systems" ;
+      skos:narrower <http://wescml.org/def/avpcc/667> , <http://wescml.org/def/avpcc/661> , <http://wescml.org/def/avpcc/668> , <http://wescml.org/def/avpcc/662> , <http://wescml.org/def/avpcc/665> , <http://wescml.org/def/avpcc/666> , <http://wescml.org/def/avpcc/660> , <http://wescml.org/def/avpcc/663> , <http://wescml.org/def/avpcc/664> ;
+      skos:prefLabel "Transport – Rail and Tramway Systems" .
+
+<http://wescml.org/def/avpcc/660>
+      rdf:type skos:Concept ;
+      rdfs:label "Railway Line in use" ;
+      skos:definition "Land developed and used as an operating railway line and associated infrastructure." ;
+      skos:note "Changed from Railway Line Land and Improvements in use to Railway Line in use" ;
+      skos:prefLabel "Railway Line in use" .
+
+<http://wescml.org/def/avpcc/661>
+      rdf:type skos:Concept ;
+      rdfs:label "Railway Switching and Marshalling Yards" ;
+      skos:definition "Land developed and used as a railway switching and marshalling yard." ;
+      skos:prefLabel "Railway Switching and Marshalling Yards" .
+
+<http://wescml.org/def/avpcc/662>
+      rdf:type skos:Concept ;
+      rdfs:label "Railway Maintenance Facility" ;
+      skos:definition "Land developed and used for railway maintenance." ;
+      skos:prefLabel "Railway Maintenance Facility" .
+
+<http://wescml.org/def/avpcc/663>
+      rdf:type skos:Concept ;
+      rdfs:label "Railway Passenger Terminal Facilities (including stations)" ;
+      skos:definition "Land developed and used as a railway passenger terminal." ;
+      skos:note "Changed from Railway Passenger Terminal Facilities (including stations etc.) to Railway Passenger Terminal Facilities (including stations)" ;
+      skos:prefLabel "Railway Passenger Terminal Facilities (including stations)" .
+
+<http://wescml.org/def/avpcc/664>
+      rdf:type skos:Concept ;
+      rdfs:label "Railway Freight Terminal Facilities" ;
+      skos:definition "Land developed and used as a railway freight terminal." ;
+      skos:prefLabel "Railway Freight Terminal Facilities" .
+
+<http://wescml.org/def/avpcc/665>
+      rdf:type skos:Concept ;
+      rdfs:label "Tramway/Light Rail Right of Way and Associated Track Infrastructure" ;
+      skos:definition "Land developed and used as an operating tram or light rail service and associated infrastructure." ;
+      skos:note "Changed from Tramway/Light Rail Right of Way and Associated Track Improvements to Tramway/Light Rail Right of Way and Associated Track Infrastructure" ;
+      skos:prefLabel "Tramway/Light Rail Right of Way and Associated Track Infrastructure" .
+
+<http://wescml.org/def/avpcc/666>
+      rdf:type skos:Concept ;
+      rdfs:label "Tramway Maintenance /Terminal Storage" ;
+      skos:definition "Land developed and used for tramway maintenance and terminal facilities." ;
+      skos:prefLabel "Tramway Maintenance /Terminal Storage" .
+
+<http://wescml.org/def/avpcc/667>
+      rdf:type skos:Concept ;
+      rdfs:label "Tram Stopping Facilities" ;
+      skos:definition "Land developed and used for a tram stop. Includes shelters and platforms." ;
+      skos:prefLabel "Tram Stopping Facilities" .
+
+<http://wescml.org/def/avpcc/668>
+      rdf:type skos:Concept ;
+      rdfs:label "Railway/Tramway Line Closed/Unused" ;
+      skos:definition "Land developed and no longer used for tramways or other related facilities." ;
+      skos:prefLabel "Railway/Tramway Line Closed/Unused" .
+
+<http://wescml.org/def/avpcc/67>
+      rdf:type skos:Concept ;
+      rdfs:label "Transport – Air" ;
+      skos:narrower <http://wescml.org/def/avpcc/674> , <http://wescml.org/def/avpcc/670> , <http://wescml.org/def/avpcc/675> , <http://wescml.org/def/avpcc/672> , <http://wescml.org/def/avpcc/671> , <http://wescml.org/def/avpcc/673> , <http://wescml.org/def/avpcc/676> ;
+      skos:prefLabel "Transport – Air" .
+
+<http://wescml.org/def/avpcc/670>
+      rdf:type skos:Concept ;
+      rdfs:label "Airfield (includes associated open space)" ;
+      skos:definition "Land developed with specialist infrastructure used as an airport capable of handling domestic and/or international services." ;
+      skos:prefLabel "Airfield (includes associated open space)" .
+
+<http://wescml.org/def/avpcc/671>
+      rdf:type skos:Concept ;
+      rdfs:label "Airstrip" ;
+      skos:definition "Land developed with limited infrastructure and used as a local/regional airstrip." ;
+      skos:prefLabel "Airstrip" .
+
+<http://wescml.org/def/avpcc/672>
+      rdf:type skos:Concept ;
+      rdfs:label "Airport Traffic Control Centre" ;
+      skos:definition "Land developed with specialist infrastructure used and operated as an air traffic control centre." ;
+      skos:prefLabel "Airport Traffic Control Centre" .
+
+<http://wescml.org/def/avpcc/673>
+      rdf:type skos:Concept ;
+      rdfs:label "Airport Hangar Building" ;
+      skos:definition "Land developed with specialist infrastructure used for aircraft maintenance and storage." ;
+      skos:prefLabel "Airport Hangar Building" .
+
+<http://wescml.org/def/avpcc/674>
+      rdf:type skos:Concept ;
+      rdfs:label "Airport Terminal Building – Passengers" ;
+      skos:definition "Land developed with specialist infrastructure used in conjunction with airline operations to manage passenger services." ;
+      skos:prefLabel "Airport Terminal Building – Passengers" .
+
+<http://wescml.org/def/avpcc/675>
+      rdf:type skos:Concept ;
+      rdfs:label "Airport Terminal Building – Freight" ;
+      skos:definition "Land developed with specialist infrastructure used for freight handling services within an airport." ;
+      skos:prefLabel "Airport Terminal Building – Freight" .
+
+<http://wescml.org/def/avpcc/676>
+      rdf:type skos:Concept ;
+      rdfs:label "Heliport" ;
+      skos:definition "Land developed and used for helicopter landing and parking." ;
+      skos:prefLabel "Heliport" .
+
+<http://wescml.org/def/avpcc/68>
+      rdf:type skos:Concept ;
+      rdfs:label "Transport – Marine" ;
+      skos:narrower <http://wescml.org/def/avpcc/680> , <http://wescml.org/def/avpcc/684> , <http://wescml.org/def/avpcc/683> , <http://wescml.org/def/avpcc/689> , <http://wescml.org/def/avpcc/688> , <http://wescml.org/def/avpcc/687> , <http://wescml.org/def/avpcc/682> , <http://wescml.org/def/avpcc/681> , <http://wescml.org/def/avpcc/686> , <http://wescml.org/def/avpcc/685> ;
+      skos:prefLabel "Transport – Marine" .
+
+<http://wescml.org/def/avpcc/680>
+      rdf:type skos:Concept ;
+      rdfs:label "Port Channel" ;
+      skos:definition "Designated channel used as a shipping waterway." ;
+      skos:prefLabel "Port Channel" .
+
+<http://wescml.org/def/avpcc/681>
+      rdf:type skos:Concept ;
+      rdfs:label "Port Dock/Berth" ;
+      skos:definition "Seabed adjoining a wharf and developed with infrastructure used for the berthing of ships." ;
+      skos:prefLabel "Port Dock/Berth" .
+
+<http://wescml.org/def/avpcc/682>
+      rdf:type skos:Concept ;
+      rdfs:label "Port Wharf/Pier and Apron – Cargo" ;
+      skos:definition "Land developed with specialist infrastructure to facilitate the movement of containers and cargo to and from ships." ;
+      skos:prefLabel "Port Wharf/Pier and Apron – Cargo" .
+
+<http://wescml.org/def/avpcc/683>
+      rdf:type skos:Concept ;
+      rdfs:label "Wharf – Storage Sheds" ;
+      skos:definition "Land developed with enclosed storage facilities within a wharf." ;
+      skos:prefLabel "Wharf – Storage Sheds" .
+
+<http://wescml.org/def/avpcc/684>
+      rdf:type skos:Concept ;
+      rdfs:label "Wharf – Passenger Terminal and Ferry Pier Facilities" ;
+      skos:definition "Land developed with passenger terminals and other facilities within a wharf or pier." ;
+      skos:prefLabel "Wharf – Passenger Terminal and Ferry Pier Facilities" .
+
+<http://wescml.org/def/avpcc/685>
+      rdf:type skos:Concept ;
+      rdfs:label "Piers, Storages and Slipways" ;
+      skos:definition "Land developed and used for the maintenance and launching of boats." ;
+      skos:prefLabel "Piers, Storages and Slipways" .
+
+<http://wescml.org/def/avpcc/686>
+      rdf:type skos:Concept ;
+      rdfs:label "Ramps and Jetties" ;
+      skos:definition "Land developed with limited infrastructure used for recreational boating purposes." ;
+      skos:note "Changed from Boat Sheds, Bathing Boxes, Ramps and Jetties to  Ramps and Jetties" ;
+      skos:prefLabel "Ramps and Jetties" .
+
+<http://wescml.org/def/avpcc/687>
+      rdf:type skos:Concept ;
+      rdfs:label "Marinas and Yacht Clubs" ;
+      skos:definition "Land developed with specialist infrastructure used for the wet and dry storage of leisure boats." ;
+      skos:prefLabel "Marinas and Yacht Clubs" .
+
+<http://wescml.org/def/avpcc/688>
+      rdf:type skos:Concept ;
+      rdfs:label "Dockyard, Dry Dock and/or Ship Building Facility" ;
+      skos:definition "Land developed with specialist infrastructure used for the repair, maintenance, and construction of ships." ;
+      skos:prefLabel "Dockyard, Dry Dock and/or Ship Building Facility" .
+
+<http://wescml.org/def/avpcc/689>
+      rdf:type skos:Concept ;
+      rdfs:label "Lighthouse and Navigation Aids" ;
+      skos:definition "Land developed with specialist infrastructure used to assist in sea navigation." ;
+      skos:prefLabel "Lighthouse and Navigation Aids" .
+
+<http://wescml.org/def/avpcc/69>
+      rdf:type skos:Concept ;
+      rdfs:label "Communications, including Print, Post, Telecommunications and Airwave Facilities" ;
+      skos:narrower <http://wescml.org/def/avpcc/696> , <http://wescml.org/def/avpcc/693> , <http://wescml.org/def/avpcc/695> , <http://wescml.org/def/avpcc/694> , <http://wescml.org/def/avpcc/692> , <http://wescml.org/def/avpcc/698> , <http://wescml.org/def/avpcc/691> , <http://wescml.org/def/avpcc/690> , <http://wescml.org/def/avpcc/697> ;
+      skos:prefLabel "Communications, including Print, Post, Telecommunications and Airwave Facilities" .
+
+<http://wescml.org/def/avpcc/690>
+      rdf:type skos:Concept ;
+      rdfs:label "Post Offices" ;
+      skos:definition "Land used for the collection/ distribution of mail and the sale of products associated with that use." ;
+      skos:prefLabel "Post Offices" .
+
+<http://wescml.org/def/avpcc/691>
+      rdf:type skos:Concept ;
+      rdfs:label "Postal Exchange/Mail Sorting Centres" ;
+      skos:definition "Land developed and used for the sorting of mail." ;
+      skos:prefLabel "Postal Exchange/Mail Sorting Centres" .
+
+<http://wescml.org/def/avpcc/692>
+      rdf:type skos:Concept ;
+      rdfs:label "Post Boxes" ;
+      skos:definition "Land developed with a single receptacle for the posting of mail." ;
+      skos:prefLabel "Post Boxes" .
+
+<http://wescml.org/def/avpcc/693>
+      rdf:type skos:Concept ;
+      rdfs:label "Telecommunication Buildings/Maintenance Depots" ;
+      skos:definition "Land developed and used for the maintenance of telecommunication installations." ;
+      skos:prefLabel "Telecommunication Buildings/Maintenance Depots" .
+
+<http://wescml.org/def/avpcc/694>
+      rdf:type skos:Concept ;
+      rdfs:label "Telecommunication Towers and Aerials" ;
+      skos:definition "Land developed with specialist infrastructure used for the transmission of telecommunication signals. Maybe be stand alone or affixed to buildings." ;
+      skos:narrower <http://wescml.org/def/avpcc/694.3> , <http://wescml.org/def/avpcc/694.2> , <http://wescml.org/def/avpcc/694.1> ;
+      skos:prefLabel "Telecommunication Towers and Aerials" .
+
+<http://wescml.org/def/avpcc/694.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/694.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Telecommunication Tower" ;
+      skos:prefLabel "Telecommunication Tower" .
+
+<http://wescml.org/def/avpcc/694.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Telecommunication Aerial" ;
+      skos:prefLabel "Telecommunication Aerial" .
+
+<http://wescml.org/def/avpcc/695>
+      rdf:type skos:Concept ;
+      rdfs:label "Cable Lines, Conduits and Special Purpose Below Street Level Communication Line Tunnels – not being sewers (through easements, freehold and public land)" ;
+      skos:definition "Land developed with cable lines, conduits and special purpose, below street level and communication line tunnels used for telecommunication purposes." ;
+      skos:prefLabel "Cable Lines, Conduits and Special Purpose Below Street Level Communication Line Tunnels – not being sewers (through easements, freehold and public land)" .
+
+<http://wescml.org/def/avpcc/696>
+      rdf:type skos:Concept ;
+      rdfs:label "Television/Radio Station – Purpose Built" ;
+      skos:definition "Land developed with specialist infrastructure used for the production/ recording of television and radio programs." ;
+      skos:prefLabel "Television/Radio Station – Purpose Built" .
+
+<http://wescml.org/def/avpcc/697>
+      rdf:type skos:Concept ;
+      rdfs:label "Printing Works/Press" ;
+      skos:definition "Land developed with specialist infrastructure and used for printing works, e.g. newspaper print, magazines." ;
+      skos:prefLabel "Printing Works/Press" .
+
+<http://wescml.org/def/avpcc/698>
+      rdf:type skos:Concept ;
+      rdfs:label "Telephone Exchange – Purpose Built" ;
+      skos:definition "Land developed with specialist infrastructure used to facilitate the transmission of telephonics." ;
+      skos:prefLabel "Telephone Exchange – Purpose Built" .
+
+<http://wescml.org/def/avpcc/70>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant or Disused Community Services Site" ;
+      skos:narrower <http://wescml.org/def/avpcc/703> , <http://wescml.org/def/avpcc/700> , <http://wescml.org/def/avpcc/705> , <http://wescml.org/def/avpcc/707> , <http://wescml.org/def/avpcc/702> , <http://wescml.org/def/avpcc/704> , <http://wescml.org/def/avpcc/706> , <http://wescml.org/def/avpcc/701> ;
+      skos:prefLabel "Vacant or Disused Community Services Site" .
+
+<http://wescml.org/def/avpcc/700>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Health Services Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for health purposes, e.g. hospital site." ;
+      skos:prefLabel "Vacant Health Services Development Site" .
+
+<http://wescml.org/def/avpcc/701>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Education and Research Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for education purposes, e.g. school/university site." ;
+      skos:prefLabel "Vacant Education and Research Development Site" .
+
+<http://wescml.org/def/avpcc/702>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Justice and Community Protection Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for justice and community protection purposes, e.g. police station, court house." ;
+      skos:prefLabel "Vacant Justice and Community Protection Development Site" .
+
+<http://wescml.org/def/avpcc/703>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Religious Purposes Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for religious purposes, e.g. church, temple, synagogue site." ;
+      skos:prefLabel "Vacant Religious Purposes Development Site" .
+
+<http://wescml.org/def/avpcc/704>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Community Services Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for community services, e.g. clubrooms." ;
+      skos:prefLabel "Vacant Community Services Development Site" .
+
+<http://wescml.org/def/avpcc/705>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Government Administration Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for government administration purposes, e.g. civic purposes." ;
+      skos:prefLabel "Vacant Government Administration Development Site" .
+
+<http://wescml.org/def/avpcc/706>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Defence Services Development Site" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for defence purposes, e.g. barracks." ;
+      skos:prefLabel "Vacant Defence Services Development Site" .
+
+<http://wescml.org/def/avpcc/707>
+      rdf:type skos:Concept ;
+      rdfs:label "Cemetery" ;
+      skos:definition "Land permitted to be used as a cemetery." ;
+      skos:prefLabel "Cemetery" .
+
+<http://wescml.org/def/avpcc/71>
+      rdf:type skos:Concept ;
+      rdfs:label "Health" ;
+      skos:narrower <http://wescml.org/def/avpcc/715> , <http://wescml.org/def/avpcc/714> , <http://wescml.org/def/avpcc/713> , <http://wescml.org/def/avpcc/712> , <http://wescml.org/def/avpcc/711> , <http://wescml.org/def/avpcc/710> ;
+      skos:prefLabel "Health" .
+
+<http://wescml.org/def/avpcc/710>
+      rdf:type skos:Concept ;
+      rdfs:label "Public Hospital" ;
+      skos:definition "Land developed and used as a hospital funded by the government for public patients." ;
+      skos:prefLabel "Public Hospital" .
+
+<http://wescml.org/def/avpcc/711>
+      rdf:type skos:Concept ;
+      rdfs:label "Private Hospital" ;
+      skos:definition "Land developed and used as a non-government funded hospital for private patients." ;
+      skos:prefLabel "Private Hospital" .
+
+<http://wescml.org/def/avpcc/712>
+      rdf:type skos:Concept ;
+      rdfs:label "Welfare Centre" ;
+      skos:definition "Land developed and used for the purposes of providing welfare services to the community." ;
+      skos:note "Changed from Infant Welfare Centre to Welfare Centre" ;
+      skos:prefLabel "Welfare Centre" .
+
+<http://wescml.org/def/avpcc/713>
+      rdf:type skos:Concept ;
+      rdfs:label "Community Health Centre" ;
+      skos:definition "Land developed and used as consulting facilities, for a range of public health issues to the wider community." ;
+      skos:prefLabel "Community Health Centre" .
+
+<http://wescml.org/def/avpcc/714>
+      rdf:type skos:Concept ;
+      rdfs:label "Centre for the Mentally ill" ;
+      skos:definition "Land developed with specialist facilities and used for the treatment of the mentally ill. Includes rehabilitation clinics." ;
+      skos:prefLabel "Centre for the Mentally ill" .
+
+<http://wescml.org/def/avpcc/715>
+      rdf:type skos:Concept ;
+      rdfs:label "Day Care Centre for Children" ;
+      skos:definition "Land developed and permitted to be used as a day care centre of children by a licensed operator." ;
+      skos:prefLabel "Day Care Centre for Children" .
+
+<http://wescml.org/def/avpcc/72>
+      rdf:type skos:Concept ;
+      rdfs:label "Education and Research" ;
+      skos:narrower <http://wescml.org/def/avpcc/727> , <http://wescml.org/def/avpcc/726> , <http://wescml.org/def/avpcc/729> , <http://wescml.org/def/avpcc/728> , <http://wescml.org/def/avpcc/721> , <http://wescml.org/def/avpcc/723> , <http://wescml.org/def/avpcc/720> , <http://wescml.org/def/avpcc/722> , <http://wescml.org/def/avpcc/725> , <http://wescml.org/def/avpcc/724> ;
+      skos:prefLabel "Education and Research" .
+
+<http://wescml.org/def/avpcc/720>
+      rdf:type skos:Concept ;
+      rdfs:label "Early Childhood Development Centre – Kindergarten" ;
+      skos:definition "Land developed and permitted to be used as a funded early education centre for children 3-5 year olds." ;
+      skos:narrower <http://wescml.org/def/avpcc/720.5> , <http://wescml.org/def/avpcc/720.4> , <http://wescml.org/def/avpcc/720.3> , <http://wescml.org/def/avpcc/720.2> , <http://wescml.org/def/avpcc/720.1> ;
+      skos:prefLabel "Early Childhood Development Centre – Kindergarten" .
+
+<http://wescml.org/def/avpcc/720.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/720.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Early Childhood Development Centre" ;
+      skos:prefLabel "Early Childhood Development Centre" .
+
+<http://wescml.org/def/avpcc/720.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Kindergarten" ;
+      skos:prefLabel "Kindergarten" .
+
+<http://wescml.org/def/avpcc/720.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Pre-School" ;
+      skos:prefLabel "Pre-School" .
+
+<http://wescml.org/def/avpcc/720.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Child Welfare and Pre-School" ;
+      skos:prefLabel "Child Welfare and Pre-School" .
+
+<http://wescml.org/def/avpcc/721>
+      rdf:type skos:Concept ;
+      rdfs:label "Government School" ;
+      skos:definition "Land developed and used in the education of students in a government school operated by the state." ;
+      skos:narrower <http://wescml.org/def/avpcc/721.6> , <http://wescml.org/def/avpcc/721.4> , <http://wescml.org/def/avpcc/721.1> , <http://wescml.org/def/avpcc/721.5> , <http://wescml.org/def/avpcc/721.2> , <http://wescml.org/def/avpcc/721.3> ;
+      skos:note "Changed from School Primary – Public/Private to Government School" ;
+      skos:prefLabel "Government School" .
+
+<http://wescml.org/def/avpcc/721.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/721.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Primary School" ;
+      skos:definition "Land developed and used in the education of students in years p-6/7." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Primary School" .
+
+<http://wescml.org/def/avpcc/721.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Secondary School/College" ;
+      skos:definition "Land developed and used in the education of students in years 7/8-12. Includes trade and technical schools." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Secondary School/College" .
+
+<http://wescml.org/def/avpcc/721.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Combined Primary/Secondary" ;
+      skos:definition "Land developed and used in the education of students in years p-12." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Combined Primary/Secondary" .
+
+<http://wescml.org/def/avpcc/721.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Technical School" ;
+      skos:definition "Land developed and used in the education of students in years 7/8-12 for trade and technical purposes." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Technical School" .
+
+<http://wescml.org/def/avpcc/721.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Playing Fields and Sporting Facilities" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Playing Fields and Sporting Facilities" .
+
+<http://wescml.org/def/avpcc/722>
+      rdf:type skos:Concept ;
+      rdfs:label "School Camps" ;
+      skos:definition "Land developed and used as a camp exclusively for the education of students by a registered education provider." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "School Camps" .
+
+<http://wescml.org/def/avpcc/723>
+      rdf:type skos:Concept ;
+      rdfs:label "Non-Government School" ;
+      skos:definition "Land developed and used in the education of students in a non-government school operated by a registered education provider." ;
+      skos:narrower <http://wescml.org/def/avpcc/723.5> , <http://wescml.org/def/avpcc/723.6> , <http://wescml.org/def/avpcc/723.3> , <http://wescml.org/def/avpcc/723.4> , <http://wescml.org/def/avpcc/723.1> , <http://wescml.org/def/avpcc/723.2> ;
+      skos:note "Changed from School/College Secondary/Technical School  Public/Private to Non Government School" ;
+      skos:prefLabel "Non-Government School" .
+
+<http://wescml.org/def/avpcc/723.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/723.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Primary School" ;
+      skos:definition "Land developed and used in the education of students in years p-6/7." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Primary School" .
+
+<http://wescml.org/def/avpcc/723.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Secondary School/College" ;
+      skos:definition "Land developed and used in the education of students in years 7/8-12." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Secondary School/College" .
+
+<http://wescml.org/def/avpcc/723.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Combined Primary/Secondary" ;
+      skos:definition "Land developed and used in the education of students in years p-12." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Combined Primary/Secondary" .
+
+<http://wescml.org/def/avpcc/723.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Technical School" ;
+      skos:definition "Land developed and used in the education of students in years 7/8-12 for trade and technical purposes." ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Technical School" .
+
+<http://wescml.org/def/avpcc/723.6>
+      rdf:type skos:Concept ;
+      rdfs:label "Playing Fields and Sporting Facilities" ;
+      skos:note "New AVPCC - subclassification" ;
+      skos:prefLabel "Playing Fields and Sporting Facilities" .
+
+<http://wescml.org/def/avpcc/724>
+      rdf:type skos:Concept ;
+      rdfs:label "Special Needs School" ;
+      skos:definition "Land developed and used in the education of pupils with special needs by a registered education provider." ;
+      skos:prefLabel "Special Needs School" .
+
+<http://wescml.org/def/avpcc/725>
+      rdf:type skos:Concept ;
+      rdfs:label "University" ;
+      skos:definition "Land developed and used in undergraduate and post graduate studies at degree, masters and PhD levels by a registered university." ;
+      skos:note "Changed from University - Public/Private to University" ;
+      skos:prefLabel "University" .
+
+<http://wescml.org/def/avpcc/726>
+      rdf:type skos:Concept ;
+      rdfs:label "Technical and Further Education" ;
+      skos:definition "Land developed and used for post-secondary school education and training by a registered education provider. Usually aimed at developing specific job core competencies." ;
+      skos:prefLabel "Technical and Further Education" .
+
+<http://wescml.org/def/avpcc/727>
+      rdf:type skos:Concept ;
+      rdfs:label "Research Institute – Public" ;
+      skos:definition "Land developed and used as a research facility by the government." ;
+      skos:prefLabel "Research Institute – Public" .
+
+<http://wescml.org/def/avpcc/728>
+      rdf:type skos:Concept ;
+      rdfs:label "Observatory" ;
+      skos:definition "Land developed with purpose-built infrastructure associated with astronomy and of national scientific importance." ;
+      skos:prefLabel "Observatory" .
+
+<http://wescml.org/def/avpcc/729>
+      rdf:type skos:Concept ;
+      rdfs:label "Residential College/Quarters - Defence forces" ;
+      skos:definition "Residential accommodation/quarters for the defence forces." ;
+      skos:prefLabel "Residential College/Quarters - Defence forces" .
+
+<http://wescml.org/def/avpcc/73>
+      rdf:type skos:Concept ;
+      rdfs:label "Justice and Community Protection" ;
+      skos:narrower <http://wescml.org/def/avpcc/732> , <http://wescml.org/def/avpcc/734> , <http://wescml.org/def/avpcc/735> , <http://wescml.org/def/avpcc/731> , <http://wescml.org/def/avpcc/736> , <http://wescml.org/def/avpcc/733> , <http://wescml.org/def/avpcc/730> ;
+      skos:prefLabel "Justice and Community Protection" .
+
+<http://wescml.org/def/avpcc/730>
+      rdf:type skos:Concept ;
+      rdfs:label "Police Facility" ;
+      skos:definition "Land developed and used as a policing facility, at district/regional/state level." ;
+      skos:prefLabel "Police Facility" .
+
+<http://wescml.org/def/avpcc/731>
+      rdf:type skos:Concept ;
+      rdfs:label "Court Facility" ;
+      skos:definition "Land developed and used as a judicial facility for either a Court or tribunal." ;
+      skos:prefLabel "Court Facility" .
+
+<http://wescml.org/def/avpcc/732>
+      rdf:type skos:Concept ;
+      rdfs:label "Prison/Detention Centre/Gaol Complex/ Corrective Institution" ;
+      skos:definition "Land developed and used for custodial purposes." ;
+      skos:prefLabel "Prison/Detention Centre/Gaol Complex/ Corrective Institution" .
+
+<http://wescml.org/def/avpcc/733>
+      rdf:type skos:Concept ;
+      rdfs:label "Fire Station Facility" ;
+      skos:definition "Land developed and used for the storage of vehicles and equipment for the fighting of fires." ;
+      skos:prefLabel "Fire Station Facility" .
+
+<http://wescml.org/def/avpcc/734>
+      rdf:type skos:Concept ;
+      rdfs:label "Ambulance Station Facility" ;
+      skos:definition "Land developed and used as an ambulance station." ;
+      skos:prefLabel "Ambulance Station Facility" .
+
+<http://wescml.org/def/avpcc/735>
+      rdf:type skos:Concept ;
+      rdfs:label "Emergency Services Complex" ;
+      skos:definition "Land developed and used for state emergency services facilities." ;
+      skos:prefLabel "Emergency Services Complex" .
+
+<http://wescml.org/def/avpcc/736>
+      rdf:type skos:Concept ;
+      rdfs:label "Community Protection and Services Training Facility" ;
+      skos:definition "Land developed and used as a specialist facility for the training of fire, police, ambulance, SES and prison personnel." ;
+      skos:prefLabel "Community Protection and Services Training Facility" .
+
+<http://wescml.org/def/avpcc/74>
+      rdf:type skos:Concept ;
+      rdfs:label "Religious" ;
+      skos:narrower <http://wescml.org/def/avpcc/743> , <http://wescml.org/def/avpcc/742> , <http://wescml.org/def/avpcc/741> , <http://wescml.org/def/avpcc/740> ;
+      skos:prefLabel "Religious" .
+
+<http://wescml.org/def/avpcc/740>
+      rdf:type skos:Concept ;
+      rdfs:label "Place of Worship" ;
+      skos:definition "Land developed and used as a place of worship." ;
+      skos:note "Changed from Church, Temple, Synagogue, etc. to Place of Worship" ;
+      skos:prefLabel "Place of Worship" .
+
+<http://wescml.org/def/avpcc/741>
+      rdf:type skos:Concept ;
+      rdfs:label "Religious Hall" ;
+      skos:definition "Land developed and used for the social interaction of people by a religious organisation." ;
+      skos:prefLabel "Religious Hall" .
+
+<http://wescml.org/def/avpcc/742>
+      rdf:type skos:Concept ;
+      rdfs:label "Religious Residence" ;
+      skos:definition "Land developed and used as a dwelling by an ordained member/members of a religious order, as part of administering their religious duties." ;
+      skos:note "Changed from Rectory, Manse, Presbytery to Religious Residence" ;
+      skos:prefLabel "Religious Residence" .
+
+<http://wescml.org/def/avpcc/743>
+      rdf:type skos:Concept ;
+      rdfs:label "Religious Study Centre" ;
+      skos:definition "Land developed and used as a religious study centre." ;
+      skos:prefLabel "Religious Study Centre" .
+
+<http://wescml.org/def/avpcc/75>
+      rdf:type skos:Concept ;
+      rdfs:label "Community Service and Sporting Clubrooms and Halls" ;
+      skos:narrower <http://wescml.org/def/avpcc/752> , <http://wescml.org/def/avpcc/751> , <http://wescml.org/def/avpcc/750> ;
+      skos:prefLabel "Community Service and Sporting Clubrooms and Halls" .
+
+<http://wescml.org/def/avpcc/750>
+      rdf:type skos:Concept ;
+      rdfs:label "Halls and Service Clubrooms" ;
+      skos:definition "Land developed and used as an occasional meeting place by community based groups or clubs." ;
+      skos:prefLabel "Halls and Service Clubrooms" .
+
+<http://wescml.org/def/avpcc/751>
+      rdf:type skos:Concept ;
+      rdfs:label "Rural and Community Camps" ;
+      skos:definition "Land developed with accommodation used by persons or groups for short term recreation/training/education purposes by a community service provider e.g. scout camp." ;
+      skos:prefLabel "Rural and Community Camps" .
+
+<http://wescml.org/def/avpcc/752>
+      rdf:type skos:Concept ;
+      rdfs:label "Community Facility" ;
+      skos:definition "Land developed and used as a meeting place by groups involved in community interests, e.g. neighbour centre." ;
+      skos:note "Changed from Community/Neighbourhood Facility to Community Facility" ;
+      skos:prefLabel "Community Facility" .
+
+<http://wescml.org/def/avpcc/76>
+      rdf:type skos:Concept ;
+      rdfs:label "Government Administration" ;
+      skos:narrower <http://wescml.org/def/avpcc/763> , <http://wescml.org/def/avpcc/762> , <http://wescml.org/def/avpcc/761> , <http://wescml.org/def/avpcc/760> ;
+      skos:prefLabel "Government Administration" .
+
+<http://wescml.org/def/avpcc/760>
+      rdf:type skos:Concept ;
+      rdfs:label "Parliament House" ;
+      skos:definition "Land developed and used by government as a house of parliament." ;
+      skos:prefLabel "Parliament House" .
+
+<http://wescml.org/def/avpcc/761>
+      rdf:type skos:Concept ;
+      rdfs:label "Government House" ;
+      skos:definition "Land developed and used as a residence by a governor of a state or the Commonwealth." ;
+      skos:prefLabel "Government House" .
+
+<http://wescml.org/def/avpcc/762>
+      rdf:type skos:Concept ;
+      rdfs:label "Local Government" ;
+      skos:definition "Land developed and used for the administration of local government." ;
+      skos:prefLabel "Local Government" .
+
+<http://wescml.org/def/avpcc/763>
+      rdf:type skos:Concept ;
+      rdfs:label "Civic Buildings" ;
+      skos:definition "Land developed and used by local government for civic purposes." ;
+      skos:prefLabel "Civic Buildings" .
+
+<http://wescml.org/def/avpcc/77>
+      rdf:type skos:Concept ;
+      rdfs:label "Defence Services/Military Base" ;
+      skos:narrower <http://wescml.org/def/avpcc/771> , <http://wescml.org/def/avpcc/776> , <http://wescml.org/def/avpcc/777> , <http://wescml.org/def/avpcc/770> , <http://wescml.org/def/avpcc/774> , <http://wescml.org/def/avpcc/775> , <http://wescml.org/def/avpcc/772> , <http://wescml.org/def/avpcc/773> , <http://wescml.org/def/avpcc/778> ;
+      skos:prefLabel "Defence Services/Military Base" .
+
+<http://wescml.org/def/avpcc/770>
+      rdf:type skos:Concept ;
+      rdfs:label "Army Barracks/Administration Base" ;
+      skos:definition "Land developed and used for the administration of the armed forces." ;
+      skos:prefLabel "Army Barracks/Administration Base" .
+
+<http://wescml.org/def/avpcc/771>
+      rdf:type skos:Concept ;
+      rdfs:label "Army Maintenance Depots" ;
+      skos:definition "Land developed and used by the army for the storage and maintenance of equipment and infrastructure." ;
+      skos:prefLabel "Army Maintenance Depots" .
+
+<http://wescml.org/def/avpcc/772>
+      rdf:type skos:Concept ;
+      rdfs:label "Army Field Camps and Firing Ranges" ;
+      skos:definition "Land developed and used by the army as field camps and for firearms training/practice." ;
+      skos:prefLabel "Army Field Camps and Firing Ranges" .
+
+<http://wescml.org/def/avpcc/773>
+      rdf:type skos:Concept ;
+      rdfs:label "Naval Base/Administration Base" ;
+      skos:definition "Land developed and used for the administration of the naval forces." ;
+      skos:prefLabel "Naval Base/Administration Base" .
+
+<http://wescml.org/def/avpcc/774>
+      rdf:type skos:Concept ;
+      rdfs:label "Naval Specialised Facilities – Ground Based" ;
+      skos:definition "Land developed with specialised infrastructure for use by the navy, e.g. storage, maintenance and training." ;
+      skos:prefLabel "Naval Specialised Facilities – Ground Based" .
+
+<http://wescml.org/def/avpcc/775>
+      rdf:type skos:Concept ;
+      rdfs:label "Naval Specialised Facilities – Water Based" ;
+      skos:definition "Land developed with specialised infrastructure associated with the berthing of navy vessels, e.g. wharves, dry docks." ;
+      skos:prefLabel "Naval Specialised Facilities – Water Based" .
+
+<http://wescml.org/def/avpcc/776>
+      rdf:type skos:Concept ;
+      rdfs:label "Air Force Base/Administration" ;
+      skos:definition "Land developed and used for the administration of the Air forces." ;
+      skos:prefLabel "Air Force Base/Administration" .
+
+<http://wescml.org/def/avpcc/777>
+      rdf:type skos:Concept ;
+      rdfs:label "Airstrip and Specialised Facilities" ;
+      skos:definition "Land developed with specialised infrastructure associated with an airbase used by the Air Force, e.g. airfields, hangars, storage and maintenance." ;
+      skos:prefLabel "Airstrip and Specialised Facilities" .
+
+<http://wescml.org/def/avpcc/778>
+      rdf:type skos:Concept ;
+      rdfs:label "Munitions Storage Facility" ;
+      skos:definition "Land developed and used the defence forces for the storage of explosives, ammunition and bombs." ;
+      skos:prefLabel "Munitions Storage Facility" .
+
+<http://wescml.org/def/avpcc/78>
+      rdf:type skos:Concept ;
+      rdfs:label "Other Community service facilities" ;
+      skos:narrower <http://wescml.org/def/avpcc/783> , <http://wescml.org/def/avpcc/782> , <http://wescml.org/def/avpcc/781> , <http://wescml.org/def/avpcc/780> ;
+      skos:note "Changed from Community service facilities or other to Other Community service facilities" ;
+      skos:prefLabel "Other Community service facilities" .
+
+<http://wescml.org/def/avpcc/780>
+      rdf:type skos:Concept ;
+      rdfs:label "Public Conveniences" ;
+      skos:definition "Land developed and used as a public convenience, e.g. public toilet block." ;
+      skos:prefLabel "Public Conveniences" .
+
+<http://wescml.org/def/avpcc/781>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified – Public, Education and Health Improved" ;
+      skos:definition "Land developed and used for the provision of education and health to the public by community service groups." ;
+      skos:prefLabel "Unspecified – Public, Education and Health Improved" .
+
+<http://wescml.org/def/avpcc/782>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified – Public, Education and Health vacant" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for public education and health services." ;
+      skos:prefLabel "Unspecified – Public, Education and Health vacant" .
+
+<http://wescml.org/def/avpcc/783>
+      rdf:type skos:Concept ;
+      rdfs:label "Animal shelter" ;
+      skos:definition "Land developed and used as an animal welfare shelter by a community service group. May include keeping the animals on the premises for treatment or adoption" ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Animal shelter" .
+
+<http://wescml.org/def/avpcc/80>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Land" ;
+      skos:narrower <http://wescml.org/def/avpcc/802> , <http://wescml.org/def/avpcc/801> , <http://wescml.org/def/avpcc/800> ;
+      skos:prefLabel "Vacant Land" .
+
+<http://wescml.org/def/avpcc/800>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Site – Sporting Use" ;
+      skos:definition "Vacant land with a permit approved or capable of being developed for sporting use." ;
+      skos:prefLabel "Vacant Site – Sporting Use" .
+
+<http://wescml.org/def/avpcc/801>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Site – Heritage Application" ;
+      skos:definition "Vacant land designated and zoned for heritage purposes, e.g. historic precinct, heritage landscape." ;
+      skos:prefLabel "Vacant Site – Heritage Application" .
+
+<http://wescml.org/def/avpcc/802>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Site – Cultural Use" ;
+      skos:definition "Vacant land designated and zoned for cultural purposes." ;
+      skos:prefLabel "Vacant Site – Cultural Use" .
+
+<http://wescml.org/def/avpcc/81>
+      rdf:type skos:Concept ;
+      rdfs:label "State/Regional Sports Complex" ;
+      skos:narrower <http://wescml.org/def/avpcc/813> , <http://wescml.org/def/avpcc/815> , <http://wescml.org/def/avpcc/812> , <http://wescml.org/def/avpcc/811> , <http://wescml.org/def/avpcc/817> , <http://wescml.org/def/avpcc/814> , <http://wescml.org/def/avpcc/810> , <http://wescml.org/def/avpcc/816> , <http://wescml.org/def/avpcc/818> ;
+      skos:note "Changed from State/Regional Sports Complex (Superior Facility) to State/Regional Sports Complex" ;
+      skos:prefLabel "State/Regional Sports Complex" .
+
+<http://wescml.org/def/avpcc/810>
+      rdf:type skos:Concept ;
+      rdfs:label "Major Sports Complex" ;
+      skos:definition "Land developed with specialised infrastructure used as a major sporting facility for commercial purposes, e.g. MCG." ;
+      skos:note "Changed from Major Sports Facility (full commercial application) to Major Sports Facility" ;
+      skos:prefLabel "Major Sports Complex" .
+
+<http://wescml.org/def/avpcc/811>
+      rdf:type skos:Concept ;
+      rdfs:label "Major Indoor Sports Complex" ;
+      skos:definition "Land developed with specialised infrastructure used as an indoor sporting facility for commercial purposes, e.g. Rod Laver Arena." ;
+      skos:note "Changed from Indoor Sports Grounds/Complex (includes stadiums, arenas, velodromes etc. – usually state/regional centre with likely some commercial application) to Major Indoor Sports Facility" ;
+      skos:prefLabel "Major Indoor Sports Complex" .
+
+<http://wescml.org/def/avpcc/812>
+      rdf:type skos:Concept ;
+      rdfs:label "Outdoor\\Indoor Sports Complex - non major" ;
+      skos:definition "Land developed and used as a state or regional sports facility with limited commercial application, e.g.  Velodrome, Netball Hockey centre." ;
+      skos:note "Changed from Outdoor Sports Grounds/Complex (includes stadiums, arenas, courts etc. – usually state/regional centre with likely some commercial application) to Outdoor Sports Complex" ;
+      skos:prefLabel "Outdoor\\Indoor Sports Complex - non major" .
+
+<http://wescml.org/def/avpcc/813>
+      rdf:type skos:Concept ;
+      rdfs:label "Outdoor Sports – Extended Areas/Cross Country" ;
+      skos:definition "Land developed with specialist infrastructure over extended open areas used for recreational/sporting activities, e.g. member facility golf course, polo fields." ;
+      skos:note "Changed from Outdoor Sports – Extended Areas/Cross Country (likely some commercial application) to Outdoor Sports – Extended Areas/Cross Country" ;
+      skos:prefLabel "Outdoor Sports – Extended Areas/Cross Country" .
+
+<http://wescml.org/def/avpcc/814>
+      rdf:type skos:Concept ;
+      rdfs:label "Aquatic Complex" ;
+      skos:definition "Land developed with specialised infrastructure used as an aquatic complex for water sports." ;
+      skos:note "Changed from Water Sports – Confined Areas (likely some commercial application) to Aquatic Complex" ;
+      skos:prefLabel "Aquatic Complex" .
+
+<http://wescml.org/def/avpcc/815>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Sports – Outdoor" ;
+      skos:definition "Land developed with specialised infrastructure used for open air water sports, e.g. rowing." ;
+      skos:note "Changed from Water Sports – Open Areas (likely some commercial application) to Water Sports – Outdoor" ;
+      skos:prefLabel "Water Sports – Outdoor" .
+
+<http://wescml.org/def/avpcc/816>
+      rdf:type skos:Concept ;
+      rdfs:label "Motor Racing Tracks/Speedways" ;
+      skos:definition "Land developed with specialised infrastructure used for motor sports." ;
+      skos:note "Changed from Motor Racing Tracks/Speedways (likely some commercial application) to Motor Racing Tracks/Speedways" ;
+      skos:prefLabel "Motor Racing Tracks/Speedways" .
+
+<http://wescml.org/def/avpcc/817>
+      rdf:type skos:Concept ;
+      rdfs:label "Racecourse/Tracks" ;
+      skos:definition "Land developed with specialised infrastructure used for horse, greyhound, or harness racing, e.g. Flemington, Randwick." ;
+      skos:note "Changed from Racecourse/Tracks/Showground (sport involving animals, likely some commercial application) to Racecourse/Tracks" ;
+      skos:prefLabel "Racecourse/Tracks" .
+
+<http://wescml.org/def/avpcc/818>
+      rdf:type skos:Concept ;
+      rdfs:label "Ski Fields" ;
+      skos:definition "Land developed with specialised infrastructure used as a ski area for commercial purposes. Includes a field, run, trail or course prepared for the purpose of alpine recreation." ;
+      skos:note "Changed from Ski Fields (likely some commercial application) to Ski Fields" ;
+      skos:prefLabel "Ski Fields" .
+
+<http://wescml.org/def/avpcc/82>
+      rdf:type skos:Concept ;
+      rdfs:label "Local Sporting Facilities" ;
+      skos:narrower <http://wescml.org/def/avpcc/822> , <http://wescml.org/def/avpcc/827> , <http://wescml.org/def/avpcc/829> , <http://wescml.org/def/avpcc/824> , <http://wescml.org/def/avpcc/821> , <http://wescml.org/def/avpcc/826> , <http://wescml.org/def/avpcc/823> , <http://wescml.org/def/avpcc/828> , <http://wescml.org/def/avpcc/820> , <http://wescml.org/def/avpcc/825> ;
+      skos:prefLabel "Local Sporting Facilities" .
+
+<http://wescml.org/def/avpcc/820>
+      rdf:type skos:Concept ;
+      rdfs:label "Indoor Sports Centre" ;
+      skos:definition "Land developed and used as a local indoor recreational facility." ;
+      skos:narrower <http://wescml.org/def/avpcc/820.2> , <http://wescml.org/def/avpcc/820.5> , <http://wescml.org/def/avpcc/820.3> , <http://wescml.org/def/avpcc/820.4> , <http://wescml.org/def/avpcc/820.1> ;
+      skos:note "Changed from Indoor Sports Centre etc. (includes gymnasiums, stadiums/courts etc.) to Indoor Sports Centre" ;
+      skos:prefLabel "Indoor Sports Centre" .
+
+<http://wescml.org/def/avpcc/820.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/820.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Squash Courts" ;
+      skos:prefLabel "Squash Courts" .
+
+<http://wescml.org/def/avpcc/820.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Gymnasium/Health Club" ;
+      skos:prefLabel "Gymnasium/Health Club" .
+
+<http://wescml.org/def/avpcc/820.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Indoor Sports Complex" ;
+      skos:prefLabel "Indoor Sports Complex" .
+
+<http://wescml.org/def/avpcc/820.5>
+      rdf:type skos:Concept ;
+      rdfs:label "Bowling Alley" ;
+      skos:prefLabel "Bowling Alley" .
+
+<http://wescml.org/def/avpcc/821>
+      rdf:type skos:Concept ;
+      rdfs:label "Outdoor Sports Grounds town or suburban facilities" ;
+      skos:definition "Land developed and used as a local outdoor recreation facility." ;
+      skos:narrower <http://wescml.org/def/avpcc/821.4> , <http://wescml.org/def/avpcc/821.3> , <http://wescml.org/def/avpcc/821.2> , <http://wescml.org/def/avpcc/821.1> ;
+      skos:prefLabel "Outdoor Sports Grounds town or suburban facilities" .
+
+<http://wescml.org/def/avpcc/821.1>
+      rdf:type skos:Concept ;
+      rdfs:label "Unspecified" ;
+      skos:prefLabel "Unspecified" .
+
+<http://wescml.org/def/avpcc/821.2>
+      rdf:type skos:Concept ;
+      rdfs:label "Tennis Club" ;
+      skos:prefLabel "Tennis Club" .
+
+<http://wescml.org/def/avpcc/821.3>
+      rdf:type skos:Concept ;
+      rdfs:label "Bowling Club" ;
+      skos:prefLabel "Bowling Club" .
+
+<http://wescml.org/def/avpcc/821.4>
+      rdf:type skos:Concept ;
+      rdfs:label "Outdoor Park and Facilities" ;
+      skos:prefLabel "Outdoor Park and Facilities" .
+
+<http://wescml.org/def/avpcc/822>
+      rdf:type skos:Concept ;
+      rdfs:label "Outdoor Sports – Extended Areas/Cross Country" ;
+      skos:definition "Land developed with specialist infrastructure over extended open areas used for local recreational/sporting activities, e.g. municipal golf course." ;
+      skos:prefLabel "Outdoor Sports – Extended Areas/Cross Country" .
+
+<http://wescml.org/def/avpcc/823>
+      rdf:type skos:Concept ;
+      rdfs:label "Swimming Pools/Aquatic Centres" ;
+      skos:definition "Land developed with specialised infrastructure used as a local aquatic complex for water sports, e.g. municipal swimming centre." ;
+      skos:note "Changed from Water Sports – Swimming Pools/Aquatic Centres to Swimming Pools/Aquatic Centres" ;
+      skos:prefLabel "Swimming Pools/Aquatic Centres" .
+
+<http://wescml.org/def/avpcc/824>
+      rdf:type skos:Concept ;
+      rdfs:label "Water Sports – Outdoor" ;
+      skos:definition "Land developed with specialised infrastructure used for local open air water sports, e.g. rowing." ;
+      skos:note "Changed from Water Sports – Open Areas to Water Sports – Outdoor" ;
+      skos:prefLabel "Water Sports – Outdoor" .
+
+<http://wescml.org/def/avpcc/825>
+      rdf:type skos:Concept ;
+      rdfs:label "Motor Race Tracks/Speedways" ;
+      skos:definition "Land developed with specialised infrastructure used for local motor sports." ;
+      skos:prefLabel "Motor Race Tracks/Speedways" .
+
+<http://wescml.org/def/avpcc/826>
+      rdf:type skos:Concept ;
+      rdfs:label "Aero Club Facility" ;
+      skos:definition "Land used by aero clubs for flying pursuits. May include aircraft hangers." ;
+      skos:note "New AVPCC" ;
+      skos:prefLabel "Aero Club Facility" .
+
+<http://wescml.org/def/avpcc/827>
+      rdf:type skos:Concept ;
+      rdfs:label "Ski Fields" ;
+      skos:definition "Land developed with limited infrastructure and used for recreational alpine pursuits. Limited commercial application." ;
+      skos:prefLabel "Ski Fields" .
+
+<http://wescml.org/def/avpcc/828>
+      rdf:type skos:Concept ;
+      rdfs:label "Equestrian Centre" ;
+      skos:definition "Land developed with specialised infrastructure used for the grooming and showing of horses." ;
+      skos:prefLabel "Equestrian Centre" .
+
+<http://wescml.org/def/avpcc/829>
+      rdf:type skos:Concept ;
+      rdfs:label "Bike Track/Walking Trails" ;
+      skos:definition "Land designated as a bike track/walking trail." ;
+      skos:prefLabel "Bike Track/Walking Trails" .
+
+<http://wescml.org/def/avpcc/83>
+      rdf:type skos:Concept ;
+      rdfs:label "National/State Cultural Heritage Centres" ;
+      skos:narrower <http://wescml.org/def/avpcc/835> , <http://wescml.org/def/avpcc/831> , <http://wescml.org/def/avpcc/837> , <http://wescml.org/def/avpcc/833> , <http://wescml.org/def/avpcc/834> , <http://wescml.org/def/avpcc/836> , <http://wescml.org/def/avpcc/832> , <http://wescml.org/def/avpcc/830> ;
+      skos:note "Changed from National/State/Regional Cultural Heritage Centres to National/State Cultural Heritage Centres" ;
+      skos:prefLabel "National/State Cultural Heritage Centres" .
+
+<http://wescml.org/def/avpcc/830>
+      rdf:type skos:Concept ;
+      rdfs:label "Library/Archives" ;
+      skos:definition "Land developed and used as a library or archival facility with state or national significance." ;
+      skos:prefLabel "Library/Archives" .
+
+<http://wescml.org/def/avpcc/831>
+      rdf:type skos:Concept ;
+      rdfs:label "Museum/Art Gallery" ;
+      skos:definition "Land developed and used as a Museum/Art Gallery with state or national significance." ;
+      skos:prefLabel "Museum/Art Gallery" .
+
+<http://wescml.org/def/avpcc/832>
+      rdf:type skos:Concept ;
+      rdfs:label "Cultural Heritage Centre" ;
+      skos:definition "Land developed and used as a cultural heritage centre with state or national significance." ;
+      skos:prefLabel "Cultural Heritage Centre" .
+
+<http://wescml.org/def/avpcc/833>
+      rdf:type skos:Concept ;
+      rdfs:label "Wildlife Zoo" ;
+      skos:definition "Land developed and used as zoological gardens with state or national significance." ;
+      skos:note "Changed from Wildlife Zoo/Aquarium to Wildlife Zoo" ;
+      skos:prefLabel "Wildlife Zoo" .
+
+<http://wescml.org/def/avpcc/834>
+      rdf:type skos:Concept ;
+      rdfs:label "Aquarium" ;
+      skos:definition "Land developed and used as an aquarium with state or national significance." ;
+      skos:prefLabel "Aquarium" .
+
+<http://wescml.org/def/avpcc/835>
+      rdf:type skos:Concept ;
+      rdfs:label "Botanical Gardens" ;
+      skos:definition "Land developed and used as botanical gardens with state or national significance." ;
+      skos:prefLabel "Botanical Gardens" .
+
+<http://wescml.org/def/avpcc/836>
+      rdf:type skos:Concept ;
+      rdfs:label "Monument/Memorial" ;
+      skos:definition "Land developed and used as a monument/memorial with state or national significance, e.g. Shrine of Remembrance." ;
+      skos:prefLabel "Monument/Memorial" .
+
+<http://wescml.org/def/avpcc/837>
+      rdf:type skos:Concept ;
+      rdfs:label "Culture, recreation and sport" ;
+      skos:definition "Land developed and used as a culture, recreation and sport centre with state or national significance." ;
+      skos:prefLabel "Culture, recreation and sport" .
+
+<http://wescml.org/def/avpcc/84>
+      rdf:type skos:Concept ;
+      rdfs:label "Local Cultural Heritage Sites, Memorials and Monuments" ;
+      skos:narrower <http://wescml.org/def/avpcc/845> , <http://wescml.org/def/avpcc/844> , <http://wescml.org/def/avpcc/843> , <http://wescml.org/def/avpcc/842> , <http://wescml.org/def/avpcc/841> , <http://wescml.org/def/avpcc/840> ;
+      skos:prefLabel "Local Cultural Heritage Sites, Memorials and Monuments" .
+
+<http://wescml.org/def/avpcc/840>
+      rdf:type skos:Concept ;
+      rdfs:label "Library/Archives" ;
+      skos:definition "Land developed and used as a library or archival facility with local significance." ;
+      skos:prefLabel "Library/Archives" .
+
+<http://wescml.org/def/avpcc/841>
+      rdf:type skos:Concept ;
+      rdfs:label "Museum/Art Gallery" ;
+      skos:definition "Land developed and used as a Museum/Art Gallery with local significance." ;
+      skos:prefLabel "Museum/Art Gallery" .
+
+<http://wescml.org/def/avpcc/842>
+      rdf:type skos:Concept ;
+      rdfs:label "Cultural Heritage Centre" ;
+      skos:definition "Land developed and used as a cultural heritage centre with local significance." ;
+      skos:prefLabel "Cultural Heritage Centre" .
+
+<http://wescml.org/def/avpcc/843>
+      rdf:type skos:Concept ;
+      rdfs:label "Wildlife Zoo/Park/Aquarium" ;
+      skos:definition "Land developed and used as a wildlife zoo/aquarium with local significance." ;
+      skos:prefLabel "Wildlife Zoo/Park/Aquarium" .
+
+<http://wescml.org/def/avpcc/844>
+      rdf:type skos:Concept ;
+      rdfs:label "Parks and Gardens" ;
+      skos:definition "Land developed and used as parks and gardens with local significance." ;
+      skos:prefLabel "Parks and Gardens" .
+
+<http://wescml.org/def/avpcc/845>
+      rdf:type skos:Concept ;
+      rdfs:label "Monument/Memorial" ;
+      skos:definition "Land developed and used as a monument/memorial with local significance." ;
+      skos:prefLabel "Monument/Memorial" .
+
+<http://wescml.org/def/avpcc/85>
+      rdf:type skos:Concept ;
+      rdfs:label "Local Recreation - Other" ;
+      skos:narrower <http://wescml.org/def/avpcc/851> , <http://wescml.org/def/avpcc/850> ;
+      skos:note "New Category" ;
+      skos:prefLabel "Local Recreation - Other" .
+
+<http://wescml.org/def/avpcc/850>
+      rdf:type skos:Concept ;
+      rdfs:label "Bathing Boxes" ;
+      skos:definition "Land developed on the foreshore and used as a bathing box for recreational purposes." ;
+      skos:note "New AVPCC formally 686 Boat Sheds, Bathing Boxes, Ramps and Jetties" ;
+      skos:prefLabel "Bathing Boxes" .
+
+<http://wescml.org/def/avpcc/851>
+      rdf:type skos:Concept ;
+      rdfs:label "Boat Sheds" ;
+      skos:definition "Land developed on the foreshore and used as a boat shed for recreational purposes." ;
+      skos:note "New AVPCC formally 686 Boat Sheds, Bathing Boxes, Ramps and Jetties" ;
+      skos:prefLabel "Boat Sheds" .
+
+<http://wescml.org/def/avpcc/9>
+      rdf:type skos:Concept ;
+      rdfs:label "National parks, conservation areas, forest reserves and natural water reserves"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/93> , <http://wescml.org/def/avpcc/92> , <http://wescml.org/def/avpcc/99> , <http://wescml.org/def/avpcc/98> , <http://wescml.org/def/avpcc/97> , <http://wescml.org/def/avpcc/90> , <http://wescml.org/def/avpcc/95> , <http://wescml.org/def/avpcc/96> , <http://wescml.org/def/avpcc/91> , <http://wescml.org/def/avpcc/94> ;
+      skos:notation "9"^^xsd:string ;
+      skos:prefLabel "National parks, conservation areas, forest reserves and natural water reserves"^^xsd:string .
+
+<http://wescml.org/def/avpcc/90>
+      rdf:type skos:Concept ;
+      rdfs:label "Reserved Land" ;
+      skos:narrower <http://wescml.org/def/avpcc/900> ;
+      skos:prefLabel "Reserved Land" .
+
+<http://wescml.org/def/avpcc/900>
+      rdf:type skos:Concept ;
+      rdfs:label "Vacant Land" ;
+      skos:definition "Vacant land with special conservation values designated but not proclaimed as a reserve." ;
+      skos:note "Changed from Vacant Land (future reserve etc.) to Vacant Land" ;
+      skos:prefLabel "Vacant Land" .
+
+<http://wescml.org/def/avpcc/91>
+      rdf:type skos:Concept ;
+      rdfs:label "Nature Reserve" ;
+      skos:narrower <http://wescml.org/def/avpcc/910> ;
+      skos:prefLabel "Nature Reserve" .
+
+<http://wescml.org/def/avpcc/910>
+      rdf:type skos:Concept ;
+      rdfs:label "Nature Reserve" ;
+      skos:definition "Land designated and proclaimed as a nature reserve." ;
+      skos:prefLabel "Nature Reserve" .
+
+<http://wescml.org/def/avpcc/92>
+      rdf:type skos:Concept ;
+      rdfs:label "Wilderness Area" ;
+      skos:narrower <http://wescml.org/def/avpcc/921> , <http://wescml.org/def/avpcc/920> ;
+      skos:prefLabel "Wilderness Area" .
+
+<http://wescml.org/def/avpcc/920>
+      rdf:type skos:Concept ;
+      rdfs:label "World Heritage Area" ;
+      skos:definition "Land designated and proclaimed as a world heritage area. Recognised internationally for its unique wilderness values." ;
+      skos:prefLabel "World Heritage Area" .
+
+<http://wescml.org/def/avpcc/921>
+      rdf:type skos:Concept ;
+      rdfs:label "Local Wilderness Area" ;
+      skos:definition "Land designated and recognised as a local wilderness area." ;
+      skos:prefLabel "Local Wilderness Area" .
+
+<http://wescml.org/def/avpcc/93>
+      rdf:type skos:Concept ;
+      rdfs:label "National Park (Land and Marine)" ;
+      skos:narrower <http://wescml.org/def/avpcc/931> , <http://wescml.org/def/avpcc/930> ;
+      skos:prefLabel "National Park (Land and Marine)" .
+
+<http://wescml.org/def/avpcc/930>
+      rdf:type skos:Concept ;
+      rdfs:label "National Park – Land" ;
+      skos:definition "Land designated and proclaimed as a national park." ;
+      skos:prefLabel "National Park – Land" .
+
+<http://wescml.org/def/avpcc/931>
+      rdf:type skos:Concept ;
+      rdfs:label "National Park – Marine" ;
+      skos:definition "Land designated and proclaimed as a national marine park." ;
+      skos:prefLabel "National Park – Marine" .
+
+<http://wescml.org/def/avpcc/94>
+      rdf:type skos:Concept ;
+      rdfs:label "Natural Monument/Feature" ;
+      skos:narrower <http://wescml.org/def/avpcc/941> , <http://wescml.org/def/avpcc/940> ;
+      skos:prefLabel "Natural Monument/Feature" .
+
+<http://wescml.org/def/avpcc/940>
+      rdf:type skos:Concept ;
+      rdfs:label "Natural Monument – Land" ;
+      skos:definition "Land recognised for its renowned features/scenic/natural/cultural values, e.g. Three Sisters." ;
+      skos:prefLabel "Natural Monument – Land" .
+
+<http://wescml.org/def/avpcc/941>
+      rdf:type skos:Concept ;
+      rdfs:label "Natural Monument – Marine" ;
+      skos:definition "Land recognised for its marine features/scenic/cultural values, e.g. Twelve Apostles – Victoria." ;
+      skos:prefLabel "Natural Monument – Marine" .
+
+<http://wescml.org/def/avpcc/95>
+      rdf:type skos:Concept ;
+      rdfs:label "Natural Forests and Forest Reserves" ;
+      skos:narrower <http://wescml.org/def/avpcc/951> , <http://wescml.org/def/avpcc/950> ;
+      skos:prefLabel "Natural Forests and Forest Reserves" .
+
+<http://wescml.org/def/avpcc/950>
+      rdf:type skos:Concept ;
+      rdfs:label "Forest Reserves – Public" ;
+      skos:definition "Public land reserved for the preservation or protection of aesthetic, scientific, flora or fauna values." ;
+      skos:prefLabel "Forest Reserves – Public" .
+
+<http://wescml.org/def/avpcc/951>
+      rdf:type skos:Concept ;
+      rdfs:label "Forest Reserves – Private" ;
+      skos:definition "Private land reserved for the preservation or protection of aesthetic, scientific, flora or fauna values." ;
+      skos:prefLabel "Forest Reserves – Private" .
+
+<http://wescml.org/def/avpcc/96>
+      rdf:type skos:Concept ;
+      rdfs:label "Conservation Area" ;
+      skos:narrower <http://wescml.org/def/avpcc/961> , <http://wescml.org/def/avpcc/960> ;
+      skos:prefLabel "Conservation Area" .
+
+<http://wescml.org/def/avpcc/960>
+      rdf:type skos:Concept ;
+      rdfs:label "Conservation Area – Public" ;
+      skos:definition "Public land predominantly in a natural state designated as a conservation area." ;
+      skos:prefLabel "Conservation Area – Public" .
+
+<http://wescml.org/def/avpcc/961>
+      rdf:type skos:Concept ;
+      rdfs:label "Conservation Area – Private" ;
+      skos:definition "Private land predominantly in a natural state designated as a conservation area." ;
+      skos:prefLabel "Conservation Area – Private" .
+
+<http://wescml.org/def/avpcc/97>
+      rdf:type skos:Concept ;
+      rdfs:label "Protected Landscape/Seascape" ;
+      skos:narrower <http://wescml.org/def/avpcc/973> , <http://wescml.org/def/avpcc/972> , <http://wescml.org/def/avpcc/971> , <http://wescml.org/def/avpcc/970> ;
+      skos:prefLabel "Protected Landscape/Seascape" .
+
+<http://wescml.org/def/avpcc/970>
+      rdf:type skos:Concept ;
+      rdfs:label "Protected Landscape – Public" ;
+      skos:definition "Public land designated as a protected landscape recognised for its natural and cultural values." ;
+      skos:prefLabel "Protected Landscape – Public" .
+
+<http://wescml.org/def/avpcc/971>
+      rdf:type skos:Concept ;
+      rdfs:label "Protected Landscape – Private" ;
+      skos:definition "Private land designated as a protected landscape recognised for its natural and cultural values." ;
+      skos:prefLabel "Protected Landscape – Private" .
+
+<http://wescml.org/def/avpcc/972>
+      rdf:type skos:Concept ;
+      rdfs:label "Protected Seascape – Public" ;
+      skos:definition "Public land designated as a protected seascape recognised for its natural and cultural values." ;
+      skos:prefLabel "Protected Seascape – Public" .
+
+<http://wescml.org/def/avpcc/973>
+      rdf:type skos:Concept ;
+      rdfs:label "Protected Seascape – Private" ;
+      skos:definition "Private land designated as a protected seascape recognised for its natural and cultural values." ;
+      skos:note "Changed from Protected Landscape – Private to Protected Seascape – Private" ;
+      skos:prefLabel "Protected Seascape – Private" .
+
+<http://wescml.org/def/avpcc/98>
+      rdf:type skos:Concept ;
+      rdfs:label "Wetlands" ;
+      skos:narrower <http://wescml.org/def/avpcc/988> , <http://wescml.org/def/avpcc/982> , <http://wescml.org/def/avpcc/981> , <http://wescml.org/def/avpcc/984> , <http://wescml.org/def/avpcc/983> , <http://wescml.org/def/avpcc/986> , <http://wescml.org/def/avpcc/985> , <http://wescml.org/def/avpcc/987> , <http://wescml.org/def/avpcc/980> ;
+      skos:prefLabel "Wetlands" .
+
+<http://wescml.org/def/avpcc/980>
+      rdf:type skos:Concept ;
+      rdfs:label "River Reserve (fresh water)" ;
+      skos:definition "Land designated as a freshwater river reserve, usually with all year round flows." ;
+      skos:prefLabel "River Reserve (fresh water)" .
+
+<http://wescml.org/def/avpcc/981>
+      rdf:type skos:Concept ;
+      rdfs:label "Creek Reserve (fresh water)" ;
+      skos:definition "Land designated as a fresh water creek reserve with intermittent flows and tides." ;
+      skos:prefLabel "Creek Reserve (fresh water)" .
+
+<http://wescml.org/def/avpcc/982>
+      rdf:type skos:Concept ;
+      rdfs:label "River Reserve (salt water)" ;
+      skos:definition "Land designated as a salt water river reserve, usually with all year round flows." ;
+      skos:prefLabel "River Reserve (salt water)" .
+
+<http://wescml.org/def/avpcc/983>
+      rdf:type skos:Concept ;
+      rdfs:label "Creek Reserve (salt water)" ;
+      skos:definition "Land designated as a salt water creek reserve with intermittent flows and tides." ;
+      skos:prefLabel "Creek Reserve (salt water)" .
+
+<http://wescml.org/def/avpcc/984>
+      rdf:type skos:Concept ;
+      rdfs:label "Floodway Reserve" ;
+      skos:definition "Land designated as a floodway reserve." ;
+      skos:prefLabel "Floodway Reserve" .
+
+<http://wescml.org/def/avpcc/985>
+      rdf:type skos:Concept ;
+      rdfs:label "Fresh Water Lake Reserve" ;
+      skos:definition "Land designated as a fresh water lake reserve that usually holds water all year round." ;
+      skos:prefLabel "Fresh Water Lake Reserve" .
+
+<http://wescml.org/def/avpcc/986>
+      rdf:type skos:Concept ;
+      rdfs:label "Salt Water Lake Reserve" ;
+      skos:definition "Land designated as a salt water lake reserve and is not used for commercial salt extraction." ;
+      skos:prefLabel "Salt Water Lake Reserve" .
+
+<http://wescml.org/def/avpcc/987>
+      rdf:type skos:Concept ;
+      rdfs:label "Inland Low Lying Tidal Estuary Wetlands Reserve" ;
+      skos:definition "Land designated as a wetlands reserve associated with enclosed bays/salt water river estuary." ;
+      skos:prefLabel "Inland Low Lying Tidal Estuary Wetlands Reserve" .
+
+<http://wescml.org/def/avpcc/988>
+      rdf:type skos:Concept ;
+      rdfs:label "Seabed – Open Sea/Ocean/Bays" ;
+      skos:definition "Open sea below high water mark, not being a marine park." ;
+      skos:note "Changed from Seabed – Open Sea/Ocean/Bays (not included in the above) to Seabed – Open Sea/Ocean/Bays" ;
+      skos:prefLabel "Seabed – Open Sea/Ocean/Bays" .
+
+<http://wescml.org/def/avpcc/99>
+      rdf:type skos:Concept ;
+      rdfs:label "Game/Fauna Reserves" ;
+      skos:narrower <http://wescml.org/def/avpcc/991> , <http://wescml.org/def/avpcc/990> ;
+      skos:prefLabel "Game/Fauna Reserves" .
+
+<http://wescml.org/def/avpcc/990>
+      rdf:type skos:Concept ;
+      rdfs:label "Game Reserve – Public" ;
+      skos:definition "Public land designated as a game reserve. Hunting of game may be permitted." ;
+      skos:prefLabel "Game Reserve – Public" .
+
+<http://wescml.org/def/avpcc/991>
+      rdf:type skos:Concept ;
+      rdfs:label "Game Reserve – Private" ;
+      skos:definition "Private land designated as a game reserve. Hunting of game may be permitted." ;
+      skos:prefLabel "Game Reserve – Private" .
+
+avpcc:AVPCC_Collection
+      rdf:type skos:Collection ;
+      rdfs:comment "2014 Australian Valuation Property Classification Codes (AVPCC). The AVPCC in addition to Site Value, Capital Improved Value and Net Annual Value forms part of every valuation in accordance with the VL Act.   The Valuer-General has undertaken a review of 2014 VBP AVPCCs. The review has also considered feedback from valuation authorities, valuers and stakeholders during the 2014 general valuation. The review identified a number of areas that made it necessary to amend the 2014 VBP AVPCCs."^^xsd:string ;
+      rdfs:isDefinedBy <http://www.dtpli.vic.gov.au> ;
+      rdfs:label "AVPCC Collection"^^xsd:string ;
+      rdfs:seeAlso <http://www.dtpli.vic.gov.au/property-and-land-titles/valuation/council-valuations/revaluation-2014> ;
+      skos:member avpcc:Community_services , avpcc:Primary_production , avpcc:Commercial , <http://wescml.org/def/avpcc/9> , <http://wescml.org/def/avpcc/Infrastructure_and_utilities_(industrial)> , avpcc:Sport_Heritage_and_Culture , avpcc:Extractive_industries , avpcc:Residential , avpcc:Industrial ;
+      skos:prefLabel "AVPCC Collection"^^xsd:string .
+
+avpcc:AVPCC_Scheme
+      rdf:type skos:ConceptScheme ;
+      rdfs:label "AVPCC Scheme"^^xsd:string ;
+      skos:hasTopConcept avpcc:Commercial , avpcc:Sport_Heritage_and_Culture , avpcc:Residential , <http://wescml.org/def/avpcc/9> , avpcc:Extractive_industries , <http://wescml.org/def/avpcc/Infrastructure_and_utilities_(industrial)> , avpcc:Community_services , avpcc:Primary_production , avpcc:Industrial ;
+      skos:prefLabel "AVPCC Scheme"^^xsd:string .
+
+avpcc:Code
+      rdf:type skos:Concept ;
+      rdfs:label "Industrial" , "Commercial" , "National parks, conservation areas, forest reserves and natural water reserves" , "Community services" , "Infrastructure and utilities (industrial)" , "Primary production" , "Sport, Heritage and Culture" , "Extractive industries" ;
+      skos:definition "Description" ;
+      skos:note "Comment" ;
+      skos:prefLabel "Commercial" , "Primary production" , "Sport, Heritage and Culture" , "National parks, conservation areas, forest reserves and natural water reserves" , "Extractive industries" , "Infrastructure and utilities (industrial)" , "Industrial" , "Community services" .
+
+avpcc:Commercial
+      rdf:type skos:Concept ;
+      rdfs:label "Commercial"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/25> , <http://wescml.org/def/avpcc/22> , <http://wescml.org/def/avpcc/23> , <http://wescml.org/def/avpcc/21> , <http://wescml.org/def/avpcc/24> , <http://wescml.org/def/avpcc/20> , <http://wescml.org/def/avpcc/29> , <http://wescml.org/def/avpcc/28> , <http://wescml.org/def/avpcc/26> , <http://wescml.org/def/avpcc/27> ;
+      skos:notation "2"^^xsd:string ;
+      skos:prefLabel "Commercial"^^xsd:string .
+
+avpcc:Community_services
+      rdf:type skos:Concept ;
+      rdfs:label "Community services"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/72> , <http://wescml.org/def/avpcc/76> , <http://wescml.org/def/avpcc/75> , <http://wescml.org/def/avpcc/74> , <http://wescml.org/def/avpcc/71> , <http://wescml.org/def/avpcc/70> , <http://wescml.org/def/avpcc/78> , <http://wescml.org/def/avpcc/73> , <http://wescml.org/def/avpcc/77> ;
+      skos:notation "7"^^xsd:string ;
+      skos:prefLabel "Community services"^^xsd:string .
+
+avpcc:Extractive_industries
+      rdf:type skos:Concept ;
+      rdfs:label "Extractive industries"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/42> , <http://wescml.org/def/avpcc/46> , <http://wescml.org/def/avpcc/41> , <http://wescml.org/def/avpcc/44> , <http://wescml.org/def/avpcc/45> , <http://wescml.org/def/avpcc/48> , <http://wescml.org/def/avpcc/40> , <http://wescml.org/def/avpcc/43> , <http://wescml.org/def/avpcc/47> ;
+      skos:notation "4"^^xsd:string ;
+      skos:prefLabel "Extractive industries"^^xsd:string .
+
+avpcc:Industrial
+      rdf:type skos:Concept ;
+      rdfs:label "Industrial"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/30> , <http://wescml.org/def/avpcc/31> , <http://wescml.org/def/avpcc/33> , <http://wescml.org/def/avpcc/32> ;
+      skos:notation "3"^^xsd:string ;
+      skos:prefLabel "Industrial"^^xsd:string .
+
+<http://wescml.org/def/avpcc/Infrastructure_and_utilities_(industrial)>
+      rdf:type skos:Concept ;
+      rdfs:label "Infrastructure and utilities (industrial)"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/68> , <http://wescml.org/def/avpcc/65> , <http://wescml.org/def/avpcc/64> , <http://wescml.org/def/avpcc/61> , <http://wescml.org/def/avpcc/67> , <http://wescml.org/def/avpcc/60> , <http://wescml.org/def/avpcc/66> , <http://wescml.org/def/avpcc/63> , <http://wescml.org/def/avpcc/69> , <http://wescml.org/def/avpcc/62> ;
+      skos:notation "6"^^xsd:string ;
+      skos:prefLabel "Infrastructure and utilities (industrial)"^^xsd:string .
+
+avpcc:Primary_production
+      rdf:type skos:Concept ;
+      rdfs:label "Primary production"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/55> , <http://wescml.org/def/avpcc/53> , <http://wescml.org/def/avpcc/58> , <http://wescml.org/def/avpcc/56> , <http://wescml.org/def/avpcc/50> , <http://wescml.org/def/avpcc/54> , <http://wescml.org/def/avpcc/52> , <http://wescml.org/def/avpcc/57> , <http://wescml.org/def/avpcc/51> ;
+      skos:notation "5"^^xsd:string ;
+      skos:prefLabel "Primary production"^^xsd:string .
+
+avpcc:Residential
+      rdf:type skos:Concept ;
+      rdfs:label "Residential"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/11> , <http://wescml.org/def/avpcc/15> , <http://wescml.org/def/avpcc/10> , <http://wescml.org/def/avpcc/14> , <http://wescml.org/def/avpcc/13> , <http://wescml.org/def/avpcc/12> ;
+      skos:notation "1"^^xsd:string ;
+      skos:prefLabel "Residential"^^xsd:string .
+
+avpcc:Sport_Heritage_and_Culture
+      rdf:type skos:Concept ;
+      rdfs:label "Sport, Heritage and Culture"^^xsd:string ;
+      skos:narrower <http://wescml.org/def/avpcc/81> , <http://wescml.org/def/avpcc/82> , <http://wescml.org/def/avpcc/80> , <http://wescml.org/def/avpcc/85> , <http://wescml.org/def/avpcc/83> , <http://wescml.org/def/avpcc/84> ;
+      skos:notation "8"^^xsd:string ;
+      skos:prefLabel "Sport, Heritage and Culture"^^xsd:string .
