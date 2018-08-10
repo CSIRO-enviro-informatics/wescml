@@ -1,7 +1,7 @@
 # WESCML
 Water and Energy Supply and Consumption info model - A data standard for water and energy supply and consumption.
 
-##About 
+## About 
 
 The Water and Energy Supply and Consumption (WESC) data standard has been developed by CSIRO to support a common represention of data for supply and consumption of water and energy and its delivery via standardised OGC services.
 
@@ -13,7 +13,7 @@ Tools have been developed to support use of WESCML and to help data custodians d
 
 See also [wescml.org](http://wescml.org#overview) for an overview.
 
-##Suggested citations of the info model
+## Suggested citations of the info model
 
 - Simons, Bruce; Yu, Jonathan (2015): WESCML Information Model. v1. CSIRO. Data Collection. [http://doi.org/10.4225/08/574D1DEEA50DD](http://doi.org/10.4225/08/574D1DEEA50DD)
 - Simons, Bruce; Yu, Jonathan; Leighton, Benjamin (2016): [WESCML: A Data Standard for Exchanging Water and Energy Supply and Consumption Data](http://dx.doi.org/10.1016/j.proeng.2016.07.451), 12th International Hydroinformatics Conference, Incheon, South Korea, August 2016., IWA. [dx.doi.org/10.1016/j.proeng.2016.07.451](http://dx.doi.org/10.1016/j.proeng.2016.07.451)
