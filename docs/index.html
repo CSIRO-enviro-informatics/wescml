@@ -1,0 +1,167 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<title>WESC: A data standard for Water and energy supply and consumption</title>
+</head>
+
+<body>
+<div id="wrap">
+   <div id="header"> 
+         <span id="title"> WESC </span>
+         <span id="title2"> A data standard for water and energy supply and consumption</span>
+   </div>
+<!--
+   <div id="nav-area">
+      <ul id="list-nav">
+         <li id="first"><a href="#about">About</a></li>
+         <li><a href="#info-model">Information Model</a></li>
+         <li><a href="#xsd">XML Schemas</a></li>
+         <li><a href="#vocab">Vocabularies</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+   </div>
+-->
+   <div id="content">
+
+
+<div id="about">
+<h2 id="about">About</h2>
+<p>
+The Water and Energy Supply and Consumption (WESC) data standard has been developed
+by CSIRO to support a common represention of data for supply and consumption of 
+water and energy and its delivery via standardised OGC services.
+</p>
+<p>
+The information model allows for data to be delivered in a consistent format
+and is the basis for the exchange format (XML schemas) for encoding datasets.
+</p>
+<p>
+A key component of WESC is the set of agreed and <a href="http://wescml.org/vocab/">shared vocabularies</a>
+used to encode the content for each XML instance, such as result method used
+to measure a meter reading and units of measure.
+</p>
+<p>
+Tools have been developed to support use of WESCML and to  help data custodians 
+deploy data infrastructure configured for WESCML. 
+<a href="https://github.com/CSIRO-enviro-informatics/docker-geoserver/">docker-geoserver</a> allows
+data custodians to create a deployment of 
+<a href="http://geoserver.org/">Geoserver</a> using <a href="https://www.docker.com/">Docker</a> containerization technologies. 
+<a href="https://github.com/CSIRO-enviro-informatics/wesc-sf0-node">wesc-sf0-node</a> extends docker-geoserver
+with configurations of the WESCML-SF0 data model so that data custodians can plug in their 
+WESC datasets and deliver them via WESCML and standardised OGC web services at a push of a button
+thus speeding up and easing the process of data provision.
+</p>
+
+</div>
+
+
+<div id="components">
+<h2>Components</h2>
+
+<p>
+XML 
+</p>
+<ul id="components">
+<li><a href="schemas/">WESC XML schemas</a></li>
+<li><a href="xml/wescml_example.xml">WESC XML instance example</a></li>
+<li><a href="https://github.com/CSIRO-enviro-informatics/wescml">WESCML Source on GitHub</a></li>
+</ul>
+
+<p>
+UML
+</p>
+<ul id="components">
+<li><a href="resource/wesc.eap">WESC Information Model</a></li>
+</ul>
+
+<p>
+Data 
+</p>
+<ul id="components">
+<li><a href="http://data.aurin.org.au/dataset?q=wesc">WESC Data Hosted on AURIN</a></li>
+</ul>
+
+<p>Controlled vocabularies</p>
+<ul id="components">
+<li><a href="vocab/">WESC Vocabulary Summary Table</a></li>
+<li><a href="resource/">WESC Vocabulary resources</a></li>
+<li><a href="http://www.sissvoc.info/search?endpoint=http://wescml.org/sissvoc/vocab&q=water">WESC Vocabulary search</a></li>
+</ul>
+
+<p>Tools</p>
+<ul id="components">
+<li><a href="https://github.com/CSIRO-enviro-informatics/wesc-sf0-node">wesc-sf0-node on GitHub</a></li>
+<li><a href="https://github.com/CSIRO-enviro-informatics/docker-geoserver">docker-geoserver on GitHub</a></li>
+</ul>
+
+</div>
+
+
+<div id="overview">
+   <img src="diagrams/wescml_overview.png" alt="WESCML Overview" width="800px"  usemap="#wescmapname" />
+   <map name="wescmapname">
+     <area shape="rect" coords="25,25,168,260" href="#info-model" alt="wesc info model" title="WESC Info Model" >
+     <area shape="rect" coords="175,41,317,160" href="/vocab" alt="wesc vocabs" title="WESC Vocabularies" >
+     <area shape="rect" coords="375,375,543,550" href="https://github.com/CSIRO-enviro-informatics/wesc-sf0-node" alt="wesc-sf0-node" title="wesc-sf0-node" >
+     <area shape="rect" coords="375,181,445,240" href="http://aurin.org.au" alt="AURIN" title="AURIN" >
+     <area shape="rect" coords="108,373,230,390," href="#" alt="WESCML - this page!" title="wescml.org - this page" >
+   </map>
+</div>
+
+
+<div id="info-model">
+<h2>Information model</h2>
+
+<p>
+Aggregated consumption information model (SF-0):
+</p>
+<div>
+<a href="diagrams/WESC-AggregatedConsumption.png"><img src="diagrams/WESC-AggregatedConsumption.png" alt="Aggregated Consumption information model"/></a>
+</div>
+<p>
+
+Consumption information model:
+</p>
+<div>
+<a href="diagrams/WESC-Consumption.png"><img src="diagrams/WESC-Consumption.png" alt="Consumption information model"/></a>
+</div>
+
+<p>
+Supply information model:
+</p>
+<div>
+<a href="diagrams/WESC-Supply.png"><img src="diagrams/WESC-Supply.png" alt="Consumption information model"/></a>
+</div>
+
+<p>
+GML SF-1 WESCML information model:
+</p>
+<div>
+<a href="diagrams/WescML-SF1.png"><img src="diagrams/WescML-SF1.png" width="780" alt="SF-1 information model"/></a>
+</div>
+</div>
+<div style="padding-top: 50px"></div>
+
+</div>
+
+   </div> <!-- end content -->
+
+
+
+   <div id="footer">
+
+<div style="text-align: center">
+&copy; 2013-2016 CSIRO.
+WESC and the respective components have been developed by <a href="http://csiro.au">CSIRO</a> for 
+the <a href="http://aurin.org.au">AURIN</a> Lens 6/2 project. 
+For more information see the 
+<a href="http://aurin.org.au/data-standards">AURIN L6/2 Factsheet</a>. Contact <a href="http://people.csiro.au/Y/J/Jonathan-Yu.aspx">Jonathan Yu</a> for more details about the project.
+<br/>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="http://i1.wp.com/mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png?resize=85%2C30" alt="cc-by"/></a>
+</div>
+
+    </div> <!-- end footer -->
+
+</div> <!-- end wrap -->
+</body>
+</html>

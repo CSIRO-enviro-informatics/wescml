@@ -1,0 +1,145 @@
+body {
+  background-color: #ffffff;
+  font-size: 12px;
+  font-family: 'raleway', helvetica, sans-serif;
+  color:#000000;  
+  margin: 20px 140px  20px 140px;
+}
+
+img {
+  text-align:center;
+}
+
+
+a:hover {
+ text-decoration:underline;
+ color: royalblue;
+ font-weight: 500;
+}
+
+a {
+ text-decoration:none;
+ color: royalblue;
+ font-weight: 500;
+}
+
+div#header {
+  display: inline-block ;  
+}
+
+
+span#title {
+   float: left;
+   font-weight:900;
+   font-size: 2.5em;
+   padding: 0px 0px 0px 0px;
+   padding-right: 30px;
+   color: black;
+   background-color: #fff;
+   margin: 0; 
+}
+
+span#title2 {
+   float: left;
+   font-weight:400;
+   font-size: 2.5em;
+   padding: 0px 20px 0px 0px;
+   color: black;
+   background-color: #fff;
+}
+
+div#about {
+   float: left;
+   width: auto;
+   max-width: 500px;
+   max-height: 400px;
+   padding: 20px 60px 5px 0px;
+   margin: 0px 0px 0px 0px ;
+   text-align:justify;
+   text-justify:inter-word;
+   font-size: 18px;
+   line-height: 1.3889;
+}
+
+div#about p {
+   color: #404040;
+}
+div#components p {
+   color: #404040;
+   margin: 0px;
+   padding: 0px;
+}
+
+ul#components {
+  color: #404040;
+  list-style:none;
+  margin-top: 5px;
+  padding:0px 0px 0px 5px;
+}
+
+div#components{
+   float: left;
+   width: 300px;
+   height: 300px;
+   padding: 20px 0px 5px 0px;
+   margin: 0px 0px 10px 0px ;
+   font-size: 18px;
+   line-height: 1.3889;
+}
+
+div#info-model {
+   padding-top: 10px;
+   clear:both;
+   font-size: 18px;
+   line-height: 1.3889;
+}
+
+#wrap {
+   max-width:1080px;
+   margin: 0 auto;
+   background-color: #fff;
+}
+
+
+#content { 
+  width: 100%;
+  padding: 0px;
+  text-align: left;
+  background-color: #fff;	
+  overflow: auto;
+  border: 1px #000000;
+  display: inline-block;
+}
+
+ul#list-nav {
+  margin:50px;
+  padding:0px 0px 0px 0px;
+  list-style:none;
+  width:525px;
+}
+
+ul#list-nav {
+   display: inline;
+}
+
+ul#list-nav li#first a {
+ margin: 0px 0px -5px -10px;
+ padding: 5px 20px 5px 10px;
+}
+ul#list-nav li a {
+ font-size: 1.5em; 
+ font-weight: 500;
+ text-decoration:none;
+ margin:0px 0px 0px 5px;
+ padding: 5px 20px 5px 20px ;
+ background: white;
+ color:black;
+ float:left;
+ text-align:center;
+ border-left:1px solid #fff;
+}
+
+ul#list-nav li a:hover {
+  background: gainsboro;
+  color:#000
+}
