@@ -52,7 +52,7 @@
               <a class="nav-link js-scroll-trigger" href="#features">Vocabularies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Tools</a>
+              <a class="nav-link js-scroll-trigger" href="#tools">Tools</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Feedback</a>
@@ -304,21 +304,27 @@ In addition to the four feature classes, three code lists are included to specif
       </div>
     </section>
 
-    <section class="cta">
+    <section class="cta" id="tools">
       <div class="cta-content">
         <div class="container">
           <h2>WESC Tools</h2>
           <p>
 Tools have been developed to support use of WESCML and to  help data custodians 
 deploy data infrastructure configured for WESCML. 
+<br/><br/>
 <a href="https://github.com/CSIRO-enviro-informatics/docker-geoserver/">docker-geoserver</a> allows
 data custodians to create a deployment of 
 <a href="http://geoserver.org/">Geoserver</a> using <a href="https://www.docker.com/">Docker</a> containerization technologies. 
+<br/><br/>
 <a href="https://github.com/CSIRO-enviro-informatics/wesc-sf0-node">wesc-sf0-node</a> extends docker-geoserver
 with configurations of the WESCML-SF0 data model so that data custodians can plug in their 
 WESC datasets and deliver them via WESCML and standardised OGC web services at a push of a button
 thus speeding up and easing the process of data provision.
 </p>
+<div style="text-align: center; padding-top:10px">
+   <img src="img/wescml_overview2.png" width="80%">
+</div>
+
         </div>
       </div>
       <div class="overlay"></div>
@@ -330,6 +336,9 @@ thus speeding up and easing the process of data provision.
 		<p>
 		More information and resources are available on our GitHub site. <br/>
 		Issues, feedback or feature requests can be lodged via <a href="https://github.com/csiro-enviro-informatics/wescml/issues">this link</a>.</p>
+		<p>
+		WESCML is maintained by the <a href="https://research.csiro.au/ei/">CSIRO Environmental Informatics group</a> with <br/> partners from the research and industry sectors. 		
+		</p>
         <ul class="list-inline list-social">
           <li class="list-inline-item social-github">
             <a href="#">
@@ -342,8 +351,9 @@ thus speeding up and easing the process of data provision.
 
     <footer>
       <div class="container">
-        <p>&copy; CSIRO 2013-2019. All Rights Reserved. WESC and the respective components have been developed by CSIRO for the AURIN Lens 6/2 project and the NEAR project.</p>
-        <ul class="list-inline">
+        <p>&copy; <a href="https://www.csiro.au/">CSIRO</a> 2013-2019. All Rights Reserved. WESC and the respective components have been developed by CSIRO for the AURIN Lens 6/2 project and the NEAR project.</p>
+        <!--
+		<ul class="list-inline">
           <li class="list-inline-item">
             <a href="#">Privacy</a>
           </li>
@@ -354,6 +364,7 @@ thus speeding up and easing the process of data provision.
             <a href="#">FAQ</a>
           </li>
         </ul>
+		-->
       </div>
     </footer>
 
