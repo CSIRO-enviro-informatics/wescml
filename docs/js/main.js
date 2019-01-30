@@ -1,5 +1,4 @@
-var currentEndpoint = 'http://demo.sissvoc.info/sissvoc/pizza';
-var conceptschemeOrCollection = "conceptscheme"; //choose conceptscheme or collection
+var currentEndpoint = "https://wescml.org/sissvoc/vocab";
 //var conceptschemeOrCollection = "collection"; //choose conceptscheme or collection
 var details_opened = true;
 var MAX_LABEL_LENGTH = 50;
@@ -13,7 +12,7 @@ var margin = {top: 20, right: 30, bottom: 50, left: 100},
     height = 800 - margin.top - margin.bottom;
 
 var sissvoc_endpoints = {};
-sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "http://wescml.org/sissvoc/vocab", "view": "collection"}; 
+sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "https://wescml.org/sissvoc/vocab", "view": "collection"}; 
  
 	
 
