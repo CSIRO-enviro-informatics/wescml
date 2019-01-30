@@ -300,7 +300,7 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("../img/powerlines.jpg");
+  background-image: url("../img/powerlines_sm.jpg");
   background-position: center;
   background-size: cover;
 }
