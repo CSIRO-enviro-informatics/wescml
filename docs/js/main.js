@@ -7,8 +7,8 @@ var data_processed = {};
 var enable_lookahead = false;
 var arrDeferred = [];
 
-var margin = {top: 20, right: 30, bottom: 50, left: 100},
-    width = 1200 - margin.right - margin.left,
+var margin = {top: 20, right: 20, bottom: 50, left: 100},
+    width = 1000 - margin.right - margin.left,
     height = 800 - margin.top - margin.bottom;
 
 var sissvoc_endpoints = {};
