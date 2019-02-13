@@ -1,0 +1,529 @@
+@prefix qudt:  <http://qudt.org/schema/qudt#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ssd:   <http://www.w3.org/ns/sparql-service-description#> .
+@prefix rr-entity: <http://registry.it.csiro.au/structure/entity-type/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spec:  <http://www.opengis.net/ont/modspec#> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix dgu:   <http://reference.data.gov.uk/def/reference/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix ui:    <http://purl.org/linked-data/registry-ui#> .
+@prefix reg:   <http://purl.org/linked-data/registry#> .
+@prefix api:   <http://purl.org/linked-data/api/vocab#> .
+@prefix vivo:  <http://vivoweb.org/ontology/core#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix sp:    <http://registry.it.csiro.au/system/prefixes/sp> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix cc:    <http://creativecommons.org/ns#> .
+@prefix op:    <http://environment.data.gov.au/def/op#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix dtr:   <http://registry.it.csiro.au/ont/dtr#> .
+@prefix npg:   <http://ns.nature.com/terms/> .
+@prefix odrs:  <http://schema.theodi.org/odrs#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix gba:   <http://registry.it.csiro.au/ont/gba-approval/> .
+@prefix version: <http://purl.org/linked-data/version#> .
+@prefix rr-cat: <http://registry.it.csiro.au/structure/category/> .
+@prefix rr-org: <http://registry.it.csiro.au/structure/org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix bibo:  <http://purl.org/ontology/bibo/> .
+@prefix rr-ui: <http://registry.it.csiro.au/structure/ui/> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://registry.it.csiro.au/def/wesc/core/MeteringConcept>
+        a                  skos:Concept ;
+        rdfs:label         "Metering definitions"^^xsd:string ;
+        dct:description    "Metering definitions"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/MeterReadingType> , <http://registry.it.csiro.au/def/wesc/core/MeteringMethod> ;
+        skos:prefLabel     "Metering definitions"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpereReactive>
+        a                     qudt:Unit ;
+        rdfs:label            "Mega-Volt-Ampere Reactive" ;
+        reg:notation          "MegaVoltAmpereReactive" ;
+        qudt:hasQuantityKind  <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        qudt:symbol           "MVAr" ;
+        skos:broader          <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> .
+
+<http://registry.it.csiro.au/def/wesc/core/Supply>
+        a                skos:Concept ;
+        rdfs:label       "Supply" ;
+        dct:description  "Supply"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/SupplyConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/BulkElectricityGeneratorSupply> , <http://registry.it.csiro.au/def/wesc/core/BulkWaterSupply> ;
+        skos:prefLabel   "Supply"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/SupplyConcept>
+        a                  skos:Concept ;
+        rdfs:label         "Supply definitions"^^xsd:string ;
+        dct:description    "Supply definitions"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/Supply> ;
+        skos:prefLabel     "Supply definitions"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/LowRiseHighDensityResidentialProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Low rise high density residential property"^^xsd:string ;
+        dct:description         "Low rise high density residential property"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> ;
+        skos:prefLabel          "Low rise high density residential property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/WaterConsumption>
+        a                skos:Concept ;
+        rdfs:label       "Water Consumption" ;
+        dct:description  "Metered Water consumption for a residential property, or larger commercial/industry properties. For many residential apartments and flats, water consumption meter is read on a monthly basis and the total is split across all units based on a floor space factor not actual consumption.  Meter readings for water can be on-site read or an estimate."^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/Consumption> , <http://registry.it.csiro.au/def/wesc/core/WaterDomainConcept> ;
+        skos:definition  "Metered Water consumption for a residential property, or larger commercial/industry properties. For many residential apartments and flats, water consumption meter is read on a monthly basis and the total is split across all units based on a floor space factor not actual consumption.  Meter readings for water can be on-site read or an estimate."^^xsd:string ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/WaterConsumptionByEndUsers> , <http://registry.it.csiro.au/def/wesc/core/DistrictWaterConsumption> ;
+        skos:prefLabel   "Water consumption"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/BulkElectricityGeneratorSupply>
+        a                skos:Concept ;
+        rdfs:label       "Bulk Electricity Generator Supply" ;
+        dct:description  "Some information would be available at the scale of the energy generators - however the temporal scale that can be made available to the project is likely to be heavily dependent on the commercial nature of the data.  "^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/Supply> , <http://registry.it.csiro.au/def/wesc/core/EnergyDomainConcept> ;
+        skos:definition  "Some information would be available at the scale of the energy generators - however the temporal scale that can be made available to the project is likely to be heavily dependent on the commercial nature of the data.  "^^xsd:string ;
+        skos:prefLabel   "Bulk electricity generator supply"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/MixedLandUse>
+        a                skos:Concept ;
+        rdfs:label       "Mixed land use"^^xsd:string ;
+        dct:description  "Mixed land use"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/ResidentialAndCommercialLandUse> , <http://registry.it.csiro.au/def/wesc/core/CommercialAndIndustrialLandUse> ;
+        skos:prefLabel   "Mixed land use"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/LandUseProperty>
+        a                        skos:Concept ;
+        rdfs:label               "Land use" ;
+        dct:description          "Property"^^xsd:string ;
+        skos:narrower            <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> , <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/UnknownLandUse> , <http://registry.it.csiro.au/def/wesc/core/CommercialProperty> , <http://registry.it.csiro.au/def/wesc/core/MixedLandUse> ;
+        skos:narrowerTransitive  <http://registry.it.csiro.au/def/wesc/core/LowRiseHighDensityResidentialProperty> , <http://registry.it.csiro.au/def/wesc/core/ResidentialAndCommercialLandUse> , <http://registry.it.csiro.au/def/wesc/core/UnitProperty> , <http://registry.it.csiro.au/def/wesc/core/LightManufacturing> , <http://registry.it.csiro.au/def/wesc/core/HeavyIndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/SingleDwellingProperty> , <http://registry.it.csiro.au/def/wesc/core/StrataProperty> , <http://registry.it.csiro.au/def/wesc/core/CommercialAndIndustrialLandUse> , <http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty> , <http://registry.it.csiro.au/def/wesc/core/HeavyManufacturingProperty> , <http://registry.it.csiro.au/def/wesc/core/LightIndustrialProperty> ;
+        skos:prefLabel           "Property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/SingleDwellingProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Single Dwelling Property" ;
+        dct:description         "single dwelling"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "single dwelling"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/Water>
+        a                skos:Concept ;
+        rdfs:label       "Water commodity"^^xsd:string ;
+        dct:description  "water"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/CommodityType> ;
+        skos:prefLabel   "water"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByEndUsers>
+        a                       skos:Concept ;
+        rdfs:label              "Electricity Consumption by end user" ;
+        dct:description         "For the residential sector, energy data has historically been collected on a quarterly basis.  As with water, it can be assumed that the meter reading process is staged over the year for properties in a given supply zone meaning that consumption for any given three month period will need to be aggregated from more than one meter read.  "^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumption> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/Consumption> ;
+        skos:definition         "For the residential sector, energy data has historically been collected on a quarterly basis.  As with water, it can be assumed that the meter reading process is staged over the year for properties in a given supply zone meaning that consumption for any given three month period will need to be aggregated from more than one meter read.  "^^xsd:string ;
+        skos:prefLabel          "Electricity consumption by end users"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ManualMeterValue>
+        a                skos:Concept ;
+        rdfs:label       "Manual Meter Value read method" ;
+        dct:description  "Manual meter read"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeteringMethod> ;
+        skos:prefLabel   "Manual meter read"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpere>
+        a                     qudt:Unit ;
+        rdfs:label            "Kilo-Volt-Ampere" ;
+        reg:notation          "KiloVoltAmpere" ;
+        qudt:abbreviation     "kVA" ;
+        qudt:hasQuantityKind  <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        qudt:symbol           "kVA" ;
+        skos:broader          <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> .
+
+<http://registry.it.csiro.au/def/wesc/core/EnergyDomainConcept>
+        a                  skos:Concept ;
+        rdfs:label         "Energy domain definitions"^^xsd:string ;
+        dct:description    "Energy domain definitions"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumption> , <http://registry.it.csiro.au/def/wesc/core/BulkElectricityGeneratorSupply> , <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        skos:prefLabel     "Energy domain definitions"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/CustomerMeterValue>
+        a                skos:Concept ;
+        rdfs:label       "Customer Meter Value method" ;
+        dct:description  "Customer meter value"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeteringMethod> ;
+        skos:prefLabel   "Customer meter value"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/FeedInMeterReadType>
+        a                skos:Concept ;
+        rdfs:label       "Feed-in Meter Read Type" ;
+        dct:description  "Feed in meter read type"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeterReadingType> ;
+        skos:prefLabel   "Feed in meter read type"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/UnitProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Unit property" ;
+        dct:description         "unit dwelling"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> ;
+        skos:prefLabel          "unit dwelling"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/CommodityType>
+        a                  skos:Concept ;
+        rdfs:label         "Commodity type"^^xsd:string ;
+        dct:description    "Commodity type"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/Water> , <http://registry.it.csiro.au/def/wesc/core/Electricity> , <http://registry.it.csiro.au/def/wesc/core/Gas> ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/WaterDomainConcept>
+        a                  skos:Concept ;
+        rdfs:label         "Water domain"^^xsd:string ;
+        dct:description    "Water domain"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/WaterConsumption> , <http://registry.it.csiro.au/def/wesc/core/BulkWaterSupply> ;
+        skos:prefLabel     "Water domain"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure>
+        a                  skos:Concept ;
+        rdfs:label         "Unit of Measure" ;
+        dct:description    "Unit of measure"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpereReactive> , <http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpereReactive> , <http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpere> , <http://registry.it.csiro.au/def/wesc/core/MegaWatt> , <http://qudt.org/vocab/unit#Kilowatthour> , <http://environment.data.gov.au/water/quality/def/unit/MegaLitre> , <http://registry.it.csiro.au/def/wesc/core/KiloWatt> , <http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpere> ;
+        skos:prefLabel     "Unit of measure"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/CalculatedMeterValue>
+        a                skos:Concept ;
+        rdfs:label       "Calculated Meter Value" ;
+        dct:description  "Calculated meter value"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeteringMethod> ;
+        skos:prefLabel   "Calculated meter value"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/MegaWatt>
+        a             qudt:Unit ;
+        rdfs:label    "MegaWatt" ;
+        reg:notation  "MegaWatt" ;
+        qudt:symbol   "MW" ;
+        skos:broader  <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> .
+
+<http://registry.it.csiro.au/def/wesc/core/Consumption>
+        a                        skos:Concept ;
+        rdfs:label               "Consumption" ;
+        dct:description          "Consumption definition"^^xsd:string ;
+        skos:broader             <http://registry.it.csiro.au/def/wesc/core/DemandConcept> ;
+        skos:narrower            <http://registry.it.csiro.au/def/wesc/core/WaterConsumption> , <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumption> ;
+        skos:narrowerTransitive  <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByDistributionNetwork> , <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByEndUsers> , <http://registry.it.csiro.au/def/wesc/core/WaterConsumptionByEndUsers> , <http://registry.it.csiro.au/def/wesc/core/DistrictWaterConsumption> ;
+        skos:prefLabel           "Consumption definition"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ResidentialAndCommercialLandUse>
+        a                       skos:Concept ;
+        rdfs:label              "Mixed residential and commercial land use"^^xsd:string ;
+        dct:description         "Mixed residential and commercial land use"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/MixedLandUse> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "Mixed residential and commercial land use"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/Electricity>
+        a                skos:Concept ;
+        rdfs:label       "Electricity Commodity"^^xsd:string ;
+        dct:description  "electricity"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/CommodityType> ;
+        skos:prefLabel   "electricity"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpere>
+        a                     qudt:Unit ;
+        rdfs:label            "Mega-Volt-Ampere" ;
+        reg:notation          "MegaVoltAmpere" ;
+        qudt:hasQuantityKind  <http://registry.it.csiro.au/def/wesc/core/ApparentPower;> ;
+        qudt:symbol           "MVA" ;
+        skos:broader          <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> .
+
+<http://registry.it.csiro.au/def/wesc/core/UnmeteredProperty>
+        a                skos:Concept ;
+        rdfs:label       "Unmetered property"^^xsd:string ;
+        dct:description  "Unmetered property"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:prefLabel   "Unmetered property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/CommercialProperty>
+        a                skos:Concept ;
+        rdfs:label       "Commercial Property" ;
+        dct:description  "commercial"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:prefLabel   "commercial"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/WaterConsumptionByEndUsers>
+        a                       skos:Concept ;
+        rdfs:label              "Water Consumption by end user" ;
+        dct:description         "Water consumption by end users"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/WaterConsumption> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/Consumption> ;
+        skos:prefLabel          "Water consumption by end users"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/LandUseConcept>
+        a                  skos:Concept ;
+        rdfs:label         "Land use definitions"^^xsd:string ;
+        dct:description    "Land use definitions"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/MixedLandUse> , <http://registry.it.csiro.au/def/wesc/core/CommercialProperty> , <http://registry.it.csiro.au/def/wesc/core/RuralProperty> , <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/UnknownLandUse> , <http://registry.it.csiro.au/def/wesc/core/UnmeteredProperty> , <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> , <http://registry.it.csiro.au/def/wesc/core/SolarMeteredProperty> ;
+        skos:prefLabel     "Land use definitions"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/ElectricityConsumption>
+        a                skos:Concept ;
+        rdfs:label       "Electricity Consumption" ;
+        dct:description  "Electricity consumption"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/Consumption> , <http://registry.it.csiro.au/def/wesc/core/EnergyDomainConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByDistributionNetwork> , <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByEndUsers> ;
+        skos:prefLabel   "Electricity consumption"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/SelfGeneratedMeterReadType>
+        a                skos:Concept ;
+        rdfs:label       "Self-generated Meter Read type" ;
+        dct:description  "Self generated meter read type"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeterReadingType> ;
+        skos:prefLabel   "Self generated meter read type"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByDistributionNetwork>
+        a                       skos:Concept ;
+        rdfs:label              "Electricity Consumption By District" ;
+        dct:description         "This type of metering is typically conducted at three levels - residential (which might be approx 100 homes); district and zoned (perhaps only a handful of zones for a large city).  The data is a very important tool in managing and optimising the distribution network and is typically considered as highly confidential due to the competitive nature of the energy distribution and retail marketplace.   "^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumption> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/Consumption> ;
+        skos:definition         "This type of metering is typically conducted at three levels - residential (which might be approx 100 homes); district and zoned (perhaps only a handful of zones for a large city).  The data is a very important tool in managing and optimising the distribution network and is typically considered as highly confidential due to the competitive nature of the energy distribution and retail marketplace.   "^^xsd:string ;
+        skos:prefLabel          "Electricity consumption by distribution network"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/BulkWaterSupply>
+        a                skos:Concept ;
+        rdfs:label       "Bulk Water Supply" ;
+        dct:description  "This single daily total volume released into the network data point has been more widely used than the district metering data as it provides a total consumption number and can be matched up with weather data to look at the influence of rainfall, evaporation, temperature etc on overall demand.  This data is also typically reported publicly already so there should be no barrier to making it available in AURIN but will not generate much excitement in the research community as it not considered new or novel data"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/Supply> , <http://registry.it.csiro.au/def/wesc/core/WaterDomainConcept> ;
+        skos:definition  "This single daily total volume released into the network data point has been more widely used than the district metering data as it provides a total consumption number and can be matched up with weather data to look at the influence of rainfall, evaporation, temperature etc on overall demand.  This data is also typically reported publicly already so there should be no barrier to making it available in AURIN but will not generate much excitement in the research community as it not considered new or novel data"^^xsd:string ;
+        skos:prefLabel   "Bulk water supply"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/MeteringMethod>
+        a                skos:Concept ;
+        rdfs:label       "Metering method" ;
+        dct:description  "Metering method"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeteringConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/ManualMeterValue> , <http://registry.it.csiro.au/def/wesc/core/CalculatedMeterValue> , <http://registry.it.csiro.au/def/wesc/core/CustomerMeterValue> ;
+        skos:prefLabel   "Metering method"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ApparentPower>
+        a                qudt:QuantityKind ;
+        rdfs:label       "Apparent Power" ;
+        dct:description  "Apparent power is the total power in an AC circuit, which can be divided into two portions: i) Reactive power is the portion due to non-resistive loads, and ii) Active power is due to resistive loads." ;
+        reg:notation     "ApparentPower" ;
+        qudt:unit        <http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpere> , <http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpere> ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        skos:definition  "Apparent power is the total power in an AC circuit, which can be divided into two portions: i) Reactive power is the portion due to non-resistive loads, and ii) Active power is due to resistive loads." ;
+        skos:related     <http://registry.it.csiro.au/def/wesc/core/ReactivePower> , <http://registry.it.csiro.au/def/wesc/core/ActivePower> .
+
+<http://registry.it.csiro.au/def/wesc/core/Gas>
+        a                skos:Concept ;
+        rdfs:label       "Gas Commodity"^^xsd:string ;
+        dct:description  "gas"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/CommodityType> ;
+        skos:prefLabel   "gas"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind>
+        a                skos:Concept ;
+        rdfs:label       "Power Quantity Kind" ;
+        dct:description  "Quantity Kinds relating to Power" ;
+        reg:notation     "PowerQuantityKind" ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/EnergyDomainConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/ApparentPower> , <http://registry.it.csiro.au/def/wesc/core/ActivePower> , <http://registry.it.csiro.au/def/wesc/core/ReactivePower> .
+
+<http://registry.it.csiro.au/def/wesc/core/SolarMeteredProperty>
+        a                skos:Concept ;
+        rdfs:label       "Solar metered property"^^xsd:string ;
+        dct:description  "Solar metered property"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:prefLabel   "Solar metered property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/UnknownLandUse>
+        a                skos:Concept ;
+        rdfs:label       "Unknown land use"^^xsd:string ;
+        dct:description  "unknown"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:prefLabel   "unknown"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/HeavyIndustrialProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Heavy industrial property"^^xsd:string ;
+        dct:description         "heavy industrial"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "heavy industrial"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpereReactive>
+        a                     qudt:Unit ;
+        rdfs:label            "Kilo-Volt-Ampere Reactive" ;
+        reg:notation          "KiloVoltAmpereReactive" ;
+        qudt:hasQuantityKind  <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        qudt:symbol           "kVAr " ;
+        skos:broader          <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> .
+
+<http://registry.it.csiro.au/def/wesc/core>
+        a                          skos:ConceptScheme , ldp:Container , reg:Register ;
+        rdfs:label                 "core" ;
+        rdfs:member                <http://registry.it.csiro.au/def/wesc/core/SelfGeneratedMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/Consumption> , <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> , <http://registry.it.csiro.au/def/wesc/core/KiloWatt> , <http://registry.it.csiro.au/def/wesc/core/CommercialAndIndustrialLandUse> , <http://registry.it.csiro.au/def/wesc/core/SolarMeteredProperty> , <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumption> , <http://registry.it.csiro.au/def/wesc/core/WaterConsumption> , <http://registry.it.csiro.au/def/wesc/core/CalculatedMeterValue> , <http://registry.it.csiro.au/def/wesc/core/Water> , <http://registry.it.csiro.au/def/wesc/core/Supply> , <http://registry.it.csiro.au/def/wesc/core/MeteringMethod> , <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> , <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByDistributionNetwork> , <http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpere> , <http://registry.it.csiro.au/def/wesc/core/EnergyDomainConcept> , <http://registry.it.csiro.au/def/wesc/core/FeedInMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpereReactive> , <http://registry.it.csiro.au/def/wesc/core/BulkElectricityGeneratorSupply> , <http://registry.it.csiro.au/def/wesc/core/MeteringConcept> , <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/MegaWatt> , <http://registry.it.csiro.au/def/wesc/core/ActivePower> , <http://registry.it.csiro.au/def/wesc/core/StrataProperty> , <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> , <http://registry.it.csiro.au/def/wesc/core/PeakMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/UnknownLandUse> , <http://registry.it.csiro.au/def/wesc/core/SupplyConcept> , <http://registry.it.csiro.au/def/wesc/core/UnmeteredProperty> , <http://registry.it.csiro.au/def/wesc/core/HeavyIndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/Gas> , <http://registry.it.csiro.au/def/wesc/core/OffPeakMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/ApparentPower> , <http://registry.it.csiro.au/def/wesc/core/LightIndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/CustomerMeterValue> , <http://registry.it.csiro.au/def/wesc/core/CommodityType> , <http://registry.it.csiro.au/def/wesc/core/RuralProperty> , <http://registry.it.csiro.au/def/wesc/core/Electricity> , <http://registry.it.csiro.au/def/wesc/core/WaterDomainConcept> , <http://registry.it.csiro.au/def/wesc/core/MeterReadingType> , <http://registry.it.csiro.au/def/wesc/core/ManualMeterValue> , <http://registry.it.csiro.au/def/wesc/core/DistrictWaterConsumption> , <http://registry.it.csiro.au/def/wesc/core/ResidentialAndCommercialLandUse> , <http://registry.it.csiro.au/def/wesc/core/HeavyManufacturingProperty> , <http://registry.it.csiro.au/def/wesc/core/MixedLandUse> , <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> , <http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpere> , <http://registry.it.csiro.au/def/wesc/core/LightManufacturing> , <http://registry.it.csiro.au/def/wesc/core/ReactivePower> , <http://registry.it.csiro.au/def/wesc/core/DemandConcept> , <http://registry.it.csiro.au/def/wesc/core/WaterConsumptionByEndUsers> , <http://registry.it.csiro.au/def/wesc/core/SingleDwellingProperty> , <http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty> , <http://registry.it.csiro.au/def/wesc/core/LowRiseHighDensityResidentialProperty> , <http://registry.it.csiro.au/def/wesc/core/UnitProperty> , <http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpereReactive> , <http://registry.it.csiro.au/def/wesc/core/ElectricityConsumptionByEndUsers> , <http://registry.it.csiro.au/def/wesc/core/CommercialProperty> , <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/BulkWaterSupply> ;
+        dct:description            "core" ;
+        dct:modified               "2019-01-23T01:53:29.287Z"^^xsd:dateTime ;
+        reg:notation               "core" ;
+        ui:hierarchyChildProperty  skos:narrower ;
+        ui:hierarchyRootProperty   skos:topConceptOf ;
+        owl:versionInfo            14 .
+
+<http://registry.it.csiro.au/def/wesc/core/KiloWatt>
+        a                     qudt:Unit ;
+        rdfs:label            "KiloWatt" ;
+        reg:notation          "KiloWatt" ;
+        qudt:hasQuantityKind  <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        qudt:symbol           "kW" ;
+        skos:broader          <http://registry.it.csiro.au/def/wesc/core/UnitOfMeasure> .
+
+<http://registry.it.csiro.au/def/wesc/core/RuralProperty>
+        a                skos:Concept ;
+        rdfs:label       "Rural property"^^xsd:string ;
+        dct:description  "Rural property"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:prefLabel   "Rural property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/MeterReadingType>
+        a                skos:Concept ;
+        rdfs:label       "Meter Reading Type" ;
+        dct:description  "Meter reading type"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeteringConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/FeedInMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/SelfGeneratedMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/OffPeakMeterReadType> , <http://registry.it.csiro.au/def/wesc/core/PeakMeterReadType> ;
+        skos:prefLabel   "Meter reading type"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/OffPeakMeterReadType>
+        a                skos:Concept ;
+        rdfs:label       "Off-peak Meter Read Type" ;
+        dct:description  "Off peak meter read type"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeterReadingType> ;
+        skos:prefLabel   "Off peak meter read type"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/LightManufacturing>
+        a                       skos:Concept ;
+        rdfs:label              "Light manufacturing"^^xsd:string ;
+        dct:description         "light manufacturing"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "light manufacturing"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/IndustrialProperty>
+        a                skos:Concept ;
+        rdfs:label       "Industrial property"^^xsd:string ;
+        dct:description  "industrial"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:narrower    <http://registry.it.csiro.au/def/wesc/core/HeavyManufacturingProperty> , <http://registry.it.csiro.au/def/wesc/core/LightIndustrialProperty> , <http://registry.it.csiro.au/def/wesc/core/LightManufacturing> , <http://registry.it.csiro.au/def/wesc/core/HeavyIndustrialProperty> ;
+        skos:prefLabel   "industrial"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ResidentialProperty>
+        a                        skos:Concept ;
+        rdfs:label               "Residential Property" ;
+        dct:description          "residential"^^xsd:string ;
+        skos:broader             <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/LandUseConcept> ;
+        skos:narrower            <http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty> , <http://registry.it.csiro.au/def/wesc/core/SingleDwellingProperty> ;
+        skos:narrowerTransitive  <http://registry.it.csiro.au/def/wesc/core/LowRiseHighDensityResidentialProperty> , <http://registry.it.csiro.au/def/wesc/core/UnitProperty> , <http://registry.it.csiro.au/def/wesc/core/StrataProperty> ;
+        skos:prefLabel           "residential"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/DemandConcept>
+        a                  skos:Concept ;
+        rdfs:label         "Demand definitions"^^xsd:string ;
+        dct:description    "Demand definitions"^^xsd:string ;
+        skos:narrower      <http://registry.it.csiro.au/def/wesc/core/Consumption> ;
+        skos:prefLabel     "Demand definitions"^^xsd:string ;
+        skos:topConceptOf  <http://registry.it.csiro.au/def/wesc/core> .
+
+<http://registry.it.csiro.au/def/wesc/core/CommercialAndIndustrialLandUse>
+        a                       skos:Concept ;
+        rdfs:label              "Commercial and industrial land use"^^xsd:string ;
+        dct:description         "Commercial and industrial land use"^^xsd:string ;
+        skos:altLabel           "nonresidential"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/MixedLandUse> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "Commercial and industrial land use"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Multi dwelling residential property"^^xsd:string ;
+        dct:description         "Multi dwelling residential property"^^xsd:string ;
+        skos:altLabel           "multi dwelling"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:narrower           <http://registry.it.csiro.au/def/wesc/core/StrataProperty> , <http://registry.it.csiro.au/def/wesc/core/UnitProperty> , <http://registry.it.csiro.au/def/wesc/core/LowRiseHighDensityResidentialProperty> ;
+        skos:prefLabel          "Multi dwelling residential property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/LightIndustrialProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Light industrial property"^^xsd:string ;
+        dct:description         "light industrial"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "light industrial"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/PeakMeterReadType>
+        a                skos:Concept ;
+        rdfs:label       "Peak Meter Read Type" ;
+        dct:description  "Peak meter read type"^^xsd:string ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/MeterReadingType> ;
+        skos:prefLabel   "Peak meter read type"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/StrataProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Strata property" ;
+        dct:description         "Strata property"^^xsd:string ;
+        skos:altLabel           "strata"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/MultiDwellingResProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> , <http://registry.it.csiro.au/def/wesc/core/ResidentialProperty> ;
+        skos:prefLabel          "Strata property"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/HeavyManufacturingProperty>
+        a                       skos:Concept ;
+        rdfs:label              "Heavy manufacturing property"^^xsd:string ;
+        dct:description         "heavy manufacturing"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/IndustrialProperty> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/LandUseProperty> ;
+        skos:prefLabel          "heavy manufacturing"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ActivePower>
+        a                qudt:QuantityKind ;
+        rdfs:label       "Active Power" ;
+        dct:description  "The portion of total power in an AC circuit that is due to non-resistive loads." ;
+        reg:notation     "ActivePower" ;
+        qudt:unit        <http://registry.it.csiro.au/def/wesc/core/MegaWatt> , <http://registry.it.csiro.au/def/wesc/core/KiloWatt> ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        skos:definition  "The portion of total power in an AC circuit that is due to non-resistive loads." ;
+        skos:related     <http://registry.it.csiro.au/def/wesc/core/ApparentPower> , <http://registry.it.csiro.au/def/wesc/core/ReactivePower> .
+
+<http://registry.it.csiro.au/def/wesc/core/DistrictWaterConsumption>
+        a                       skos:Concept ;
+        rdfs:label              "District water consumption" ;
+        dct:description         "District Metering of the Water Supply Network. Typically this data is collected at much higher frequency (daily or higher) and is used by the utility to manage operations.  It can be useful from a research perspective but is often very difficult to interpret as there is no relation to specific end user consumption.  For a single house, the complexity of the distribution network means that water may flow through several different sections of pipe to arrive at the property; from an operational perspective, the utility may be moving water through a section of pipe and it bares no relationship to consumption"^^xsd:string ;
+        skos:broader            <http://registry.it.csiro.au/def/wesc/core/WaterConsumption> ;
+        skos:broaderTransitive  <http://registry.it.csiro.au/def/wesc/core/Consumption> ;
+        skos:definition         "District Metering of the Water Supply Network. Typically this data is collected at much higher frequency (daily or higher) and is used by the utility to manage operations.  It can be useful from a research perspective but is often very difficult to interpret as there is no relation to specific end user consumption.  For a single house, the complexity of the distribution network means that water may flow through several different sections of pipe to arrive at the property; from an operational perspective, the utility may be moving water through a section of pipe and it bares no relationship to consumption"^^xsd:string ;
+        skos:prefLabel          "District water consumption"^^xsd:string .
+
+<http://registry.it.csiro.au/def/wesc/core/ReactivePower>
+        a                qudt:QuantityKind ;
+        rdfs:label       "Reactive Power" ;
+        dct:description  "The portion of total power in an AC circuit that is due to resistive loads." ;
+        reg:notation     "ReactivePower" ;
+        qudt:unit        <http://registry.it.csiro.au/def/wesc/core/KiloVoltAmpereReactive> , <http://registry.it.csiro.au/def/wesc/core/MegaVoltAmpereReactive> ;
+        skos:broader     <http://registry.it.csiro.au/def/wesc/core/PowerQuantityKind> ;
+        skos:definition  " The portion of total power in an AC circuit that is due to resistive loads." ;
+        skos:related     <http://registry.it.csiro.au/def/wesc/core/ApparentPower> , <http://registry.it.csiro.au/def/wesc/core/ActivePower> .
