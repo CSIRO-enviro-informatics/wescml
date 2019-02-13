@@ -13,7 +13,8 @@ var margin = { top: 20, right: 20, bottom: 50, left: 100 },
 	height = 800 - margin.top - margin.bottom;
 
 var sissvoc_endpoints = {};
-sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "https://wescml.org/sissvoc/vocab", "view": "collection"}; 
+sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "https://wescml.org/sissvoc/vocab", "view": "conceptscheme"}; 
+//sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "https://wescml.org/sissvoc/vocab", "view": "collection"}; 
 //sissvoc_endpoints["wesc"] = { "label": "Water/Energy Consumption Supply", "endpoint": "http://localhost:8080/sissvoc/vocab", "view": "conceptscheme" };
 
 
@@ -418,15 +419,15 @@ function click(d) {
 				type: "GET"
 			}).done(function (itemDetails) {
 				prepareToShowDetail(resourceUri, itemDetails, d);
-				console.log(d);
-				showResourceInfo(d.resourceObject);
+	//			console.log(d);
+	//			showResourceInfo(d.resourceObject);
 			});
 			//call sissvoc
 
 		}
 		else {
 			console.log(d);
-			showResourceInfo(d.resourceObject);
+	//		showResourceInfo(d.resourceObject);
 		}
 	}
 
