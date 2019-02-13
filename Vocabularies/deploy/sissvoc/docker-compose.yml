@@ -1,0 +1,10 @@
+version: "3"
+services:
+  sissvoc:
+    image: csiroenvinf/sissvoc
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./sissvoc-wesc.ttl:/usr/local/tomcat/webapps/sissvoc/resources/default/config/default_sissvoc.ttl"
+
+

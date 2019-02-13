@@ -1,0 +1,11 @@
+version: "3"
+services:
+  fuseki:
+    environment:
+      - ADMIN_PASSWORD=changeme
+    image: stain/jena-fuseki
+    ports:
+      - "3030:3030"
+    volumes:
+      - "/opt/repo/fuseki:/fuseki"
+      - "./config/config.ttl:/fuseki/config.ttl"
