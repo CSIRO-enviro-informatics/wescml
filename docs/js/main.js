@@ -1,4 +1,5 @@
-var currentEndpoint = "http://localhost:8090/sissvoc/default";
+var currentEndpoint = "https://wescml.org/sissvoc/vocab";
+//var currentEndpoint = "http://localhost:8080/sissvoc/vocab";
 //var conceptschemeOrCollection = "collection"; //choose conceptscheme or collection
 var details_opened = true;
 var MAX_LABEL_LENGTH = 50;
@@ -7,49 +8,49 @@ var data_processed = {};
 var enable_lookahead = false;
 var arrDeferred = [];
 
-var margin = {top: 20, right: 20, bottom: 50, left: 100},
-    width = 1000 - margin.right - margin.left,
-    height = 800 - margin.top - margin.bottom;
+var margin = { top: 20, right: 20, bottom: 50, left: 100 },
+	width = 1000 - margin.right - margin.left,
+	height = 800 - margin.top - margin.bottom;
 
 var sissvoc_endpoints = {};
 sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "https://wescml.org/sissvoc/vocab", "view": "collection"}; 
-//sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "http://localhost:8090/sissvoc/default", "view": "conceptscheme"}; 
- 
-	
+//sissvoc_endpoints["wesc"] = { "label": "Water/Energy Consumption Supply", "endpoint": "http://localhost:8080/sissvoc/vocab", "view": "conceptscheme" };
+
+
 
 /**
  * Function to hide or show the details tab on the right
  * depending on the actual state
  */
 
-$('#arrow').click(function(){
+$('#arrow').click(function () {
 	toggleDetails();
 
 });
 
-function toggleDetails(){
-	$('#arrow').css('transform', function(){ return details_opened ? 'rotate(0deg)' : 'rotate(180deg)'})
-	
-	$('#details').css('margin-right', function(){ return details_opened ? '-475px' : '0'});
+function toggleDetails() {
+	$('#arrow').css('transform', function () { return details_opened ? 'rotate(0deg)' : 'rotate(180deg)' })
+
+	$('#details').css('margin-right', function () { return details_opened ? '-475px' : '0' });
 	details_opened = !details_opened;
 }
 
-function findNodeAndParents(node, exactMatch){
+function findNodeAndParents(node, exactMatch) {
 	var children_found = false;
 
 	// Iterate the children and _children (hidden ones)
-	if (node.children || node._children){
-		var children = node.children ? node.children : node._children; 
-		
-		for (var i = 0; i < children.length; i++){
-			if (findNodeAndParents(children[i], exactMatch)){
+	if (node.children || node._children) {
+		var children = node.children ? node.children : node._children;
+
+		for (var i = 0; i < children.length; i++) {
+			if (findNodeAndParents(children[i], exactMatch)) {
 				children_found = true;
 			}
 		}
-		if (children_found){
+		if (children_found) {
 			openNode(node);
-			
-		}else{
+
+		} else {
 			collapseNode(node);
 		}
 	}
@@ -61,17 +62,17 @@ function findNodeAndParents(node, exactMatch){
 	 * If it does not match, then it must return the value of children_found, in order
 	 * to open push the parents to the stack as well.
 	 */
-	
-	if (doesNodeNameContainInput(node, exactMatch)){
-		
+
+	if (doesNodeNameContainInput(node, exactMatch)) {
+
 		openNode(node);
-		
+
 		return true;
 
-	}else{
+	} else {
 		return children_found;
 	}
-	
+
 }
 
 
@@ -81,33 +82,33 @@ function findNodeAndParents(node, exactMatch){
  * it is necessary to get these ._children to the .children attribute.
  */
 
-function openNode(node){
-	if(node._children){
+function openNode(node) {
+	if (node._children) {
 		node.children = node._children;
-		node._children = null;	
+		node._children = null;
 	}
 }
 
-function collapseNode(node){
-	if(node.children){
+function collapseNode(node) {
+	if (node.children) {
 		node._children = node.children;
-		node.children = null;	
+		node.children = null;
 	}
 }
 
-function doesNodeNameContainInput(node, exactMatch){
-	if (exactMatch !== undefined){
+function doesNodeNameContainInput(node, exactMatch) {
+	if (exactMatch !== undefined) {
 		if (node.name.toLowerCase() == input.toLowerCase())
 			return true;
 		else
 			return false;
-	}else{
+	} else {
 		if (node.name.toLowerCase().indexOf(input.toLowerCase()) >= 0)
 			return true;
 		else
 			return false;
 	}
-	
+
 }
 
 /**
@@ -119,37 +120,37 @@ function doesNodeNameContainInput(node, exactMatch){
 d3.select('#filter_button').on('click', filterElementByInput)
 d3.select('#body').on('keydown', filterElementByInput);
 
-d3.select('#filter').on('input', function(){
+d3.select('#filter').on('input', function () {
 	input = String(d3.select(this).property('value'));
 	////console.log(input);
-	if(input == ''){
+	if (input == '') {
 		filterElementByInput();
 	}
 });
 
-$(document).on('click', '.resprop-field', function(){
-	
-	if($(this).data('toggle') == 'collapse'){
+$(document).on('click', '.resprop-field', function () {
+
+	if ($(this).data('toggle') == 'collapse') {
 		$(this).children().toggleClass('rotate180');
 		$(this).siblings().children().collapse('toggle');
 	}
 });
 
 
-function filterElementByInput(exactMatch){
+function filterElementByInput(exactMatch) {
 	input = String(d3.select('#filter').property('value'));
-	if(d3.event != undefined){
+	if (d3.event != undefined) {
 		//console.log(d3.event.keyCode);
-	
-		if (input == ''){
+
+		if (input == '') {
 			input = 'eReefs';
-		}else{
-			if(d3.event.keyCode != 13 && d3.event.keyCode != 0){
+		} else {
+			if (d3.event.keyCode != 13 && d3.event.keyCode != 0) {
 				return false;
-			}	
+			}
 		}
 	}
-	
+
 
 	var parents = []
 	var broader_matches = 0;
@@ -160,49 +161,49 @@ function filterElementByInput(exactMatch){
 
 	var circle = d3.selectAll('g circle');
 	circle.classed('filtered', false);
-	circle.filter(function(d){
+	circle.filter(function (d) {
 		if (input == '' || input == 'eReefs')
 			return false;
 
-		
-		if(doesNodeNameContainInput(d, exactMatch)){
-			if(parents.indexOf(d.name.toLowerCase) < 0){
+
+		if (doesNodeNameContainInput(d, exactMatch)) {
+			if (parents.indexOf(d.name.toLowerCase) < 0) {
 				parents.push(d.name.toLowerCase());
 				broader_matches++;
 			}
-			
+
 			return true;
 		}
-		
-		
-		if (d.parent !== undefined){
-			if (parents.indexOf(d.parent.name) >= 0){ 
+
+
+		if (d.parent !== undefined) {
+			if (parents.indexOf(d.parent.name) >= 0) {
 				parents.push(d.name);
 				return true;
-			}	
+			}
 		}
-		
+
 		return false;
 	}).classed('filtered', true);
 
 
 	var text = d3.selectAll('g text');
 	text.style('opacity', '0.6');
-	text.filter(function(d){
-		
-		if(doesNodeNameContainInput(d, exactMatch)){			
-			return true;
-		}	
-		
-		if (d.parent !== undefined){
-			if (parents.indexOf(d.parent.name) >= 0){ 
-				return true;
-			}	
-		}
-		
+	text.filter(function (d) {
 
-		
-		
+		if (doesNodeNameContainInput(d, exactMatch)) {
+			return true;
+		}
+
+		if (d.parent !== undefined) {
+			if (parents.indexOf(d.parent.name) >= 0) {
+				return true;
+			}
+		}
+
+
+
+
 		return false;
 	}).style('opacity', '1');
 }
@@ -213,110 +214,141 @@ function filterElementByInput(exactMatch){
 
 
 var i = 0,
-    duration = 750,
-    root;
+	duration = 750,
+	root;
 
 var tree = d3.layout.tree()
-    .size([height, width]);
+	.size([height, width]);
 
 var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.y, d.x]; });
+	.projection(function (d) { return [d.y, d.x]; });
 
-var svg = d3.select("#visualisation").append("svg")
-    .attr('class', 'vocabviz')
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", height + margin.top + margin.bottom )
-  .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var container = d3.select("#visualisation").append("div").attr('id', "vocabvizDiv");
 
-	
-function initialise(data, error){
-  if (error) throw error;
 
-  root = data;
-  root.x0 = height / 2;
-  root.y0 = 0;
+//var svg = d3.select("#visualisation").append("svg")
+var svg = container.append("svg")
+.attr('id', 'vocabviz')
+.attr('class', 'vocabviz')
+//	.attr("width", width + margin.right + margin.left)
+//	.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  function collapse(d) {
-    if (d.children) {
-      d._children = d.children;
-      d._children.forEach(collapse);
-      d.children = null;
-    }
-  }
 
-  root.children.forEach(collapse);
-  update(root);
+function initialise(data, error) {
+	if (error) throw error;
+
+	root = data;
+	root.x0 = height / 2;
+	root.y0 = 0;
+
+	function collapse(d) {
+		if (d.children) {
+			d._children = d.children;
+			d._children.forEach(collapse);
+			d.children = null;
+		}
+	}
+
+	root.children.forEach(collapse);
+	update(root);
 }
 
 d3.select(self.frameElement).style("height", "900px");
+var tooltipDiv = d3.select("body").append("div")
+		.attr("class", "tooltip")
+		.style("opacity", 0);
 
 function update(source) {
 
-  // Compute the new tree layout.
-  var nodes = tree.nodes(root).reverse(),
-      links = tree.links(nodes);
+	// Compute the new tree layout.
+	var nodes = tree.nodes(root).reverse(),
+		links = tree.links(nodes);
 
-  // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * 180; });
+	// Normalize for fixed-depth.
+	nodes.forEach(function (d) { d.y = d.depth * 180; });
 
-  // Update the nodes.
-  var node = svg.selectAll("g.node")
-      .data(nodes, function(d) { return d.id || (d.id = ++i); });
-  // Enter any new nodes at the parent's previous position.
-  var nodeEnter = node.enter().append("g")
-      .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .attr('data-name', function(d){ return d.name })
-      .on("click", click);
+	// Update the nodes.
+	var node = svg.selectAll("g.node")
+		.data(nodes, function (d) { return d.id || (d.id = ++i); });
+	// Enter any new nodes at the parent's previous position.
+	// Define the div for the tooltip
+	
+	var nodeEnter = node.enter().append("g")
+		.attr("class", "node")
+		.attr("transform", function (d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+		.attr('data-name', function (d) { return d.name })
+		.on("mouseover", function (d) {
+			//prepareAndShowResourceInfo(d, tooltipDiv);
+			var event = d3.event;
 
-  nodeEnter.append("circle")
-      .attr("r", 1e-6)
-      .style("fill", function(d) {
+			$.when(prepareAndShowResourceInfo(d)).then(function() {
+				tooltipDiv.transition()		
+				.duration(200)		
+				.style("opacity", .9);	
+				console.log(d);
+				console.log(event);	
+				tooltipDiv.html(d.resourceObject.result.primaryTopic.description)	
+				.style("left", (event.pageX + 100) + "px")		
+				.style("top", (event.pageY - 28) + "px");		
+			})
 
-      	if(d.name && d.name.indexOf(' Group') >= 0){
-  			return "rgb(85, 165, 255);";
-  		}
-      	if (d._children){
-      		return "rgb(48, 180, 136);";
-      	}
-      	return '#fff';
-      
-      });
+		})
+		.on("mouseout", function (d) {
+			tooltipDiv.transition()
+				.duration(500)
+				.style("opacity", 0);
+		})
+		.on("click", click);
 
-  nodeEnter.append("text")
-      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
-      .attr("dy", ".35em")
-      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
-      .text(function(d) { return d.name; })
-      .style("fill-opacity", 1e-6);
+	nodeEnter.append("circle")
+		.attr("r", 1e-6)
+		.style("fill", function (d) {
 
-  // Transition nodes to their new position.
-  var nodeUpdate = node.transition()
-      .duration(duration)
-      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+			if (d.name && d.name.indexOf(' Group') >= 0) {
+				return "rgb(85, 165, 255);";
+			}
+			if (d._children) {
+				return "rgb(48, 180, 136);";
+			}
+			return '#fff';
 
-  nodeUpdate.select("circle")
-      .attr("r", 4.5)
-      .style("fill", function(d) {
+		});
 
-      	if(d.name.indexOf(' Group') >= 0){
-  			return "rgb(85, 165, 255);";
-  		}
-      	if (d._children){
-      		return "rgb(48, 180, 136);";
-      	}
-      	return '#fff';
-      
-      });
+	nodeEnter.append("text")
+		.attr("x", function (d) { return d.children || d._children ? -10 : 10; })
+		.attr("dy", ".35em")
+		.attr("text-anchor", function (d) { return d.children || d._children ? "end" : "start"; })
+		.text(function (d) { return d.name; })
+		.style("fill-opacity", 1e-6);
 
-  nodeUpdate.select("text")
-      .style("fill-opacity", 1);
-
-  // Transition exiting nodes to the parent's new position.
-  	var nodeExit = node.exit().transition()
+	// Transition nodes to their new position.
+	var nodeUpdate = node.transition()
 		.duration(duration)
-		.attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+		.attr("transform", function (d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+	nodeUpdate.select("circle")
+		.attr("r", 4.5)
+		.style("fill", function (d) {
+
+			if (d.name.indexOf(' Group') >= 0) {
+				return "rgb(85, 165, 255);";
+			}
+			if (d._children) {
+				return "rgb(48, 180, 136);";
+			}
+			return '#fff';
+
+		});
+
+	nodeUpdate.select("text")
+		.style("fill-opacity", 1);
+
+	// Transition exiting nodes to the parent's new position.
+	var nodeExit = node.exit().transition()
+		.duration(duration)
+		.attr("transform", function (d) { return "translate(" + source.y + "," + source.x + ")"; })
 		.remove();
 
 	nodeExit.select("circle")
@@ -325,45 +357,45 @@ function update(source) {
 	nodeExit.select("text")
 		.style("fill-opacity", 1e-6);
 
-  // Update the links…
+	// Update the links…
 	var link = svg.selectAll("path.link")
-		.data(links, function(d) { return d.target.id; });
+		.data(links, function (d) { return d.target.id; });
 
-  // Enter any new links at the parent's previous position.
+	// Enter any new links at the parent's previous position.
 	link.enter().insert("path", "g")
 		.attr("class", "link")
-		.attr("d", function(d) {
-			var o = {x: source.x0, y: source.y0};
-			return diagonal({source: o, target: o});
+		.attr("d", function (d) {
+			var o = { x: source.x0, y: source.y0 };
+			return diagonal({ source: o, target: o });
 		});
 
-  // Transition links to their new position.
+	// Transition links to their new position.
 	link.transition()
 		.duration(duration)
 		.attr("d", diagonal);
 
-  // Transition exiting nodes to the parent's new position.
+	// Transition exiting nodes to the parent's new position.
 	link.exit().transition()
 		.duration(duration)
-		.attr("d", function(d) {
-			var o = {x: source.x, y: source.y};
-			return diagonal({source: o, target: o});
+		.attr("d", function (d) {
+			var o = { x: source.x, y: source.y };
+			return diagonal({ source: o, target: o });
 		})
 		.remove();
 
-  // Stash the old positions for transition.
-	nodes.forEach(function(d) {
+	// Stash the old positions for transition.
+	nodes.forEach(function (d) {
 		d.x0 = d.x;
 		d.y0 = d.y;
 	});
 }
 
 // Toggle children on click.
-function click(d){
- 	if (d.children){
+function click(d) {
+	if (d.children) {
 		d._children = d.children;
 		d.children = null;
-	}else{
+	} else {
 		d.children = d._children;
 		d._children = null;
 	}
@@ -371,47 +403,85 @@ function click(d){
 	/**
 	 * if it is a group (generated by the clustering method), don't try to get information about it
 	 */
-	if (d.about !== undefined){
+	if (d.about !== undefined) {
 		$('#content').empty();
-		
-		
+
+
 		var resourceUri = d.about;
-		
-		var promise = $.ajax({
-					url : currentEndpoint + "/resource.json",
-					data : {
-						uri : resourceUri,
-						_view : "all"
-					},
-					type : "GET"
-				}).done(function(itemDetails){
-					prepareToShowDetail(resourceUri, itemDetails, d);
-				});
+		if (d.resourceObject !== undefined) {
+			var promise = $.ajax({
+				url: currentEndpoint + "/resource.json",
+				data: {
+					uri: resourceUri,
+					_view: "all"
+				},
+				type: "GET"
+			}).done(function (itemDetails) {
+				prepareToShowDetail(resourceUri, itemDetails, d);
+				console.log(d);
+				showResourceInfo(d.resourceObject);
+			});
+			//call sissvoc
 
-		
-		//call sissvoc
+		}
+		else {
+			console.log(d);
+			showResourceInfo(d.resourceObject);
+		}
 	}
-	
 
-	if(!d.children && !d._children){
 
-		
-		if (!details_opened){
+	if (!d.children && !d._children) {
+
+
+		if (!details_opened) {
 			toggleDetails();
 		}
 	}
 	update(d);
 }
 
-function prepareToShowDetail(resourceUri, itemDetails, node){
+function prepareAndShowResourceInfo(d) {
+	var resourceUri = d.about;
+
+	if (d.resourceObject === undefined) { //just show
+		var promise = $.ajax({
+			url: currentEndpoint + "/resource.json",
+			data: {
+				uri: resourceUri,
+				_view: "all"
+			},
+			type: "GET"
+		}).done(function (itemDetails) {
+			d.resourceObject = itemDetails;
+		});
+
+		return promise;
+		//call sissvoc
+
+	}
+}
+
+function prepareToShowDetail(resourceUri, itemDetails, node) {
 	//console.log();
 	var prefLabel = node.longname;
-		
-	if (prefLabel && prefLabel.indexOf(',') >= 0){
-		var prefLabel = node.longname.split(", ");	
+
+	if (prefLabel && prefLabel.indexOf(',') >= 0) {
+		var prefLabel = node.longname.split(", ");
 	}
 	var details = renderSearchResultItem(resourceUri, processSkosLabel(prefLabel), itemDetails);
 	$('#content').append(details);
+	node.resourceObject = itemDetails;
+}
+
+function showResourceInfo(d, divObj) {
+	divObj.transition()
+	.duration(200)
+	.style("opacity", .9);
+	divObj.html(d.name)
+	.style("left", (d.x + 20) + "px")
+	.style("top", (d.y - 28) + "px");
+
 }
 
 /**
@@ -420,126 +490,126 @@ function prepareToShowDetail(resourceUri, itemDetails, node){
  * have prefLabel.
  */
 
-function navigate(object){
+function navigate(object) {
 	////console.dir(object);
-	if (typeof object === 'string' || object instanceof String){
-		var current_object = {'_about': object, 'children':[]};
+	if (typeof object === 'string' || object instanceof String) {
+		var current_object = { '_about': object, 'children': [] };
 		//go off and fill in the details for current_object
 		var url = currentEndpoint + '/resource.json?uri=' + object;
-		$.get( url, function(data) {
-		   current_object =  addDetailsToNode(data.result.primaryTopic, current_object);
-		   collapseNode(current_object);
+		$.get(url, function (data) {
+			current_object = addDetailsToNode(data.result.primaryTopic, current_object);
+			collapseNode(current_object);
 		});
 		return current_object;
 	}
 	var labelOrPreflabel = object.prefLabel ? object.prefLabel : object.label;
 	var name = processMultilingualLabel(labelOrPreflabel);
-        if(name) {
-	   var longname = name;
-   	   if(name.length > MAX_LABEL_LENGTH ) {
-	      name = name.substring(0,MAX_LABEL_LENGTH ) + "..."
-	   }  
-        }
-        else {
-           name = "";
-        }
-	var current_object = {'name': name, 'longname': longname, 'about': object['_about'], 'children': []}; // creates new object to receive the elements
+	if (name) {
+		var longname = name;
+		if (name.length > MAX_LABEL_LENGTH) {
+			name = name.substring(0, MAX_LABEL_LENGTH) + "..."
+		}
+	}
+	else {
+		name = "";
+	}
+	var current_object = { 'name': name, 'longname': longname, 'about': object['_about'], 'children': [] }; // creates new object to receive the elements
 	var url = currentEndpoint + '/resource.json?uri=' + object._about;
-	var jqxhr = $.get( url, function(data) {
+	var jqxhr = $.get(url, function (data) {
 
-		   current_object =  addDetailsToNode(data.result.primaryTopic, current_object);
-		   collapseNode(current_object);
-		}).done(function() {
-			console.log('done ');
-			
-			//updateTree();
-		}).always(function() {
-			console.log('finished');
-		});
-		
-		arrDeferred.push(jqxhr);
-	
+		current_object = addDetailsToNode(data.result.primaryTopic, current_object);
+		collapseNode(current_object);
+	}).done(function () {
+		console.log('done ');
+
+		//updateTree();
+	}).always(function () {
+		console.log('finished');
+	});
+
+	arrDeferred.push(jqxhr);
+
 	//current_object = addDetailsToNode(object, current_object);
-	
+
 	return current_object;
 }
 
 function addDetailsToNode(object, current_object) {
 	var name = null;
-	if ('prefLabel' in object || 'label' in object){	
+	if ('prefLabel' in object || 'label' in object) {
 
-		if('prefLabel' in object) {
+		if ('prefLabel' in object) {
 			/**
 			 * Generate the name correctly depending if it is an array or an single string
 			 */
 			name = processSkosLabel(object['prefLabel'])
 		}
-		else if('label' in object) {
+		else if ('label' in object) {
 			/**
 			 * Generate the name correctly depending if it is an array or an single string
 			 */
 			name = processSkosLabel(object['label'])
 		}
-		
-		
-		if(name != null) {
-		    var shortname = name;
-			if(name.length > MAX_LABEL_LENGTH ) {
-	           shortname = name.substring(0,MAX_LABEL_LENGTH ) + "..."
-	        }
+
+
+		if (name != null) {
+			var shortname = name;
+			if (name.length > MAX_LABEL_LENGTH) {
+				shortname = name.substring(0, MAX_LABEL_LENGTH) + "..."
+			}
 			current_object['name'] = shortname;
 			current_object['longname'] = name;
 		}
-		
+
 		/**
 		 * if the element has member (children), then it will call the method recursively
 		 * and then with the children done it will push the children and its children to
 		 * the array.
 		 */
-		if(current_object.children === 'undefined'  &&  current_object._children === 'undefined'){
-		   current_object.children = [];
+		if (current_object.children === 'undefined' && current_object._children === 'undefined') {
+			current_object.children = [];
 		}
- 		var children = current_object.children ? current_object.children : current_object._children; 
+		var children = current_object.children ? current_object.children : current_object._children;
 
-		if('member' in object){
-			for(var j = 0; j < object['member'].length; j++){
+		if ('member' in object) {
+			for (var j = 0; j < object['member'].length; j++) {
 				var child = navigate(object['member'][j]);
-				if (child !== null){
-					children.push(child);	
+				if (child !== null) {
+					children.push(child);
 				}
-				
+
 			}
 		}
-		if('hasTopConcept' in object){
-			for(var j = 0; j < object['hasTopConcept'].length; j++){
+		if ('hasTopConcept' in object) {
+			for (var j = 0; j < object['hasTopConcept'].length; j++) {
 				var child = navigate(object['hasTopConcept'][j]);
-				if (child !== null){
-					children.push(child);	
+				if (child !== null) {
+					children.push(child);
 				}
 			}
 		}
-		if('narrower' in object){
+		if ('narrower' in object) {
 			console.log(object['narrower'].length);
-			if(object['narrower'].constructor === Array) {
-				for(var j = 0; j < object['narrower'].length; j++){
+			if (object['narrower'].constructor === Array) {
+				for (var j = 0; j < object['narrower'].length; j++) {
 					var child = navigate(object['narrower'][j]);
-					if (child !== null){
-						children.push(child);	
+					if (child !== null) {
+						children.push(child);
 					}
 				}
 			}
 			else {
 				var child = navigate(object['narrower']);
-				if (child !== null){
-					children.push(child);	
-				}				
+				if (child !== null) {
+					children.push(child);
+				}
 			}
 		}
-		
-		if(current_object['children']) {
-			if (current_object['children'].length == 0){
+
+		if (current_object['children']) {
+			if (current_object['children'].length == 0) {
 				delete current_object['children'];
-			}else{
+			} else {
 				current_object['children'] = cluster(current_object['children']);
 			}
 		}
@@ -553,32 +623,32 @@ function addDetailsToNode(object, current_object) {
  * a single node.
  */
 
-function cluster(children){
+function cluster(children) {
 	var MAX_CHILDREN = 14;
 	var result = [];
-	children.sort(function(a, b){
-				if (a.name < b.name)
-					return -1;
-				if (a.name > b.name)
-					return 1;
-				return 0;
-			});
-	if (children.length > MAX_CHILDREN){
-		var parents = Math.ceil(children.length/MAX_CHILDREN); // get how many parents there will be.
-		
-		
+	children.sort(function (a, b) {
+		if (a.name < b.name)
+			return -1;
+		if (a.name > b.name)
+			return 1;
+		return 0;
+	});
+	if (children.length > MAX_CHILDREN) {
+		var parents = Math.ceil(children.length / MAX_CHILDREN); // get how many parents there will be.
 
-		for (var i = 0; i < parents; i++){ // for each parent, create its children
+
+
+		for (var i = 0; i < parents; i++) { // for each parent, create its children
 			var group = {};
-			var begin = i*MAX_CHILDREN;
-			var end = begin+MAX_CHILDREN-1;
-			
-			end = end < children.length ? end : children.length-1; // check to avoid inexistent position
+			var begin = i * MAX_CHILDREN;
+			var end = begin + MAX_CHILDREN - 1;
+
+			end = end < children.length ? end : children.length - 1; // check to avoid inexistent position
 			var beginName = String(children[begin].name);
 			var endName = String(children[end].name);
-			group['name'] = beginName.charAt(0).toUpperCase()+'-'+endName.charAt(0).toUpperCase() + ' Group'; // creates the name for the cluster
-			group['children'] = children.slice(begin, end+1); //make a copy of the array
-			group['children'].sort(function(a, b){
+			group['name'] = beginName.charAt(0).toUpperCase() + '-' + endName.charAt(0).toUpperCase() + ' Group'; // creates the name for the cluster
+			group['children'] = children.slice(begin, end + 1); //make a copy of the array
+			group['children'].sort(function (a, b) {
 				if (a.name < b.name)
 					return -1;
 				if (a.name > b.name)
@@ -590,46 +660,45 @@ function cluster(children){
 			// //console.log(group);
 			result.push(group);
 		}
-		
+
 		// Cluster the cluster of parents when there are more than the maximum allowed.
-		if (parents > MAX_CHILDREN){
+		if (parents > MAX_CHILDREN) {
 			result = cluster(result);
 		}
 
 		return result;
 
 
-	}else{
-		return children;	
+	} else {
+		return children;
 	}
-	
+
 }
 
-function baseName(str)
-{
-   var base = new String(str).substring(str.lastIndexOf('/') + 1); 
-    if(base.lastIndexOf(".") != -1)       
-        base = base.substring(0, base.lastIndexOf("."));
-   return base;
+function baseName(str) {
+	var base = new String(str).substring(str.lastIndexOf('/') + 1);
+	if (base.lastIndexOf(".") != -1)
+		base = base.substring(0, base.lastIndexOf("."));
+	return base;
 }
 
 var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+		sURLVariables = sPageURL.split('&'),
+		sParameterName,
+		i;
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
+	for (i = 0; i < sURLVariables.length; i++) {
+		sParameterName = sURLVariables[i].split('=');
 
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
+		if (sParameterName[0] === sParam) {
+			return sParameterName[1] === undefined ? true : sParameterName[1];
+		}
+	}
 };
 
 function isUrlValid(url) {
-    return /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url);
+	return /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(url);
 }
 
 
@@ -638,20 +707,20 @@ function reloadSissvoc() {
 		currentEndpoint + "/" + conceptschemeOrCollection + ".json?_page=0&_pageSize=50",
 		{},
 		prepareData
-    );
-	console.log("sissvoc reloaded with " + currentEndpoint + " and " + conceptschemeOrCollection)    ;
+	);
+	console.log("sissvoc reloaded with " + currentEndpoint + " and " + conceptschemeOrCollection);
 }
 
-function prepareData(data){
-    var vocab_name = baseName(currentEndpoint);
+function prepareData(data) {
+	var vocab_name = baseName(currentEndpoint);
 
-	data_processed = {'name': vocab_name, 'children': []};
+	data_processed = { 'name': vocab_name, 'children': [] };
 
-	for(var i = 0; i < data['result']['items'].length; i++){
+	for (var i = 0; i < data['result']['items'].length; i++) {
 		var child = navigate(data['result']['items'][i]);
-		if (child != null){
+		if (child != null) {
 			data_processed['children'].push(child);
-		}else{
+		} else {
 			//console.log(data['result']['items'][i]);
 		}
 	}
@@ -660,12 +729,12 @@ function prepareData(data){
 
 
 
-    $.when.apply(null, arrDeferred).done(function() {
-        console.log("All deferreds done!");
-   		//console.dir(data_processed);
-	    initialise(data_processed, null);
+	$.when.apply(null, arrDeferred).done(function () {
+		console.log("All deferreds done!");
+		//console.dir(data_processed);
+		initialise(data_processed, null);
 
-    });
+	});
 
 
 }
@@ -673,11 +742,11 @@ function prepareData(data){
 function setSissvocEndpoint(endpoint, view) {
 	currentEndpoint = endpoint;
 	setEndpointInputText(endpoint);
-	setSissvocView(view);	
+	setSissvocView(view);
 }
 
 function setEndpointInputText(newEndpoint) {
-	$("#sissvoc-endpoint-input").val(newEndpoint);	
+	$("#sissvoc-endpoint-input").val(newEndpoint);
 }
 
 function setSissvocView(skosview) {
@@ -686,34 +755,34 @@ function setSissvocView(skosview) {
 	if ($('#skosview_conceptscheme').hasClass('active')) {
 		$('#skosview_conceptscheme').removeClass('active');
 	}
-	else if($('#skosview_collection').hasClass('active')) {
-	   $('#skosview_collection').removeClass('active');
+	else if ($('#skosview_collection').hasClass('active')) {
+		$('#skosview_collection').removeClass('active');
 	}
-	
-	if(skosview == "collection") {
+
+	if (skosview == "collection") {
 		$('#skosview_collection').addClass('active');
 	}
 	else {
 		$('#skosview_conceptscheme').addClass('active');
 	}
-	
+
 }
 
-$( document ).ready(function() {
+$(document).ready(function () {
 	setSissvocEndpoint(sissvoc_endpoints["wesc"].endpoint, sissvoc_endpoints["wesc"].view);
-	
-	
-	
+
+
+
 	/**
     *  Prepare data to be inserted in array. This is just a workaround
     */
 
 
-    $.get(
-        currentEndpoint + "/" + conceptschemeOrCollection + ".json?_page=0&_pageSize=50",
-        {},
-        prepareData
-    );
+	$.get(
+		currentEndpoint + "/" + conceptschemeOrCollection + ".json?_page=0&_pageSize=50",
+		{},
+		prepareData
+	);
 
 
 });
