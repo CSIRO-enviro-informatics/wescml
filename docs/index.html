@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WESC</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+  <!--
+	-->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/new-age.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">WESC</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#infomodel">Information model</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#vocabularies">Vocabularies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#tools">Tools</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#data">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">about</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">WESC - A data standard for water and energy supply and consumption.</h1>
+            <a href="#infomodel" class="btn btn-outline btn-xl js-scroll-trigger">Learn more</a>
+          </div>
+        </div>
+        <div class="col-lg-5 my-auto masthead-img">
+          <img src="img/water_sm.jpg" width="100%" alt="water" />
+          <img src="img/lightbulb_sm.jpg" width="100%" alt="light bulb" />
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="infomodel bg-primary text-center" id="infomodel">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mx-auto">
+          <h2 class="section-heading">WESC Information Model</h2>
+          <p>
+            The Water and Energy Supply and Consumption (WESC) data standard is a common representation
+            of data for supply and consumption of water and energy. The information model allows for
+            data to be delivered in a consistent format and is the basis for the exchange format (XML schemas)
+            for encoding datasets for delivery through standard OGC services.
+          </p>
+          <p>Select from the following to view each Information Model profile.</p>
+          <div class="infomodel-diagrams">
+            <div class="row">
+              <div class="col-md-12 mx-auto">
+                <ul class="nav nav-pills  justify-content-center" id="infoModelTab" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" id="agg-consumption-tab" data-toggle="tab" href="#agg-consumption"
+                      role="tab" aria-controls="agg-consumption" aria-selected="true">Aggregated Consumption</a></li>
+                  <li class="nav-item"><a class="nav-link" id="consumption-tab" data-toggle="tab" href="#consumption"
+                      role="tab" aria-controls="consumption" aria-selected="false">Consumption</a></li>
+                  <li class="nav-item"><a class="nav-link" id="supply-tab" data-toggle="tab" href="#supply" role="tab"
+                      aria-controls="supply" aria-selected="false">Supply</a></li>
+                  <li class="nav-item"><a class="nav-link" id="sf1-tab" data-toggle="tab" href="#sf1" role="tab"
+                      aria-controls="sf1" aria-selected="false">GML SF-1</a></li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="agg-consumption" role="tabpanel" aria-labelledby="agg-consumption-tab">
+                    <div class="row">
+                      <div class="col-md-6 mx-auto">
+                        <h3>Aggregated consumption information model</h3>
+                        <p>
+                          A simple tabular view of consumption, aggregated for a locality,
+                          a zone substation region, or some other spatial region e.g. a set of
+                          meter readings for properties in a metropolitan region or suburb.
+                          Indicate the location using either geometryID (a predefined region)
+                          or spatialRepresentation (a shape or polygon).
+                        </p>
+                        <p></p>
+                      </div>
+                      <div class="col-md-6 mx-auto"><a href="diagrams/WESC-AggregatedConsumption.png"><img src="diagrams/WESC-AggregatedConsumption.png"
+                            width="100%" alt="Aggregated Consumption information model" /></a></div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="consumption" role="tabpanel" aria-labelledby="consumption-tab">
+                    <div class="row">
+                      <div class="col-md-6 mx-auto">
+                        <h3>Consumption information model</h3>
+                        <p>
+                          A fine-grained view of consumption based on readings for a single meter located on a
+                          property.
+                          For a single-dwelling there is a 1-to-1 mapping between the meter and the property ID, while
+                          for other property types there is a 1-to-many mapping between the meter and the property.
+                        </p>
+                        <p>
+                          The general class MeterReading has the following specializations: WaterMeterReading,
+                          GasMeterReading,
+                          ElectricityMeterReading.
+                        </p>
+                        <p>
+                          This view includes specific encodings for various types of readings, such as manual meter
+                          readings, indicated via the resultMethod (values selected from a controlled vocabulary).
+                        </p>
+                      </div>
+                      <div class="col-md-6 mx-auto"><a href="diagrams/WESC-Consumption.png"><img src="diagrams/WESC-Consumption.png"
+                            width="100%" alt="Consumption information model" /></a></div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="supply" role="tabpanel" aria-labelledby="supply-tab">
+                    <div class="row">
+                      <div class="col-md-4 mx-auto">
+                        <h3>Supply information model</h3>
+                        <p>
+                          A model for supply-related data. The general class UtilitySupplyData
+                          currently has specializations for WaterSupply, and for ElectricitySupply
+                          and ZoneSubstationElectricitySupply. These capture details of the
+                          supply region (local government area, jurisdiction, statistical area, etc),
+                          of the supplying utility, and the total amount of water or electricity supplied.
+                        </p>
+                        <p>
+                          The time period can be indicated using a named interval taken from a pre-defined
+                          list (timeName) as an alternative to using an explicit startDeliveryTime and endDeliveryTime.
+                          Similarly, the supply region can be indicated using a named location or as a geometry
+                          such as multi-part polygons, single polygons or points.
+                        </p>
+                        <p></p>
+                      </div>
+                      <div class="col-md-8 mx-auto"><a href="diagrams/WESC-Supply_V2-1.png"><img src="diagrams/WESC-Supply_V2-1.png"
+                            width="100%" alt="Consumption information model" /></a></div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="sf1" role="tabpanel" aria-labelledby="sf1-tab">
+                    <div class="row">
+                      <div class="col-md-6 mx-auto">
+                        <h3>GML SF-1 WESCML information model</h3>
+                        <p>
+                          The WESCML-SF1 model is a specialization of the Observations and
+                          Measurements standard (O&amp;M) from Open Geospatial Consortium (OGC).
+                          O&M is a model and encoding for describing a wide range of observations
+                          from multiple domains. It is based on the Geography Markup Language standard.
+                          The actual time-series data is the result of an OM_TimeSeriesObservation which
+                          samples the reporting location at different times.
+                        </p>
+                        <p>
+                          WESCML-SF1 has four main classes. WESC_MonitoringLocation describes
+                          the location of a supply or consumption monitoring process, which may
+                          be a point location, or an area such as a statistical or local government
+                          region from which an aggregation of meters is reported. WESC_MonitoringLocation
+                          also captures the monitoring type (e.g. individual meter, smart meter, or locality), the
+                          location name (e.g. street address, region, jurisdiction.) and reference description.
+                        </p>
+                        <p>
+                          WESC_Commodity identifies the type of commodity (e.g. water, gas, electricity
+                          etc.) being reported, and its source (e.g. desalination, stormwater, surface
+                          water, groundwater; solar, wind, grid, etc.). WESC_Agent specifies the name
+                          and type of utility, organisation, individual, population, or environment
+                          supplying or consuming the commodity. The relationship between the WESC_Agent
+                          and WESC_Commodity indicates the role each plays (consumer, supplier).
+                          WESC_Procedure specifies the procedures used to determine or aggregate
+                          the observations, including the number of meters, the number of readings,
+                          and the statistical method used to generate the results.
+                        </p>
+                        <p>
+                          Three code lists standardize the values for specific properties.
+                          These are:
+                          <ul>
+                            <li>types of agents (e.g. residential, commercial, industrial, agricultural, municipal)</li>
+                            <li>commodity source (e.g. desalination, groundwater, hydroelectricity, coal fired power
+                              stations, etc.) </li>
+                            <li>statistical methods (e.g. average, interpolation, median, modelled)</li>
+                          </ul>
+                        </p>
+
+
+
+                      </div>
+                      <div class="col-md-6 mx-auto"><a href="diagrams/WescML-SF1.png"><img src="diagrams/WescML-SF1.png"
+                            width="100%" alt="SF-1 information model" /></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="padding-top: 50px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vocabularies" id="vocabularies">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>WESC Vocabularies</h2>
+        <p class="text-muted">Controlled vocabularies for WESC</p>
+        <hr>
+        <p>
+          WESC includes a set of shared vocabularies to encode the content for each item, such as: result method used
+          to measure a meter reading;
+          and units of measure.
+
+        </p>
+
+
+      </div>
+      <div class="row">
+        <div id="visualisation"></div>
+      </div>
+
+      <div class="row">
+        <p>See here for more details: <a href="http://registry.it.csiro.au/def/wesc">http://registry.it.csiro.au/def/wesc</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta tools" id='tools'>
+    <div class="cta-content">
+      <div class="container">
+        <h2>WESC Tools</h2>
+        <p>Tools help data custodians deploy data infrastructure configured for WESCML include:
+          <br /><br /><a href="https://github.com/CSIRO-enviro-informatics/docker-geoserver/">docker-geoserver</a>
+          to create a deployment of <a href="http://geoserver.org/">Geoserver</a>
+          using <a href="https://www.docker.com/">Docker</a> containerization technologies. <br /><br />
+          <a href="https://github.com/CSIRO-enviro-informatics/wesc-sf0-node">wesc-sf0-node</a> extends
+          docker-geoserver with configurations of the WESCML-SF0 data model, so that data custodians
+          can plug in their WESC datasets and deliver them via WESCML and standardised OGC web services.
+        </p>
+        <div style="text-align: center; padding-top:10px"><img src="img/wescml_overview2.png" width="80%"></div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <section class="data" id='data'>
+    <div class="cta-content">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>WESC Data</h2>
+          <p class="text-muted">Data published using the WESC standard</p>
+          <hr>
+          <p>
+          </p>
+        </div>
+        <div class="row  text-center">
+          <div class="col-md-6 data-item" style="min-height: 400px">
+            <a href="https://data.aurin.org.au/dataset?q=wesc"><img height="200px" src='https://aurin.org.au/wp-content/uploads/2018/07/aurin-logo-400.png'></a>
+            <p><a href="https://data.aurin.org.au/dataset?q=wesc">WESC data on AURIN</a></p>
+          </div>
+
+          <div class="col-md-6 data-item" style="min-height: 400px">
+            <div class="data-item" style="min-height: 200px"><a href="https://eudm.csiro.au/search?query=WESCML"><img
+                  width="80%" src='img/eudmlogo.png'></a></div>
+            <p><a href="https://eudm.csiro.au/search?query=WESCML">WESC data on EUDM/NEAR</a></p>
+          </div>
+          <div>
+
+            <div>
+            </div>
+          </div>
+  </section>
+
+  <section class="about bg-primary" id="about">
+    <div class="container">
+      <h2>About</h2>
+      <p>
+        The Water and Energy Supply and Consumption (WESC) data standard has been developed by CSIRO with partners to
+        support
+        a common information model for supply and consumption of water and energy, and its delivery via standardised
+        data
+        services. The WESC information model allows for data to be delivered in a consistent format regardless of how
+        it is
+        represented as a data format, though there are XML data formats developed and hosted on Github.
+      </p>
+      <p>
+        WESCML is currently used in 2 data projects in Australia. In the AURIN project, the WESCML is being used to
+        standardise water/energy supply/consumption data from across 16 different water and energy companies. The WESC
+        information model is being used in the National Energy Analytics and Research (NEAR) Program for developing
+        standardised energy data views at a national scale, e.g. zone substation electricity supply.
+      </p>
+      <p>More information and resources are available on our GitHub site. <br />Issues, feedback or feature
+        requests can be lodged via <a href="https://github.com/csiro-enviro-informatics/wescml/issues">this
+          link</a>.</p>
+      <p>WESCML is maintained by the <a href="https://research.csiro.au/ei/">CSIRO Environmental Informatics
+          group</a> with <br /> partners from the research and industry sectors. </p>
+      <ul class="list-inline list-social">
+        <li class="list-inline-item social-github"><a href="https://github.com/CSIRO-enviro-informatics/wescml"><i
+              class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      
+      <ul class="list-inline">
+          <li class="list-inline-item">
+              <p>&copy; <a href="https://www.csiro.au">CSIRO</a> 2013-2019. </p>
+            </li>
+        <li class="list-inline-item">
+          <a href="https://www.csiro.au/en/About/Footer/Copyright" class="reversed emphasis--none">Copyright</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.csiro.au/en/About/Footer/Legal-notice" class="reversed emphasis--none">Legal notice and
+            disclaimer</a> </li>
+        <li class="list-inline-item">
+          <a href="https://www.csiro.au/en/About/Access-to-information/Privacy" class="reversed emphasis--none">Your
+            privacy</a> </li>
+        <li class="list-inline-item">
+          <a href="https://www.csiro.au/en/About/Footer/Accessibility" class="reversed emphasis--none">Accessibility</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.csiro.au/en/Contact" class="reversed emphasis--none">Contact us</a>
+      </ul>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/new-age.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sissvoc.js"></script>
+  <script src="js/sissvoc-search.js"></script>
+
+
+</body>
+
+</html>
