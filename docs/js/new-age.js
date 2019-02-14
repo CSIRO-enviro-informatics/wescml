@@ -39,4 +39,26 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  $(document).ready(function(){
+    $(".navbar-nav a.about").addClass('active');
+});
+
+
+$(document).ready(function(){
+  const urlParams = new URLSearchParams(window.location.search);
+  const viewParam = urlParams.get('view');
+  console.log(window.location);
+  
+  console.log(urlParams);
+  console.log(viewParam);
+  for (let p of urlParams) {
+    console.log(p);
+  }
+
+  if(viewParam !== undefined && viewParam != "") {
+     $('#' + viewParam + '-tab').tab('show')     
+  }
+
+});
+
 })(jQuery); // End of use strict

@@ -1,0 +1,13 @@
+version: "3"
+services:
+  rdf4j:
+    image: yyz1989/rdf4j
+    ports:
+      - "8090:8080"
+      - "8091:8009"
+    volumes:
+      - "/opt/repo/rdf4j-data:/data"
+    environment:
+       - RDF4J_DATA=/data 
+    restart: always
+
