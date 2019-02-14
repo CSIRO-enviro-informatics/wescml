@@ -249,45 +249,45 @@ section.download .badges .badge-link img {
   }
 }
 
-section.features .section-heading {
+section.vocabularies .section-heading {
   margin-bottom: 100px;
 }
 
-section.features .section-heading h2 {
+section.vocabularies .section-heading h2 {
   margin-top: 0;
 }
 
-section.features .section-heading p {
+section.vocabularies .section-heading p {
   margin-bottom: 0;
 }
 
-section.features .device-container,
-section.features .feature-item {
+section.vocabularies .device-container,
+section.vocabularies .feature-item {
   max-width: 325px;
   margin: 0 auto;
 }
 
-section.features .device-container {
+section.vocabularies .device-container {
   margin-bottom: 100px;
 }
 
 @media (min-width: 992px) {
-  section.features .device-container {
+  section.vocabularies .device-container {
     margin-bottom: 0;
   }
 }
 
-section.features .feature-item {
+section.vocabularies .feature-item {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
 }
 
-section.features .feature-item h3 {
+section.vocabularies .feature-item h3 {
   font-size: 30px;
 }
 
-section.features .feature-item i {
+section.vocabularies .feature-item i {
   font-size: 80px;
   display: block;
   margin-bottom: 15px;
@@ -339,26 +339,26 @@ section.cta .overlay {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-section.contact {
+section.about {
   text-align: center;
   height: 100%;
   
 }
 
-section.contact h2 {
+section.about h2 {
   margin-top: 0;
   margin-bottom: 25px;
 }
 
-section.contact h2 i {
+section.about h2 i {
   color: #dd4b39;
 }
 
-section.contact ul.list-social {
+section.about ul.list-social {
   margin-bottom: 0;
 }
 
-section.contact ul.list-social li a {
+section.about ul.list-social li a {
   font-size: 40px;
   line-height: 80px;
   display: block;
@@ -368,35 +368,35 @@ section.contact ul.list-social li a {
   border-radius: 100%;
 }
 
-section.contact ul.list-social li.social-twitter a {
+section.about ul.list-social li.social-twitter a {
   background-color: #1da1f2;
 }
 
-section.contact ul.list-social li.social-twitter a:hover {
+section.about ul.list-social li.social-twitter a:hover {
   background-color: #0d95e8;
 }
 
-section.contact ul.list-social li.social-facebook a {
+section.about ul.list-social li.social-facebook a {
   background-color: #3b5998;
 }
 
-section.contact ul.list-social li.social-facebook a:hover {
+section.about ul.list-social li.social-facebook a:hover {
   background-color: #344e86;
 }
 
-section.contact ul.list-social li.social-google-plus a {
+section.about ul.list-social li.social-google-plus a {
   background-color: #dd4b39;
 }
 
-section.contact ul.list-social li.social-google-plus a:hover {
+section.about ul.list-social li.social-google-plus a:hover {
   background-color: #d73925;
 }
 
-section.contact ul.list-social li.social-github a {
+section.about ul.list-social li.social-github a {
   background-color: black;
 }
 
-section.contact ul.list-social li.social-github a:hover {
+section.about ul.list-social li.social-github a:hover {
   background-color: black;
 }
 
@@ -465,6 +465,9 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   padding: 15px 45px;
 }
 
+.infomodel li {
+  text-align: left;
+}
 
 .infomodel-diagrams .nav-tabs .nav-item .nav-link.active {
 	background-color: blue;
@@ -532,18 +535,18 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
     text-align:center;
 }
 
-#contact a
+#about a
  {
   color: blue;
 }
 
-#contact .list-social  a
+#about .list-social  a
  {
   color: white;
 }
 
 .data-item {
-	display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }

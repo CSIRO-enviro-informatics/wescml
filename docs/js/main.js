@@ -1,4 +1,4 @@
-var currentEndpoint = "https://wescml.org/sissvoc/vocab";
+var currentEndpoint = "http://localhost:8090/sissvoc/default";
 //var conceptschemeOrCollection = "collection"; //choose conceptscheme or collection
 var details_opened = true;
 var MAX_LABEL_LENGTH = 50;
@@ -13,6 +13,7 @@ var margin = {top: 20, right: 20, bottom: 50, left: 100},
 
 var sissvoc_endpoints = {};
 sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "https://wescml.org/sissvoc/vocab", "view": "collection"}; 
+//sissvoc_endpoints["wesc"] =   {"label": "Water/Energy Consumption Supply", "endpoint": "http://localhost:8090/sissvoc/default", "view": "conceptscheme"}; 
  
 	
 
@@ -518,11 +519,20 @@ function addDetailsToNode(object, current_object) {
 			}
 		}
 		if('narrower' in object){
-			for(var j = 0; j < object['narrower'].length; j++){
-				var child = navigate(object['narrower'][j]);
+			console.log(object['narrower'].length);
+			if(object['narrower'].constructor === Array) {
+				for(var j = 0; j < object['narrower'].length; j++){
+					var child = navigate(object['narrower'][j]);
+					if (child !== null){
+						children.push(child);	
+					}
+				}
+			}
+			else {
+				var child = navigate(object['narrower']);
 				if (child !== null){
 					children.push(child);	
-				}
+				}				
 			}
 		}
 		
