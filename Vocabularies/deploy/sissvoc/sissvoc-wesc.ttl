@@ -37,15 +37,9 @@
 
 
 ##############################################################
-## TODO: deployer to make changes here
-## change "test" to give this API a name to distinguish it from any other API hosted by the same LDA service
-
 svoc:vocab a api:API
+	; api:base "/sissvoc"
 
-## it would be great if this could be made to help somehow, but ELDA does not currently appear to implement it
-#	; api:base "http://def.seegrid.csiro.au/sissvoc/vocab"
-
-## end of TODO:
 ##############################################################
 
 # generic SISSvoc stuff
@@ -109,7 +103,7 @@ svoc:vocab a api:API
 		, [api:name "serviceTitle"; api:value "WESC Vocabularies"]
 		, [api:name "serviceAuthor"; api:value "Jonathan Yu"]
 		, [api:name "serviceAuthorEmail"; api:value "jonathan.yu@csiro.au"]
-		, [api:name "serviceHomePage"; api:value "https://www.wescml.org"]
+		, [api:name "serviceHomePage"; api:value "https://www.wescml.org/sissvoc"]
 		, [api:name "configID"; api:value "$Header$"]
 
 
@@ -270,8 +264,12 @@ svoc:conceptLabelEndpoint a api:ListEndpoint
 ## end of TODO:
 ##############################################################
 		; api:selector [
-				api:where
-					""" { ?item skos:prefLabel ?l }
+            api:select
+               """PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+                  PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT DISTINCT ?item
+                  WHERE {
+					      { ?item skos:prefLabel ?l }
 							UNION
 							{ ?item skos:altLabel ?l }
 							UNION
@@ -297,13 +295,18 @@ svoc:conceptLabelContainsEndpoint a api:ListEndpoint
 ## end of TODO:
 ##############################################################
 		; api:selector [
-				api:where
-					""" { ?item skos:prefLabel ?l }
-							UNION
-							{ ?item skos:altLabel ?l }
-							UNION
-							{ ?item rdfs:label ?l }
-							FILTER regex( str(?l) , ?text , 'i' ) """
+            api:select
+               """PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+                  PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT DISTINCT ?item
+                  WHERE {
+                     { ?item skos:prefLabel ?l }
+                     UNION
+                     { ?item skos:altLabel ?l }
+                     UNION
+                     { ?item rdfs:label ?l }
+                     FILTER regex( str(?l) , ?text , 'i' )
+					   } """
 		]
 		; api:defaultViewer svoc:basicConceptViewer
 		; api:viewer  api:basicViewer,svoc:basicConceptViewer
@@ -412,8 +415,12 @@ svoc:broaderLabelEndpoint a api:ListEndpoint
 ## end of TODO:
 ##############################################################
 		; api:selector [
-				api:where
-					""" ?i0 skos:broader ?item .
+            api:select
+               """PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+                  PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT DISTINCT ?item
+                  WHERE {
+					      ?i0 skos:broader ?item .
 							{ ?i0 rdfs:label ?l }
 							UNION
 							{ ?i0 skos:prefLabel ?l }
@@ -440,8 +447,12 @@ svoc:narrowerLabelEndpoint a api:ListEndpoint
 ## end of TODO:
 ##############################################################
 		; api:selector [
-				api:where
-					""" ?i0 skos:narrower ?item .
+				api:select
+               """PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+                  PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT DISTINCT ?item
+                  WHERE {
+					   ?i0 skos:narrower ?item .
 							{ ?i0 rdfs:label ?l }
 							UNION
 							{ ?i0 skos:prefLabel ?l }
@@ -468,8 +479,12 @@ svoc:broaderTransitiveLabelEndpoint a api:ListEndpoint
 ## end of TODO:
 ##############################################################
 		; api:selector [
-				api:where
-					""" ?i0 skos:broaderTransitive ?item .
+            api:select
+               """PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+                  PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT DISTINCT ?item
+                  WHERE {
+					   ?i0 skos:broaderTransitive ?item .
 							{ ?i0 rdfs:label ?l }
 							UNION
 							{ ?i0 skos:prefLabel ?l }
@@ -496,8 +511,12 @@ svoc:narrowerTransitiveLabelEndpoint a api:ListEndpoint
 ## end of TODO:
 ##############################################################
 		; api:selector [
-				api:where
-					""" ?i0 skos:narrowerTransitive ?item .
+            api:select
+               """PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+                  PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                  SELECT DISTINCT ?item
+                  WHERE {
+					   ?i0 skos:narrowerTransitive ?item .
 							{ ?i0 rdfs:label ?l }
 							UNION
 							{ ?i0 skos:prefLabel ?l }
