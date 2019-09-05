@@ -1,6 +1,6 @@
 var currentEndpoint = "https://wescml.org/sissvoc/vocab";
 //var currentEndpoint = "http://localhost:8080/sissvoc/vocab";
-//var conceptschemeOrCollection = "collection"; //choose conceptscheme or collection
+var conceptschemeOrCollection = "collection"; //choose conceptscheme or collection
 var details_opened = true;
 var MAX_LABEL_LENGTH = 50;
 var input;
